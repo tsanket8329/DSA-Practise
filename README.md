@@ -6,3 +6,7 @@ A left rotation operation on a circular array shifts each of the array's element
 Given an integer d, rotate the array that many steps to the left and return the result.
 Example
 text d = 2 arr = [1, 2, 3, 4, 5] After 2 rotations: [3, 4, 5, 1, 2]
+
+HackerRank 2: Drawing Book
+This repository contains a solution for the Drawing Book problem from HackerRank.
+
