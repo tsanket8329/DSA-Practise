@@ -15,3 +15,6 @@ A teacher asks the class to open their books to a page number. A student can sta
 
 HackerRank 3: Counting Valleys
 This repository contains a solution for the Counting Valleys problem from HackerRank.
+Problem Statement
+An avid hiker records their hike using uphill (U) and downhill (D) steps. The hike always starts and ends at sea level, and each step changes the altitude by one unit. A valley is defined as a sequence of steps below sea level, starting with a step down from sea level and ending with a step up to sea level. Given the number of steps and the path taken, determine the number of valleys walked through. Example Input: steps = 8
+path = UDDDUDUU Output: 1 Explanation: The hiker goes below sea level once and returns back to sea level, completing one valley. Here are the exact lines written in the picture:
