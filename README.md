@@ -34,3 +34,24 @@ Problem Statement Two cats and a mouse are at various positions on a straight li
 "Cat B" if Cat B reaches first
 
 "Mouse C" if both reach at the same time
+Input Format
+
+The first line contains an integer q, the number of queries.
+
+Each of the next q lines contains three space-separated integers:
+
+x y z
+
+Constraints
+
+1 ≤ q ≤ 100
+
+1 ≤ x, y, z ≤ 100
+
+Sample Input 5 4 1 2 3 1 3 2 4 2 5 2 6 4 Sample Output 5 Cat B Mouse C Cat A Mouse C Explanation 5 Query 1:
+
+|1 − 3| = 2 |2 − 3| = 1 Cat B is closer → Cat B
+
+Query 2:
+
+|1 − 2| = 1 |3 − 2| = 1 Equal → Mouse C
