@@ -55,3 +55,11 @@ Sample Input 5 4 1 2 3 1 3 2 4 2 5 2 6 4 Sample Output 5 Cat B Mouse C Cat A Mou
 Query 2:
 
 |1 − 2| = 1 |3 − 2| = 1 Equal → Mouse C
+
+Query 3:
+
+|4 − 5| = 1 |2 − 5| = 3 Cat A is closer → Cat A
+
+Query 4:
+
+|2 − 4| = 2 |6 − 4| = 2 Equal → Mouse C
