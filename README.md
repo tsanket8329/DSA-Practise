@@ -79,3 +79,6 @@ for magic in magic_squares:
         for j in range(3):
             cost += abs(s[i][j] - magic[i][j])
     min_cost = min(min_cost, cost)
+
+    return min_cost
+s = [] for _ in range(3): s.append(list(map(int, input().split())))
