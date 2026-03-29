@@ -63,3 +63,7 @@ Query 3:
 Query 4:
 
 |2 − 4| = 2 |6 − 4| = 2 Equal → Mouse C
+
+
+ACKERRANK 6 - Forming a Magic Square
+Problem We define a magic square to be a 3 × 3 matrix of distinct positive integers from 1 to 9 where the sum of any row, column, or diagonal is always equal to the same number (called the magic constant).
