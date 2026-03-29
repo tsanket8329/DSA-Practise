@@ -84,3 +84,5 @@ for magic in magic_squares:
 s = [] for _ in range(3): s.append(list(map(int, input().split())))
 
 print(formingMagicSquare(s)) Time Complexity O(1)
+
+Because only 8 possible magic squares are checked.
