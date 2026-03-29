@@ -68,3 +68,4 @@ Query 4:
 ACKERRANK 6 - Forming a Magic Square
 Problem We define a magic square to be a 3 × 3 matrix of distinct positive integers from 1 to 9 where the sum of any row, column, or diagonal is always equal to the same number (called the magic constant).
 You will be given a 3 × 3 matrix s of integers in the range 1–9. You can change any value a to another value b with a cost of |a − b|. Your task is to convert the matrix into a magic square with the minimum possible cost.The resulting magic square must contain distinct integers from 1 to 9. Function Description Complete the function:
+formingMagicSquare(s) Parameter s[3][3] → a 3×3 integer matrix Returnint → minimum cost required to convert the matrix into a magic square Input Format Three lines of input containing three integers each representing the rows of the matrix. Example input: 5 3 4 1 5 8 6 4 2
