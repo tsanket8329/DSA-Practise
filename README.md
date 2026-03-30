@@ -116,3 +116,21 @@ The longest valid subarray is:
 [4, 4, 5, 5, 5]
 
 Output:
+5 Approach
+
+Count the frequency of each number in the array.
+
+For each number i, check the total count of numbers i and i+1.
+
+The maximum of these sums gives the longest valid subarray.
+
+Time Complexity:
+
+O(n)
+
+Space Complexity:
+
+O(1)
+
+HACKERRANK 8 : Designer Pdf viewer
+HACKERRANK: Designer PDF Viewer
