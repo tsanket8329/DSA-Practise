@@ -86,3 +86,23 @@ s = [] for _ in range(3): s.append(list(map(int, input().split())))
 print(formingMagicSquare(s)) Time Complexity O(1)
 
 Because only 8 possible magic squares are checked.
+
+
+HackerRank 7: Picking Numbers
+This repository contains a solution for the Picking Numbers problem from HackerRank.
+
+Problem Statement
+
+Given an array of integers, find the longest subarray where the absolute difference between any two elements is less than or equal to 1.
+
+You may choose any elements from the array, but the difference between every pair of numbers in the chosen subarray must be ≤ 1.
+
+Return the maximum possible length of such a subarray.
+
+Example arr = [1, 1, 2, 2, 4, 4, 5, 5, 5]
+
+Possible valid subarrays:
+
+[1, 1, 2, 2] [4, 4, 5, 5, 5]
+
+Explanation:
