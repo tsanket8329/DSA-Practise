@@ -106,3 +106,13 @@ Possible valid subarrays:
 [1, 1, 2, 2] [4, 4, 5, 5, 5]
 
 Explanation:
+
+In [1,1,2,2] → difference between elements is at most 1
+
+In [4,4,5,5,5] → difference between elements is at most 1
+
+The longest valid subarray is:
+
+[4, 4, 5, 5, 5]
+
+Output:
