@@ -157,3 +157,14 @@ Explanation
 a = 1 b = 3 c = 1 max height = 3 word length = 3
 
 Area = 3 × 3 = 9
+
+HACKERRANK 8 : Designer Pdf viewer
+HACKERRANK: Designer PDF Viewer
+
+Problem
+
+Each letter a–z has a height stored in array h[26].
+
+Given a word, highlight it in a PDF viewer. Each letter width = 1 unit.
+
+Area of highlight =
