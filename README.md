@@ -168,3 +168,18 @@ Each letter a–z has a height stored in array h[26].
 Given a word, highlight it in a PDF viewer. Each letter width = 1 unit.
 
 Area of highlight =
+max letter height × length of word Example
+
+Input
+
+1 3 1 3 1 4 1 3 2 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 abc
+
+Output
+
+9
+
+Explanation
+
+a = 1 b = 3 c = 1 max height = 3 word length = 3
+
+Area = 3 × 3 = 9
