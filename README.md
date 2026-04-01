@@ -196,3 +196,12 @@ Your task is to determine the height of the tree after n growth cycles.
 Function Description
 
 Complete the function:
+int utopianTree(int n)
+
+Parameter:
+
+n → number of growth cycles.
+
+Return:
+
+The height of the tree after n cycles.
