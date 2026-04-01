@@ -189,3 +189,10 @@ The Utopian Tree goes through 2 growth cycles every year:
 Spring: The height of the tree doubles.
 
 Summer: The height of the tree increases by 1 meter.
+nitially, a sapling is planted with a height of 1 meter at the beginning of spring.
+
+Your task is to determine the height of the tree after n growth cycles.
+
+Function Description
+
+Complete the function:
