@@ -183,3 +183,9 @@ Explanation
 a = 1 b = 3 c = 1 max height = 3 word length = 3
 
 Area = 3 × 3 = 9
+HACKERRANK 9 : Utopian Tree
+The Utopian Tree goes through 2 growth cycles every year:
+
+Spring: The height of the tree doubles.
+
+Summer: The height of the tree increases by 1 meter.
