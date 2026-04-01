@@ -205,3 +205,13 @@ n → number of growth cycles.
 Return:
 
 The height of the tree after n cycles.
+
+Input Format
+
+First line contains integer t → number of test cases.
+
+Each of the next t lines contains an integer n.
+
+Sample Input 3 0 1 4 Sample Output 1 2 7 Explanation Cycle Operation Height 0 Initial height 1 1 Spring (×2) 2 2 Summer (+1) 3 3 Spring (×2) 6 4 Summer (+1) 7
+
+So after 4 cycles, height = 7.
