@@ -260,4 +260,15 @@ int[m] → player's rank after each game
 Input Format n ranked scores m player scores Example: 7 100 100 50 40 40 20 10 4 5 25 50 120
 
 Output 6 4 2 1
+Approach
+
+Remove duplicate scores from the leaderboard.
+
+Traverse from the end of leaderboard.
+
+Compare each player score with leaderboard scores.
+
+Move pointer left until the correct rank is found.
+
+Since player scores are ascending, the pointer only moves one direction, making the solution efficient. ⏱ Time Complexity O(n + m) n = leaderboard size m = player scores
 
