@@ -215,3 +215,18 @@ Each of the next t lines contains an integer n.
 Sample Input 3 0 1 4 Sample Output 1 2 7 Explanation Cycle Operation Height 0 Initial height 1 1 Spring (×2) 2 2 Summer (+1) 3 3 Spring (×2) 6 4 Summer (+1) 7
 
 So after 4 cycles, height = 7.
+
+HACKERRANK 10: Climbing the Leaderboard
+An arcade game player wants to climb to the top of the leaderboard and track their ranking. The game uses Dense Ranking, so its leaderboard works like this:
+
+The player with the highest score is ranked 1.
+
+Players with the same score receive the same rank.
+
+The next player gets the immediately following rank.
+
+Example
+
+Leaderboard scores:
+
+100 100 50 40 40 20 10
