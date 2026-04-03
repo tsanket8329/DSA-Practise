@@ -230,3 +230,22 @@ Example
 Leaderboard scores:
 
 100 100 50 40 40 20 10
+Ranks become:
+
+1 1 2 3 3 4 5
+
+If the player scores are:
+
+5 25 50 120
+
+Then their ranks after each game are:
+
+6 4 2 1
+
+Function Description
+
+Complete the function:
+
+climbingLeaderboard
+
+Parameters
