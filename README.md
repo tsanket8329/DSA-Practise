@@ -249,3 +249,15 @@ Complete the function:
 climbingLeaderboard
 
 Parameters
+ranked[n] → leaderboard scores in descending order
+
+player[m] → player's game scores
+
+Returns
+
+int[m] → player's rank after each game
+
+Input Format n ranked scores m player scores Example: 7 100 100 50 40 40 20 10 4 5 25 50 120
+
+Output 6 4 2 1
+
