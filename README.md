@@ -272,3 +272,8 @@ Move pointer left until the correct rank is found.
 
 Since player scores are ascending, the pointer only moves one direction, making the solution efficient. ⏱ Time Complexity O(n + m) n = leaderboard size m = player scores
 
+2075. Decode the Slanted Cipher Text
+This project decodes a slanted (diagonal) cipher text into its original message.
+The encoded string is formed by placing characters diagonally in a matrix and reading row-wise.
+To decode, we reconstruct the matrix using given rows and columns.
+Then, we traverse the matrix diagonally to retrieve the original text.
