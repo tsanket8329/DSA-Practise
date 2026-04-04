@@ -277,3 +277,8 @@ This project decodes a slanted (diagonal) cipher text into its original message.
 The encoded string is formed by placing characters diagonally in a matrix and reading row-wise.
 To decode, we reconstruct the matrix using given rows and columns.
 Then, we traverse the matrix diagonally to retrieve the original text.
+APPROACH:
+Calculate columns using: cols = length / rows
+Fill matrix row-wise
+Traverse diagonally (top-left to bottom-right)
+Remove trailing spaces
