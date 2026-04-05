@@ -288,3 +288,8 @@ Remove trailing spaces
 This project determines whether a robot returns to its original position after executing a sequence of moves.
 The robot starts at the origin (0, 0) on a 2D plane.
 It can move Up (U), Down (D), Left (L), and Right (R).
+Each move updates the robot’s position accordingly.
+The program processes a string of movements as input.
+After executing all moves, it checks the final coordinates.
+If the robot returns to (0, 0), the output is true.
+Otherwise, the output is false.
