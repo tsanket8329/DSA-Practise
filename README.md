@@ -282,3 +282,9 @@ Calculate columns using: cols = length / rows
 Fill matrix row-wise
 Traverse diagonally (top-left to bottom-right)
 Remove trailing spaces
+
+---->>>Robot Return to Origin
+
+This project determines whether a robot returns to its original position after executing a sequence of moves.
+The robot starts at the origin (0, 0) on a 2D plane.
+It can move Up (U), Down (D), Left (L), and Right (R).
