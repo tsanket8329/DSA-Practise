@@ -304,3 +304,12 @@ Question
 In a hurdle race game, a character can jump up to k units high naturally. There are n hurdles with different heights.
 
 The character can drink a magic potion, and each dose increases the jump height by 1 unit.
+Find the minimum number of potion doses needed so the character can jump over all hurdles.
+
+If the character can already jump the highest hurdle, return 0.
+
+Input
+
+First line: two integers n and k
+
+Second line: n space-separated integers representing hurdle heights.
