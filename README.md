@@ -313,3 +313,10 @@ Input
 First line: two integers n and k
 
 Second line: n space-separated integers representing hurdle heights.
+Example Input 5 4 1 6 3 5 2 Example Output 2 Explanation
+
+Maximum jump height = 4
+
+Tallest hurdle = 6
+
+Potion doses needed = 6 − 4 = 2
