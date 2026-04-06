@@ -295,3 +295,12 @@ If the robot returns to (0, 0), the output is true.
 Otherwise, the output is false.
 This project demonstrates basic string processing and coordinate tracking.
 It is useful for understanding simple logic building and problem-solving.
+
+HACKERRANK 11: HURDLE RACE
+HackerRank “The Hurdle Race” in Q & A format:
+
+Question
+
+In a hurdle race game, a character can jump up to k units high naturally. There are n hurdles with different heights.
+
+The character can drink a magic potion, and each dose increases the jump height by 1 unit.
