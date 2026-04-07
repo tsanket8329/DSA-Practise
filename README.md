@@ -320,3 +320,44 @@ Maximum jump height = 4
 Tallest hurdle = 6
 
 Potion doses needed = 6 − 4 = 2
+
+HACKERRANK 12: BEAUTIFUL DAYS AT THE MOVIES
+Question: Beautiful Days at the Movies
+
+Lily defines a number as beautiful if:
+
+number reverse(number) is divisible by 𝑘 ∣number−reverse(number)∣ is divisible by k
+
+Given three integers:
+
+i → starting day
+
+j → ending day
+
+k → divisor
+
+👉 Count how many numbers from i to j (inclusive) are beautiful. Loop from i to j
+
+For each number:
+
+Reverse it
+
+Find difference with original
+
+Check if divisible by k
+
+Count valid numbers
+
+🧪 Example
+
+Input:
+
+20 23 6
+
+Output:
+
+2 ⏱️ Complexity
+
+Time: O(n × digits)
+
+Space: O(1)
