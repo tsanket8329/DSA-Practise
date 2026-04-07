@@ -1,0 +1,95 @@
+HACKERRANK: Beautiful Days at the Movies
+
+Lily defines a number as beautiful if:
+
+∣
+number
+−
+reverse(number)
+∣
+ is divisible by 
+𝑘
+∣number−reverse(number)∣ is divisible by k
+
+Given three integers:
+
+i → starting day
+
+j → ending day
+
+k → divisor
+
+👉 Count how many numbers from i to j (inclusive) are beautiful.
+
+✅ Answer (Approach)
+
+Loop from i to j
+
+For each number:
+
+Reverse it
+
+Find difference with original
+
+Check if divisible by k
+
+Count valid numbers
+
+💻 Code (Java)
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    // Reverse a number
+    public static int reverse(int num) {
+        int rev = 0;
+        while (num > 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+        return rev;
+    }
+
+    // Count beautiful days
+    public static int beautifulDays(int i, int j, int k) {
+        int count = 0;
+
+        for (int d = i; d <= j; d++) {
+            int rev = reverse(d);
+            int diff = Math.abs(d - rev);
+
+            if (diff % k == 0) {
+                count++;
+            }
+        }
+
+        return count;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+
+        int i = sc.nextInt();
+        int j = sc.nextInt();
+        int k = sc.nextInt();
+
+        System.out.println(Result.beautifulDays(i, j, k));
+    }
+}
+🧪 Example
+
+Input:
+
+20 23 6
+
+Output:
+
+2
+⏱️ Complexity
+
+Time: O(n × digits)
+
+Space: O(1)
