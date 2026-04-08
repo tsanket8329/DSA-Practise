@@ -361,3 +361,18 @@ Output:
 Time: O(n × digits)
 
 Space: O(1)
+
+HACKERRANK 13: VIRAL ADVERTISING
+📘 Question: Viral Advertising
+
+HackerLand Enterprise is adopting a new viral advertising strategy.
+
+On the first day, the advertisement is shared with 5 people.
+
+Each day:
+
+Half of the people who receive the ad like it (floor(shared / 2)).
+
+Each person who likes it shares it with 3 friends the next day.
+
+No person receives the ad more than once.
