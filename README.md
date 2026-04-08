@@ -398,4 +398,19 @@ Input
 Output
 
 9 🧠 Explanation
+Start with shared = 5
+
+Each day:
+
+Compute liked = shared / 2
+
+Add to total
+
+Update shared = liked * 3
+
+⏱ Complexity
+
+Time: O(n)
+
+Space: O(1)
 
