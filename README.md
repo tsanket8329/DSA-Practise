@@ -423,3 +423,5 @@ A custom comparator is used to sort numbers.
 Sorting is based on (b + a) and (a + b) comparison.
 This ensures correct ordering for maximum result.
 If the first element is "0", return "0".
+This handles the edge case of all zeros.
+Finally, all strings are concatenated.
