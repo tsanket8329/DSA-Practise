@@ -419,4 +419,7 @@ Space: O(1)
 This project solves the Largest Number problem using Java.
 It arranges numbers to form the maximum possible number.
 All integers are first converted into strings.
-
+A custom comparator is used to sort numbers.
+Sorting is based on (b + a) and (a + b) comparison.
+This ensures correct ordering for maximum result.
+If the first element is "0", return "0".
