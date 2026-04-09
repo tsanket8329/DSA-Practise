@@ -414,3 +414,9 @@ Time: O(n)
 
 Space: O(1)
 
+📌 Largest Number
+
+This project solves the Largest Number problem using Java.
+It arranges numbers to form the maximum possible number.
+All integers are first converted into strings.
+
