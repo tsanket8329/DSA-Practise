@@ -427,3 +427,23 @@ This handles the edge case of all zeros.
 Finally, all strings are concatenated.
 The result is returned as a single string.
 Time complexity is O(n log n) due to sorting.
+
+HACKERRANK 14 : SAVE THE PRISONERS
+📘 Question: Save the Prisoner!
+
+A jail has n prisoners sitting in a circle, numbered from 1 to n.
+
+There are m sweets to distribute. Distribution starts from chair s, and sweets are given one by one in order around the circle.
+
+The last sweet is bad, so you must determine which prisoner gets it.
+
+🎯 Output
+
+For each test case, print the chair number of the prisoner who receives the last sweet.
+
+🧠 Logic
+
+Use modulo to avoid simulation:
+
+result
+( 𝑠 + 𝑚 − 2 )   m o d   𝑛 + 1 result=(s+m−2)modn+1 🧪 Sample Input 2 5 2 1 5 2 2 ✅ Sample Output 2 3
