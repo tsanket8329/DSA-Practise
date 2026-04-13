@@ -447,3 +447,9 @@ Use modulo to avoid simulation:
 
 result
 ( 𝑠 + 𝑚 − 2 )   m o d   𝑛 + 1 result=(s+m−2)modn+1 🧪 Sample Input 2 5 2 1 5 2 2 ✅ Sample Output 2 3
+
+
+---->>>>..Minimum distance to target element
+Implemented an efficient solution to find the minimum distance between a target element and a given start index in an array.
+Developed using Java with a focus on clean and optimized logic.
+Utilized linear traversal to identify all occurrences of the target value.
