@@ -453,3 +453,7 @@ result
 Implemented an efficient solution to find the minimum distance between a target element and a given start index in an array.
 Developed using Java with a focus on clean and optimized logic.
 Utilized linear traversal to identify all occurrences of the target value.
+Applied mathematical computation using absolute difference to calculate distances.
+Ensured optimal performance with O(n) time complexity.
+Handled edge cases such as multiple occurrences of the target element.
+Used built-in functions like Math.min() and Math.abs() for accuracy and efficiency.
