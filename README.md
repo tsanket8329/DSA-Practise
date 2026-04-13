@@ -459,3 +459,4 @@ Handled edge cases such as multiple occurrences of the target element.
 Used built-in functions like Math.min() and Math.abs() for accuracy and efficiency.
 Designed a simple and readable method structure for easy understanding and maintenance.
 Demonstrated problem-solving skills in array manipulation and algorithm design.
+Suitable for competitive programming and coding interview practice scenarios
