@@ -466,3 +466,6 @@ Implemented an optimized solution to minimize total travel distance between robo
 Developed using Java with Dynamic Programming (DP) and recursion with memoization.
 Sorted robot positions and factory data to ensure efficient processing.
 Designed a 2D DP array to store intermediate results and avoid recomputation.
+Applied recursive decision-making to either skip or assign robots to factories.
+Handled factory capacity constraints while assigning multiple robots.
+Used greedy accumulation of distance cost for optimal assignment.
