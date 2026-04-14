@@ -460,3 +460,9 @@ Used built-in functions like Math.min() and Math.abs() for accuracy and efficien
 Designed a simple and readable method structure for easy understanding and maintenance.
 Demonstrated problem-solving skills in array manipulation and algorithm design.
 Suitable for competitive programming and coding interview practice scenarios
+
+----->>>>Minimum distance travel 
+Implemented an optimized solution to minimize total travel distance between robots and factories.
+Developed using Java with Dynamic Programming (DP) and recursion with memoization.
+Sorted robot positions and factory data to ensure efficient processing.
+Designed a 2D DP array to store intermediate results and avoid recomputation.
