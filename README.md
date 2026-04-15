@@ -472,3 +472,9 @@ Used greedy accumulation of distance cost for optimal assignment.
 Achieved efficient time complexity by reducing overlapping subproblems.
 Incorporated built-in methods like Collections.sort() and Arrays.sort().
 Demonstrated strong problem-solving skills in DP, optimization, and real-world logistics scenarios
+
+------>>>.Shortest distance to ttarget
+Developed a Java-based solution to find the shortest distance between a target element and a given start index in an array.
+Implemented a linear search approach to traverse the array efficiently.
+Calculated distances using absolute difference between indices.
+Used Math.min() to track and update the minimum distance dynamically.
