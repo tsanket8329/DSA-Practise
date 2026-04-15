@@ -478,3 +478,7 @@ Developed a Java-based solution to find the shortest distance between a target e
 Implemented a linear search approach to traverse the array efficiently.
 Calculated distances using absolute difference between indices.
 Used Math.min() to track and update the minimum distance dynamically.
+Ensured optimal time complexity of O(n) for fast execution.
+Handled cases with multiple occurrences of the target element.
+Designed a clean and simple function for easy readability and maintenance.
+Focused on accurate and efficient computation with minimal space usage.
