@@ -482,3 +482,5 @@ Ensured optimal time complexity of O(n) for fast execution.
 Handled cases with multiple occurrences of the target element.
 Designed a clean and simple function for easy readability and maintenance.
 Focused on accurate and efficient computation with minimal space usage.
+Suitable for coding interviews and competitive programming practice.
+Demonstrated strong understanding of array manipulation and basic algorithms.
