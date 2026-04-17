@@ -495,4 +495,6 @@ A function is implemented to calculate the volume of the box.
 Operator overloading is used to compare two boxes using the < operator.
 The << operator is overloaded to print box dimensions in a clean format.
 The program processes multiple queries to perform operations on boxes.
+It supports creating, copying, comparing, and displaying box details dynamically.
+This project is useful for understanding classes, encapsulation, and operator overloading in C++.
 
