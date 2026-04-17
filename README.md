@@ -484,3 +484,15 @@ Designed a clean and simple function for easy readability and maintenance.
 Focused on accurate and efficient computation with minimal space usage.
 Suitable for coding interviews and competitive programming practice.
 Demonstrated strong understanding of array manipulation and basic algorithms.
+
+
+----->>..Box.it
+This project implements a Box class in C++ demonstrating object-oriented programming concepts.
+It includes constructors such as default, parameterized, and copy constructor.
+The class encapsulates dimensions: length, breadth, and height as private members..
+Getter functions are provided to access each dimension safely.
+A function is implemented to calculate the volume of the box.
+Operator overloading is used to compare two boxes using the < operator.
+The << operator is overloaded to print box dimensions in a clean format.
+The program processes multiple queries to perform operations on boxes.
+
