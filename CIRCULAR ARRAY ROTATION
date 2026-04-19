@@ -1,0 +1,99 @@
+Question
+
+Given an array of integers, perform right circular rotation k times.
+
+In one rotation, the last element moves to the front.
+After performing all rotations, answer q queries.
+Each query asks: what is the value at index i in the rotated array?
+📥 Input
+n k q
+array elements
+queries (each on new line)
+📌 Example Input
+3 2 3
+1 2 3
+0
+1
+2
+✅ Answer
+🔄 Step 1: Perform Rotations
+
+Initial array:
+
+[1, 2, 3]
+
+After 1 rotation:
+
+[3, 1, 2]
+
+After 2 rotations:
+
+[2, 3, 1]
+🔍 Step 2: Answer Queries
+Query Index	Value
+0	2
+1	3
+2	1
+📤 Output
+2
+3
+1
+💡 Optimized Logic (No Rotation Needed)
+
+Instead of rotating, use:
+
+index = (q - k + n) % n
+🧾 Final Code (Java)
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    public static List<Integer> circularArrayRotation(List<Integer> a, int k, List<Integer> queries) {
+        int n = a.size();
+        List<Integer> result = new ArrayList<>();
+        
+        k = k % n;
+
+        for (int q : queries) {
+            int index = (q - k + n) % n;
+            result.add(a.get(index));
+        }
+        
+        return result;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        String[] firstInput = bufferedReader.readLine().trim().split(" ");
+        int n = Integer.parseInt(firstInput[0]);
+        int k = Integer.parseInt(firstInput[1]);
+        int q = Integer.parseInt(firstInput[2]);
+
+        String[] aTemp = bufferedReader.readLine().trim().split(" ");
+        List<Integer> a = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            a.add(Integer.parseInt(aTemp[i]));
+        }
+
+        List<Integer> queries = new ArrayList<>();
+        for (int i = 0; i < q; i++) {
+            queries.add(Integer.parseInt(bufferedReader.readLine().trim()));
+        }
+
+        List<Integer> result = Result.circularArrayRotation(a, k, queries);
+
+        for (int i = 0; i < result.size(); i++) {
+            bufferedWriter.write(String.valueOf(result.get(i)));
+            bufferedWriter.newLine();
+        }
+
+        bufferedWriter.flush();
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
