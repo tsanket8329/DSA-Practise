@@ -514,3 +514,11 @@ Initial array:
 After 1 rotation:
 
 [3, 1, 2]
+
+After 2 rotations:
+
+[2, 3, 1] 🔍 Step 2: Answer Queries Query Index Value 0 2 1 3 2 1 📤 Output 2 3 1 💡 Optimized Logic (No Rotation Needed)
+
+Instead of rotating, use:
+
+index = (q - k + n) % n
