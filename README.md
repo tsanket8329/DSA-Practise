@@ -500,3 +500,7 @@ This project is useful for understanding classes, encapsulation, and operator ov
 It supports operations like creating, updating, comparing, copying, and printing boxes.
 The design ensures clean encapsulation and modular code structure.
 Input-driven execution makes it suitable for competitive programming practice.
+
+
+--->>>HACKERRANK 15 : CIRCULAR ARRAY ROTATION
+Given an array of integers, perform right circular rotation k times. In one rotation, the last element moves to the front. After performing all rotations, answer q queries. Each query asks: what is the value at index i in the rotated array? 📥 Input n k q array elements queries (each on new line) 📌 Example Input 3 2 3 1 2 3 0 1 2
