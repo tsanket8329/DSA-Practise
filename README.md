@@ -559,3 +559,11 @@ k = pos[x] (because p[k] = x) y = pos[k] (because p[y] = k)
 👉 So:
 
 y = pos[pos[x]] 🧪 Full Example Input: p = [4, 3, 5, 1, 2] Step 1: Build pos[] value index 1 4 2 5 3 2 4 1 5 3
+
+So:
+
+pos = [_, 4, 5, 2, 1, 3] Step 2: Compute for each x x pos[x] pos[pos[x]] y 1 4 1 1 2 5 3 3 3 2 5 5 4 1 4 4 5 3 2 2 ✅ Output: 1 3 5 4 2 ⚡ Why This Works Fast
+
+Instead of searching every time:
+
+We precompute positions Then each answer is O(1) ⏱ Complexity Time: O(n) Space: O(n)
