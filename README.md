@@ -522,3 +522,40 @@ After 2 rotations:
 Instead of rotating, use:
 
 index = (q - k + n) % n
+
+HACKERRANK 16 : SEQUENCE EQUATION
+Given a permutation p of size n, for each x from 1 to n, find y such that:
+
+p[p[y]] = x
+
+Return all values of y. Input: p = [2, 3, 1] Output: 2 3 1 ⏱ Complexity Time: O(n) Space: O(n)
+
+We want:
+
+p[p[y]] = x
+
+Break it:
+
+Let
+
+p[y] = k
+
+Then:
+
+p[k] = x
+
+So:
+
+First find k such that p[k] = x Then find y such that p[y] = k 💡 Key Idea (Position Array)
+
+Create an array:
+
+pos[value] = index of that value in p
+
+Now:
+
+k = pos[x] (because p[k] = x) y = pos[k] (because p[y] = k)
+
+👉 So:
+
+y = pos[pos[x]] 🧪 Full Example Input: p = [4, 3, 5, 1, 2] Step 1: Build pos[] value index 1 4 2 5 3 2 4 1 5 3
