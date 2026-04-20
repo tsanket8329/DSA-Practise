@@ -1,0 +1,116 @@
+Given a permutation p of size n, for each x from 1 to n, find y such that:
+
+p[p[y]] = x
+
+Return all values of y.
+
+✅ Answer (Code)
+public static List<Integer> permutationEquation(List<Integer> p) {
+    int n = p.size();
+
+    int[] pos = new int[n + 1];
+
+    // Store positions
+    for (int i = 0; i < n; i++) {
+        pos[p.get(i)] = i + 1;
+    }
+
+    List<Integer> result = new ArrayList<>();
+
+    // Compute answer
+    for (int x = 1; x <= n; x++) {
+        result.add(pos[pos[x]]);
+    }
+
+    return result;
+}
+🧠 Key Formula
+y = pos[pos[x]]
+🧪 Example
+
+Input:
+
+p = [2, 3, 1]
+
+Output:
+
+2
+3
+1
+⏱ Complexity
+Time: O(n)
+Space: O(n)
+
+For every x from 1 → n, find y such that:
+
+p[p[y]] = x
+🧠 Think Step-by-Step
+
+We want:
+
+p[p[y]] = x
+
+Break it:
+
+Let
+
+p[y] = k
+
+Then:
+
+p[k] = x
+
+So:
+
+First find k such that p[k] = x
+Then find y such that p[y] = k
+💡 Key Idea (Position Array)
+
+Create an array:
+
+pos[value] = index of that value in p
+
+Now:
+
+k = pos[x] (because p[k] = x)
+y = pos[k] (because p[y] = k)
+
+👉 So:
+
+y = pos[pos[x]]
+🧪 Full Example
+Input:
+p = [4, 3, 5, 1, 2]
+Step 1: Build pos[]
+value	index
+1	4
+2	5
+3	2
+4	1
+5	3
+
+So:
+
+pos = [_, 4, 5, 2, 1, 3]
+Step 2: Compute for each x
+x	pos[x]	pos[pos[x]]	y
+1	4	1	1
+2	5	3	3
+3	2	5	5
+4	1	4	4
+5	3	2	2
+✅ Output:
+1
+3
+5
+4
+2
+⚡ Why This Works Fast
+
+Instead of searching every time:
+
+We precompute positions
+Then each answer is O(1)
+⏱ Complexity
+Time: O(n)
+Space: O(n)
