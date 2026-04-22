@@ -567,3 +567,12 @@ pos = [_, 4, 5, 2, 1, 3] Step 2: Compute for each x x pos[x] pos[pos[x]] y 1 4 1
 Instead of searching every time:
 
 We precompute positions Then each answer is O(1) ⏱ Complexity Time: O(n) Space: O(n)
+
+HACKERRANK 17 : Jumping on the Clouds: Revisited
+Jumping on the Clouds: Revisited (HackerRank)
+
+A character is playing a cloud game.
+
+You are given:
+
+An array c[] where: 0 → cumulus cloud (safe) 1 → thundercloud (danger) An integer k (jump size)
