@@ -587,3 +587,13 @@ Jumps in steps of k using circular indexing:
 
 Return the final energy level.
 
+🔹 Example
+
+Input:
+
+c = [0,0,1,0,0,1,1,0], k = 2
+
+Output:
+
+92
+
