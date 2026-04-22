@@ -576,3 +576,14 @@ A character is playing a cloud game.
 You are given:
 
 An array c[] where: 0 → cumulus cloud (safe) 1 → thundercloud (danger) An integer k (jump size)
+
+The character:
+
+Starts at index 0 with energy = 100
+
+Jumps in steps of k using circular indexing:
+
+(i + k) % n 🔹 Rules Each jump → -1 energy If landing on thundercloud → extra -2 energy Game ends when character returns to index 0 🔹 Task
+
+Return the final energy level.
+
