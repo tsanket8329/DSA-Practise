@@ -599,3 +599,4 @@ Output:
 
 HACKERRANK 19 : EXTRA LONG FACTORIALS
 HackerRank Question: Extra Long Factorials The factorial of an integer n, written as n!, is defined as: n! = n × (n − 1) × (n − 2) × ... × 2 × 1 Example: 5! = 5 × 4 × 3 × 2 × 1 = 120 🎯 Task: Calculate and print the factorial of a given integer n. 📥 Function Description: Complete the function:
+extraLongFactorials(int n) It should compute and print the factorial of n. 📌 Input Format: A single integer n 📌 Constraints: Factorials can be very large (bigger than long can store) 📤 Output Format: Print the factorial of n 🧪 Sample Input: 25 🧪 Sample Output: 15511210043330985984000000
