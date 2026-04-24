@@ -612,3 +612,5 @@ You can perform the following operations on string s:
 Append a lowercase English letter to the end of the string. Delete the last character of the string. If the string is empty, deleting still results in an empty string. 🎯 Task
 
 Determine whether it is possible to convert string s into string t using exactly k operations.
+
+📥 Input First line: string s (initial string) Second line: string t (target string) Third line: integer k (number of operations) 📤 Output Print "Yes" if it is possible Otherwise, print "No" 🧾 Example Input: hackerhappy hackerrank 9 Output:Yes
