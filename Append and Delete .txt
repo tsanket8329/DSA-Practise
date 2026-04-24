@@ -1,0 +1,103 @@
+Problem: Append and Delete
+
+You are given two strings s and t consisting of lowercase English letters, and an integer k.
+
+You can perform the following operations on string s:
+
+Append a lowercase English letter to the end of the string.
+Delete the last character of the string.
+If the string is empty, deleting still results in an empty string.
+🎯 Task
+
+Determine whether it is possible to convert string s into string t using exactly k operations.
+
+📥 Input
+First line: string s (initial string)
+Second line: string t (target string)
+Third line: integer k (number of operations)
+📤 Output
+Print "Yes" if it is possible
+Otherwise, print "No"
+🧾 Example
+Input:
+hackerhappy
+hackerrank
+9
+Output:Yes
+CODE: 
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+
+    /*
+     * Complete the 'appendAndDelete' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts following parameters:
+     *  1. STRING s
+     *  2. STRING t
+     *  3. INTEGER k
+     */
+
+    public static String appendAndDelete(String s, String t, int k) {
+    // Write your code here
+    
+    int commonLength = 0;
+
+    // Find common prefix length
+    while (commonLength < s.length() && commonLength < t.length() &&
+           s.charAt(commonLength) == t.charAt(commonLength)) {
+        commonLength++;
+    }
+
+    int deletions = s.length() - commonLength;
+    int additions = t.length() - commonLength;
+    int totalOps = deletions + additions;
+
+    // Case 1: exact match
+    if (totalOps == k) {
+        return "Yes";
+    }
+
+    // Case 2: extra moves can be wasted
+    if (totalOps < k && (k - totalOps) % 2 == 0) {
+        return "Yes";
+    }
+
+    // Case 3: delete all and rebuild
+    if (k >= s.length() + t.length()) {
+        return "Yes";
+    }
+
+    return "No";
+}
+
+    }
+
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String s = bufferedReader.readLine();
+
+        String t = bufferedReader.readLine();
+
+        int k = Integer.parseInt(bufferedReader.readLine().trim());
+
+        String result = Result.appendAndDelete(s, t, k);
+
+        bufferedWriter.write(result);
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
