@@ -614,3 +614,16 @@ Append a lowercase English letter to the end of the string. Delete the last char
 Determine whether it is possible to convert string s into string t using exactly k operations.
 
 📥 Input First line: string s (initial string) Second line: string t (target string) Third line: integer k (number of operations) 📤 Output Print "Yes" if it is possible Otherwise, print "No" 🧾 Example Input: hackerhappy hackerrank 9 Output:Yes
+
+HACKERRANK 21: SHERLOCK AND SQUARES
+Problem: Sherlock and Squares
+
+Sherlock and Squares
+
+Watson likes to challenge Sherlock's math ability. He gives Sherlock a starting value and an ending value that define a range of integers (inclusive).
+
+Sherlock must determine how many square integers exist within that range.
+
+📌 Definition
+
+A square integer is a number that is the square of an integer.
