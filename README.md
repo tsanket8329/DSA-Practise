@@ -668,3 +668,8 @@ Print the total fine.
 👉 Write a function like:
 
 int calculateFine(int d1, int m1, int y1, int d2, int m2, int y2) 🔥 Challenge Twist
+After solving, try this:
+
+👉 Add a rule:
+
+Maximum fine = 5000 🎯 Goal You should be able to instantly think: Year > Month > Day (priority order)
