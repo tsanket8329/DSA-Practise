@@ -649,3 +649,14 @@ No perfect squares in this range
 → Total = 0
 
 🎯 Goal Efficiently count how many numbers between a and b are perfect squares.
+
+HACKERRANK 22: LIBRARY FINE
+Problem: Library Fine (Advanced Version)
+
+A library charges fines based on how late a book is returned.
+
+💰 Fine Rules: If returned after the due year → fine = 12000 Else if returned in the same year but after the due month → fine = 400 × number of months late Else if returned in the same month and year but after the due day → fine = 20 × number of days late If returned on time or early → fine = 0 📥 Input
+
+Two lines:
+
+d1 m1 y1 (return date) d2 m2 y2 (due date) 📤 Output
