@@ -660,3 +660,11 @@ A library charges fines based on how late a book is returned.
 Two lines:
 
 d1 m1 y1 (return date) d2 m2 y2 (due date) 📤 Output
+
+Print the total fine.
+
+🧪 Example Input: 10 7 2022 5 7 2022 Output: 100 Explanation: Same month & year 5 days late → 5 × 20 = 100 🧠 Your Task
+
+👉 Write a function like:
+
+int calculateFine(int d1, int m1, int y1, int d2, int m2, int y2) 🔥 Challenge Twist
