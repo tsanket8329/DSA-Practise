@@ -1,0 +1,91 @@
+Problem: Library Fine (Advanced Version)
+
+A library charges fines based on how late a book is returned.
+
+💰 Fine Rules:
+If returned after the due year → fine = 12000
+Else if returned in the same year but after the due month → fine = 400 × number of months late
+Else if returned in the same month and year but after the due day → fine = 20 × number of days late
+If returned on time or early → fine = 0
+📥 Input
+
+Two lines:
+
+d1 m1 y1   (return date)
+d2 m2 y2   (due date)
+📤 Output
+
+Print the total fine.
+
+🧪 Example
+Input:
+10 7 2022
+5 7 2022
+Output:
+100
+Explanation:
+Same month & year
+5 days late → 5 × 20 = 100
+🧠 Your Task
+
+👉 Write a function like:
+
+int calculateFine(int d1, int m1, int y1, int d2, int m2, int y2)
+🔥 Challenge Twist
+
+After solving, try this:
+
+👉 Add a rule:
+
+Maximum fine = 5000
+🎯 Goal
+
+You should be able to instantly think:
+
+Year > Month > Day
+(priority order)
+CODE
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    public static int libraryFine(int d1, int m1, int y1, int d2, int m2, int y2) {
+        
+        if (y1 > y2) {
+            return 10000;
+        }
+
+        if (y1 == y2 && m1 > m2) {
+            return 500 * (m1 - m2);
+        }
+
+        if (y1 == y2 && m1 == m2 && d1 > d2) {
+            return 15 * (d1 - d2);
+        }
+
+        return 0;
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        String[] first = bufferedReader.readLine().split(" ");
+        int d1 = Integer.parseInt(first[0]);
+        int m1 = Integer.parseInt(first[1]);
+        int y1 = Integer.parseInt(first[2]);
+
+        String[] second = bufferedReader.readLine().split(" ");
+        int d2 = Integer.parseInt(second[0]);
+        int m2 = Integer.parseInt(second[1]);
+        int y2 = Integer.parseInt(second[2]);
+
+        int result = Result.libraryFine(d1, m1, y1, d2, m2, y2);
+
+        System.out.println(result);
+
+        bufferedReader.close();
+    }
+}
