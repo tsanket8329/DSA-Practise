@@ -673,3 +673,12 @@ After solving, try this:
 👉 Add a rule:
 
 Maximum fine = 5000 🎯 Goal You should be able to instantly think: Year > Month > Day (priority order)
+
+HACKERRANK 23: CUT THE STICKS
+Cut the Sticks – Problem Statement
+
+You are given an array of integers representing the lengths of sticks.
+
+🔁 Task:
+
+Perform the following operation repeatedly until no sticks remain:
