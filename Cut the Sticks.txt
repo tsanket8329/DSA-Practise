@@ -1,0 +1,109 @@
+Cut the Sticks – Problem Statement
+
+You are given an array of integers representing the lengths of sticks.
+
+🔁 Task:
+
+Perform the following operation repeatedly until no sticks remain:
+
+Find the shortest stick length
+Cut that length from all sticks
+Remove sticks that become 0 length
+Before each cut, print the number of sticks present
+📥 Input
+Integer n → number of sticks
+Array arr → stick lengths
+📤 Output
+Print number of sticks before each iteration
+📌 Example
+Input:
+6
+5 4 4 2 2 8
+Output:
+6
+4
+2
+1
+💡 Explanation
+Start with 6 sticks
+Cut smallest (2) → 4 sticks remain
+Cut again → 2 sticks remain
+Cut again → 1 stick
+Done
+🎯 Goal
+
+Return a list of integers showing how many sticks remain before each cut
+CODE
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Result {
+
+    /*
+     * Complete the 'cutTheSticks' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    
+    // Write your code here
+    public static List<Integer> cutTheSticks(List<Integer> arr) {
+    Collections.sort(arr); // Step 1: sort
+
+    List<Integer> result = new ArrayList<>();
+    int n = arr.size();
+
+    result.add(n); // First count
+
+    // Step 2: check when length changes
+    for (int i = 1; i < n; i++) {
+        if (!arr.get(i).equals(arr.get(i - 1))) {
+            result.add(n - i);
+        }
+    }
+
+    return result;
+}
+
+    }
+
+
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        String[] arrTemp = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        List<Integer> arr = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            int arrItem = Integer.parseInt(arrTemp[i]);
+            arr.add(arrItem);
+        }
+
+        List<Integer> result = Result.cutTheSticks(arr);
+
+        for (int i = 0; i < result.size(); i++) {
+            bufferedWriter.write(String.valueOf(result.get(i)));
+
+            if (i != result.size() - 1) {
+                bufferedWriter.write("\n");
+            }
+        }
+
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
