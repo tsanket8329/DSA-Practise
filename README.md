@@ -689,3 +689,7 @@ ind the shortest stick length Cut that length from all sticks Remove sticks that
 Each operation consists of adding or subtracting a fixed value x to any element.
 The solution flattens the grid into a single list and sorts it.
 The median value is chosen as the target to minimize total operations.
+For each element, the difference from the target is checked.
+If the difference is not divisible by x, the task is impossible.
+Otherwise, operations are counted as (difference / x) for each element.
+The total number of operations is returned as the final result.
