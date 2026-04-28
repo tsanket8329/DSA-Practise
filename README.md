@@ -684,3 +684,8 @@ You are given an array of integers representing the lengths of sticks.
 Perform the following operation repeatedly until no sticks remain:
 
 ind the shortest stick length Cut that length from all sticks Remove sticks that become 0 length Before each cut, print the number of sticks present 📥 Input Integer n → number of sticks Array arr → stick lengths 📤 Output Print number of sticks before each iteration 📌 Example Input: 6 5 4 4 2 2 8 Output: 6 4 2 1 💡 Explanation Start with 6 sticks Cut smallest (2) → 4 sticks remain Cut again → 2 sticks remain Cut again → 1 stick Done 🎯 Goal Return a list of integers showing how many sticks remain before each cut
+
+---->>> Minimum Operations to Make a Uni-Value Grid:
+Each operation consists of adding or subtracting a fixed value x to any element.
+The solution flattens the grid into a single list and sorts it.
+The median value is chosen as the target to minimize total operations.
