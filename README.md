@@ -693,3 +693,5 @@ For each element, the difference from the target is checked.
 If the difference is not divisible by x, the task is impossible.
 Otherwise, operations are counted as (difference / x) for each element.
 The total number of operations is returned as the final result.
+Time complexity is efficient due to sorting and linear traversal.
+This approach ensures optimal transformation with minimal cost.
