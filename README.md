@@ -695,3 +695,12 @@ Otherwise, operations are counted as (difference / x) for each element.
 The total number of operations is returned as the final result.
 Time complexity is efficient due to sorting and linear traversal.
 This approach ensures optimal transformation with minimal cost.
+
+--->>>HACKERRANK 24: NON DIVISIBLE SUSBET
+Problem (Non-Divisible Subset – HackerRank)
+
+Given:
+
+Array s Integer k
+
+👉 Find the maximum subset size such that:
