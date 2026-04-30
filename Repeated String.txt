@@ -1,0 +1,72 @@
+Repeated String – Problem Statement
+
+There is a string s consisting of lowercase English letters. This string is repeated infinitely many times.
+
+You are given a number n. Your task is to find how many times the letter 'a' appears in the first n characters of the infinitely repeated string.
+
+📥 Input
+A string s
+A long integer n
+📤 Output
+Return a long integer representing the count of 'a' in the first n characters
+🔍 Example 1
+
+Input:
+
+s = "aba"
+n = 10
+
+Explanation:
+Infinite string → abaabaabaa...
+First 10 characters → abaabaabaa
+Number of 'a' → 7
+
+Output:
+
+7
+🔍 Example 2
+
+Input:
+
+s = "a"
+n = 1000000000000
+
+Output:
+
+1000000000000
+⚠️ Constraints
+1
+≤
+∣
+𝑠
+∣
+≤
+100
+1≤∣s∣≤100
+1
+≤
+𝑛
+≤
+10
+12
+1≤n≤10
+12
+CODE
+public static long repeatedString(String s, long n) {
+    long countA = 0;
+
+    for (char c : s.toCharArray()) {
+        if (c == 'a') countA++;
+    }
+
+    long fullRepeats = n / s.length();
+    long remainder = n % s.length();
+
+    long total = fullRepeats * countA;
+
+    for (int i = 0; i < remainder; i++) {
+        if (s.charAt(i) == 'a') total++;
+    }
+
+    return total;
+}
