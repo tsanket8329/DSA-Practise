@@ -715,3 +715,15 @@ There is a string s consisting of lowercase English letters. This string is repe
 
 You are given a number n. Your task is to find how many times the letter 'a' appears in the first n characters of the infinitely repeated string.
 
+
+📥 Input A string s A long integer n 📤 Output Return a long integer representing the count of 'a' in the first n characters 🔍 Example 1
+
+Input:
+
+s = "aba" n = 10
+
+Explanation: Infinite string → abaabaabaa... First 10 characters → abaabaabaa Number of 'a' → 7
+
+Output:
+
+7 🔍 Example 2
