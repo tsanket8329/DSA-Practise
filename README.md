@@ -707,3 +707,11 @@ Array s Integer k
 (a + b) % k ≠ 0 for any pair 💡 Final Approach (Short) Count frequency of remainders: freq[i] = count of numbers with remainder i Add: 1 if freq[0] > 0 For i = 1 → k/2: If i == k - i → add 1 Else → add max(freq[i], freq[k - i]) 📌 Sample Input: 4 3 1 7 2 4 Output: 3 🔥 Final One-Line Concept
 
 Use remainders and never pick both r and k-r.
+
+HACKERRANK 25: REPEATED STRING
+Repeated String – Problem Statement
+
+There is a string s consisting of lowercase English letters. This string is repeated infinitely many times.
+
+You are given a number n. Your task is to find how many times the letter 'a' appears in the first n characters of the infinitely repeated string.
+
