@@ -727,3 +727,10 @@ Explanation: Infinite string → abaabaabaa... First 10 characters → abaabaaba
 Output:
 
 7 🔍 Example 2
+nput:
+
+s = "a" n = 1000000000000
+
+Output:
+
+1000000000000 ⚠️ Constraints 1 ≤ ∣ 𝑠 ∣ ≤ 100 1≤∣s∣≤100 1 ≤ 𝑛 ≤ 10 12 1≤n≤10 12
