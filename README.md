@@ -745,3 +745,16 @@ You are given two strings A and B consisting of lowercase English letters.
 🔹 Your task is to perform 3 operations: 1️⃣ Sum of lengths
 
 Print the sum of the lengths of string A and B.
+
+
+2️⃣ Lexicographical comparison
+
+Check if string A is lexicographically greater than B.
+
+👉 If A > B, print:
+
+Yes
+
+Otherwise print:
+
+No 3️⃣ Capitalization
