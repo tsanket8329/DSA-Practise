@@ -734,3 +734,14 @@ s = "a" n = 1000000000000
 Output:
 
 1000000000000 ⚠️ Constraints 1 ≤ ∣ 𝑠 ∣ ≤ 100 1≤∣s∣≤100 1 ≤ 𝑛 ≤ 10 12 1≤n≤10 12
+
+HACKERRANK 26: JAVA STRINGS DOCUMENTATION
+HackerRank – Java Strings Introduction
+
+A string is a sequence of characters.
+
+You are given two strings A and B consisting of lowercase English letters.
+
+🔹 Your task is to perform 3 operations: 1️⃣ Sum of lengths
+
+Print the sum of the lengths of string A and B.
