@@ -758,3 +758,6 @@ Yes
 Otherwise print:
 
 No 3️⃣ Capitalization
+Capitalize the first letter of both strings and print them on one line separated by a space.
+
+📥 Input Format A B First line → string A Second line → string B 📤 Output Format (sum of lengths) Yes/No Capitalized A + space + Capitalized B ✅ Example Input: hello java Output: 9 No Hello Java
