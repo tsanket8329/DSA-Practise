@@ -1,0 +1,74 @@
+HackerRank – Java Strings Introduction
+
+A string is a sequence of characters.
+
+You are given two strings A and B consisting of lowercase English letters.
+
+🔹 Your task is to perform 3 operations:
+1️⃣ Sum of lengths
+
+Print the sum of the lengths of string A and B.
+
+2️⃣ Lexicographical comparison
+
+Check if string A is lexicographically greater than B.
+
+👉 If A > B, print:
+
+Yes
+
+Otherwise print:
+
+No
+3️⃣ Capitalization
+
+Capitalize the first letter of both strings and print them on one line separated by a space.
+
+📥 Input Format
+A
+B
+First line → string A
+Second line → string B
+📤 Output Format
+(sum of lengths)
+Yes/No
+Capitalized A + space + Capitalized B
+✅ Example
+Input:
+hello
+java
+Output:
+9
+No
+Hello Java
+CODE
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        String A = sc.next();
+        String B = sc.next();
+        
+        // 1. Sum of lengths
+        System.out.println(A.length() + B.length());
+        
+        // 2. Lexicographical comparison
+        if (A.compareTo(B) > 0) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+        
+        // 3. Capitalize first letter
+        String capA = A.substring(0, 1).toUpperCase() + A.substring(1);
+        String capB = B.substring(0, 1).toUpperCase() + B.substring(1);
+        
+        System.out.println(capA + " " + capB);
+        
+        sc.close();
+    }
+}
