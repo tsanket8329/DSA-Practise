@@ -761,3 +761,11 @@ No 3️⃣ Capitalization
 Capitalize the first letter of both strings and print them on one line separated by a space.
 
 📥 Input Format A B First line → string A Second line → string B 📤 Output Format (sum of lengths) Yes/No Capitalized A + space + Capitalized B ✅ Example Input: hello java Output: 9 No Hello Java
+
+
+---->>CLASS SOLUTION
+.This project implements a solution to count “good numbers” after digit rotation.
+A number is considered valid if it remains a number after rotation and changes to a different number.
+Digits 0, 1, and 8 remain the same, while 2, 5, 6, and 9 transform into other digits.
+Digits 3, 4, and 7 invalidate the number when rotated.
+The function iterates from 1 to n and checks each number individually.
