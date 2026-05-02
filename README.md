@@ -769,3 +769,8 @@ A number is considered valid if it remains a number after rotation and changes t
 Digits 0, 1, and 8 remain the same, while 2, 5, 6, and 9 transform into other digits.
 Digits 3, 4, and 7 invalidate the number when rotated.
 The function iterates from 1 to n and checks each number individually.
+Each digit is processed using modulo and integer division operations.
+A flag ensures the number contains at least one transforming digit.
+Another flag ensures no invalid digits are present.
+Valid transformed numbers are counted and returned as the result.
+This solution is simple, efficient, and suitable for beginner-level problem solving
