@@ -783,3 +783,14 @@ Given a string s, split it into tokens. A token is defined as a sequence of one 
 Print:
 
 Total number of tokens Each token on a new line 🔹 Input
+A single line string s
+
+He is a very very good boy, isn't he? 🔹 Output 10 He is a very very good boy isn t he ⚙️ Constraints String contains letters + special characters: ! , ? . _ ' @ and spaces 💡 Hint
+
+Split using:
+
+[^A-Za-z]+
+
+🧠 Key Concept
+
+👉 Token = only letters 👉 So remove everything else
