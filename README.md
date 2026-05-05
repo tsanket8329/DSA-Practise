@@ -794,3 +794,14 @@ Split using:
 🧠 Key Concept
 
 👉 Token = only letters 👉 So remove everything else
+✔️ Split by:
+
+[^A-Za-z]+ 🚀 Quick Trick
+
+👉 “Keep letters → break at non-letters” String:
+
+H e l l o w o r l d 0 1 2 3 4 5 6 7 8 9
+
+From index 3 to 7, the substring is:
+
+lowo
