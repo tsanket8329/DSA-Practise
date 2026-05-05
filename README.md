@@ -774,3 +774,12 @@ A flag ensures the number contains at least one transforming digit.
 Another flag ensures no invalid digits are present.
 Valid transformed numbers are counted and returned as the result.
 This solution is simple, efficient, and suitable for beginner-level problem solving
+
+HACKERRANK 28: JAVA STRING TOKEN
+Problem: Java String Tokens 📌 Problem Statement
+
+Given a string s, split it into tokens. A token is defined as a sequence of one or more English alphabetic letters.
+
+Print:
+
+Total number of tokens Each token on a new line 🔹 Input
