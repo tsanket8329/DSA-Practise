@@ -818,3 +818,22 @@ Total number of tokens Each token on a new line 🔹 Input
 A single line string s
 
 He is a very very good boy, isn't he? 🔹 Output 10 He is a very very good boy isn t he ⚙️ Constraints String contains letters + special characters: ! , ? . _ ' @ and spaces 💡 Hint
+Split using:
+
+[^A-Za-z]+
+
+🧠 Key Concept
+
+👉 Token = only letters 👉 So remove everything else
+
+✔️ Split by:
+
+[^A-Za-z]+ 🚀 Quick Trick
+
+👉 “Keep letters → break at non-letters” String:
+
+H e l l o w o r l d 0 1 2 3 4 5 6 7 8 9
+
+From index 3 to 7, the substring is:
+
+lowo
