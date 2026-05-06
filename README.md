@@ -805,3 +805,16 @@ H e l l o w o r l d 0 1 2 3 4 5 6 7 8 9
 From index 3 to 7, the substring is:
 
 lowo
+
+HACKERRANK 28: JAVA STRING TOKEN
+Problem: Java String Tokens 📌 Problem Statement
+
+Given a string s, split it into tokens. A token is defined as a sequence of one or more English alphabetic letters.
+
+Print:
+
+Total number of tokens Each token on a new line 🔹 Input
+
+A single line string s
+
+He is a very very good boy, isn't he? 🔹 Output 10 He is a very very good boy isn t he ⚙️ Constraints String contains letters + special characters: ! , ? . _ ' @ and spaces 💡 Hint
