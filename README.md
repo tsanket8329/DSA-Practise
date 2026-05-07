@@ -837,3 +837,14 @@ H e l l o w o r l d 0 1 2 3 4 5 6 7 8 9
 From index 3 to 7, the substring is:
 
 lowo
+
+HACKERRANK 29: PATTERN SYNTAX CHECKER
+Problem: Pattern Syntax Checker
+
+Using regular expressions (regex), we can match patterns in text. Before using a regex, we must ensure that its syntax is valid.
+
+📌 Task
+
+You are given several strings representing regex patterns. For each pattern:
+
+Print "Valid" if the regex syntax is correct Print "Invalid" if the regex syntax is incorrect
