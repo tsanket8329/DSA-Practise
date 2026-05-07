@@ -856,3 +856,5 @@ Pattern.compile(pattern) 📥 Input Format First line contains an integer T → 
 For each test case:
 
 Print "Valid" or "Invalid" on a new line 🔢 Constraints 1 ≤ T ≤ 100 Pattern consists of printable ASCII characters
+
+Print "Valid" or "Invalid" on a new line 🔢 Constraints 1 ≤ T ≤ 100 Pattern consists of printable ASCII characters 🧪 Sample Input 3 ([A-Z])(.+) [AZa-z batcatpat(nat ✅ Sample Output Valid Invalid Invalid 💡 Explanation ([A-Z])(.+) → correct grouping → ✅ Valid [AZa-z → mismatched brackets → ❌ Invalid batcatpat(nat → missing ) → ❌ Invalid
