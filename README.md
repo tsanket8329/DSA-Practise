@@ -848,3 +848,11 @@ Using regular expressions (regex), we can match patterns in text. Before using a
 You are given several strings representing regex patterns. For each pattern:
 
 Print "Valid" if the regex syntax is correct Print "Invalid" if the regex syntax is incorrect
+
+👉 A regex is considered valid if it can be successfully compiled using:
+
+Pattern.compile(pattern) 📥 Input Format First line contains an integer T → number of test cases Next T lines each contain a string → the regex pattern 📤 Output Format
+
+For each test case:
+
+Print "Valid" or "Invalid" on a new line 🔢 Constraints 1 ≤ T ≤ 100 Pattern consists of printable ASCII characters
