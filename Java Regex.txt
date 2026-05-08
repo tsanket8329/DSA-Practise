@@ -1,0 +1,60 @@
+Problem: Validate Floating Point Number
+
+Write a regular expression to check whether a given string is a valid floating point number.
+
+A valid floating point number:
+
+May be positive or negative
+May contain digits before and/or after decimal point
+Must contain at least one digit
+Decimal point . is optional
+✅ Valid Examples
+12.34
+-12.34
+0.5
+.25
+10
+-0.99
+❌ Invalid Examples
+.
+abc
+12.
+--12.3
+12..34
+🔹 Input Format
+
+Multiple lines of input, each containing a string.
+
+🔹 Output Format
+
+For each input, print:
+
+true
+
+or
+
+false
+🔹 Constraints
+String may contain any ASCII characters
+🔹 Starter Code (Java)
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.Scanner;
+
+class Solution{
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        while(in.hasNext()){
+            String IP = in.next();
+            System.out.println(IP.matches(new MyRegex().pattern));
+        }
+
+    }
+}
+
+class MyRegex {
+    String pattern = 
+        "^(([0-9]|[0-9][0-9]|[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5])\\.){3}" +
+        "([0-9]|[0-9][0-9]|[0-1][0-9][0-9]|2[0-4][0-9]|25[0-5])$";
+}
