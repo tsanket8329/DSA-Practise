@@ -858,3 +858,12 @@ For each test case:
 Print "Valid" or "Invalid" on a new line 🔢 Constraints 1 ≤ T ≤ 100 Pattern consists of printable ASCII characters
 
 Print "Valid" or "Invalid" on a new line 🔢 Constraints 1 ≤ T ≤ 100 Pattern consists of printable ASCII characters 🧪 Sample Input 3 ([A-Z])(.+) [AZa-z batcatpat(nat ✅ Sample Output Valid Invalid Invalid 💡 Explanation ([A-Z])(.+) → correct grouping → ✅ Valid [AZa-z → mismatched brackets → ❌ Invalid batcatpat(nat → missing ) → ❌ Invalid
+
+HACKERRANK 30 : JAVA REGEX
+Problem: Validate Floating Point Number
+
+Write a regular expression to check whether a given string is a valid floating point number.
+
+A valid floating point number:
+
+May be positive or negative May contain digits before and/or after decimal point Must contain at least one digit Decimal point . is optional ✅ Valid Examples 12.34 -12.34 0.5 .25 10 -0.99 ❌ Invalid Examples . abc 12. --12.3 12..34 🔹 Input Format
