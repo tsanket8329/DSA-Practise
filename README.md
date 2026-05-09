@@ -917,3 +917,7 @@ m.group(1) → first word
 
 For each sentence:
 
+Create matcher using regex Find duplicate word sequences Replace them with first occurrence Repeat until no duplicates remain 🧪 Sample Walkthrough Input 1 Hello hello Ab aB Matching "Hello hello" → duplicate "Ab aB" → duplicate Output Hello Ab ⚠️ Important Notes Do NOT change original structure of code Only fill: Regex Pattern flag replaceAll arguments Matching must be case-insensitive Output must preserve original casing of first word 🎯 Final Code Snippet String regex = "\b(\w+)(\b\W+\b\1\b)+"; Pattern p = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+
+while (m.find()) { input = input.replaceAll(m.group(), m.group(1)); }
+
