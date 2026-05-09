@@ -897,3 +897,23 @@ Use this regex:
 "\b(\w+)(\b\W+\b\1\b)+" 🔎 Explanation \b → word boundary (\w+) → captures a word → Group 1 ( ... )+ → matches repeated occurrences \1 → refers to the same word captured before
 
 👉 This matches patterns like:
+"to To tO" "bye bye bye" ✅ Step 2: Case-Insensitive Matching Pattern.CASE_INSENSITIVE
+
+👉 Ensures:
+
+"Hello hello" → duplicate "Ab aB" → duplicate ✅ Step 3: Replace Duplicates input.replaceAll(m.group(), m.group(1)); 🔎 Meaning
+
+m.group() → entire matched sequence
+
+"to To tO"
+
+m.group(1) → first word
+
+"to"
+
+👉 Replace full sequence with first occurrence
+
+🔁 Algorithm Flow
+
+For each sentence:
+
