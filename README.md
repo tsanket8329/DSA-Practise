@@ -887,3 +887,13 @@ Problem Summary
 You are given N sentences. For each sentence, remove duplicate words such that:
 
 Matching is case-insensitive Only the first occurrence of each word is kept The final output must preserve the original casing of the first occurrence 📥 Input Format First line: Integer N → number of sentences Next N lines: Each line contains a sentence 📤 Output Format Print each sentence after removing repeated words 🔒 Constraints Sentences contain only: English letters (a–z, A–Z) Whitespaces Length is within reasonable bounds 🔍 Approach
+
+We solve this using Regular Expressions (RegEx) with backreferences.
+
+✅ Step 1: Match Repeated Words
+
+Use this regex:
+
+"\b(\w+)(\b\W+\b\1\b)+" 🔎 Explanation \b → word boundary (\w+) → captures a word → Group 1 ( ... )+ → matches repeated occurrences \1 → refers to the same word captured before
+
+👉 This matches patterns like:
