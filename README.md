@@ -880,3 +880,10 @@ true
 or
 
 false 🔹 Constraints String may contain any ASCII characters
+
+HACKERRANK 31: REGEX SUPLICATE WORD REMOVAL
+Problem Summary
+
+You are given N sentences. For each sentence, remove duplicate words such that:
+
+Matching is case-insensitive Only the first occurrence of each word is kept The final output must preserve the original casing of the first occurrence 📥 Input Format First line: Integer N → number of sentences Next N lines: Each line contains a sentence 📤 Output Format Print each sentence after removing repeated words 🔒 Constraints Sentences contain only: English letters (a–z, A–Z) Whitespaces Length is within reasonable bounds 🔍 Approach
