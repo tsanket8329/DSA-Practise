@@ -1,0 +1,62 @@
+Problem: Parse Comma-Separated Integers (StringStream)
+
+You are given a string containing integers separated by commas. Your task is to extract these integers and store them in a vector.
+
+Function Signature
+vector<int> parseInts(string str);
+Input
+A single string str consisting of integers separated by commas.
+Example: "23,4,56"
+Output
+Return a vector of integers parsed from the string.
+Each integer should be printed on a new line.
+Example
+
+Input:
+
+23,4,56
+
+Output:
+
+23
+4
+56
+Explanation
+The input string contains numbers separated by commas.
+You need to split the string and convert each number into an integer.
+Constraints
+The length of the string is less than 1000.
+All values in the string are valid integers.
+CODE
+#include <sstream>
+#include <vector>
+#include <iostream>
+using namespace std;
+
+vector<int> parseInts(string str) {
+	// Complete this function
+   
+    vector<int> result;
+    stringstream ss(str);
+    int num;
+    char ch;
+
+    while (ss >> num) {
+        result.push_back(num);
+        ss >> ch; // to discard the comma
+    }
+
+    return result;
+}
+
+
+int main() {
+    string str;
+    cin >> str;
+    vector<int> integers = parseInts(str);
+    for(int i = 0; i < integers.size(); i++) {
+        cout << integers[i] << "\n";
+    }
+    
+    return 0;
+}
