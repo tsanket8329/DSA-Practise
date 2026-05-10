@@ -921,3 +921,10 @@ Create matcher using regex Find duplicate word sequences Replace them with first
 
 while (m.find()) { input = input.replaceAll(m.group(), m.group(1)); }
 
+HACKERRANK 32: STRING STREAM
+Problem: Parse Comma-Separated Integers (StringStream)
+
+You are given a string containing integers separated by commas. Your task is to extract these integers and store them in a vector.
+
+Function Signature vector parseInts(string str); Input A single string str consisting of integers separated by commas. Example: "23,4,56" Output Return a vector of integers parsed from the string. Each integer should be printed on a new line. Example
+
