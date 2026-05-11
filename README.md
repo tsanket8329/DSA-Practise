@@ -943,3 +943,5 @@ Question
 You are given two strings a and b, consisting of lowercase English letters.
 
 Perform the following operations:
+
+Print the length of string a and string b, separated by a space. Print the concatenation of a and b. Swap the first characters of both strings and print the modified strings separated by a space. 📥 Input Format First line: string a Second line: string b 📤 Output Format Line 1: Length of a and b Line 2: Concatenated string Line 3: Modified strings after swapping first characters 🧪 Sample Input abcd ef ✅ Sample Output 4 2 abcdef ebcd af
