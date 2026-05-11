@@ -936,3 +936,10 @@ Input:
 Output:
 
 23 4 56 Explanation The input string contains numbers separated by commas. You need to split the string and convert each number into an integer. Constraints The length of the string is less than 1000. All values in the string are valid integers.
+
+HACKERRANK 33: STRINGS CPP
+Question
+
+You are given two strings a and b, consisting of lowercase English letters.
+
+Perform the following operations:
