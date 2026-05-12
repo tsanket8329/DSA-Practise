@@ -953,3 +953,7 @@ A Solution class is implemented with the maxValue() method.
 Prefix array stores the maximum value from the left side.
 Suffix array stores the minimum value from the right side.
 The algorithm compares prefix and suffix values efficiently.
+Result values are stored in a separate result array.
+The solution works in linear time complexity O(n).
+The program is optimized for efficient array traversal operations.
+The final output returns an integer array with computed maximum values.
