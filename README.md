@@ -970,3 +970,11 @@ Each cloud is either:
 Starting from the first cloud (index 0), reach the last cloud in the minimum number of jumps.
 
 🪜 Rules You can jump: 1 step forward, or 2 steps forward You can only land on clouds with 0 It is guaranteed that reaching the end is always possible 📥 Input An integer n → number of clouds An array c of size n containing only 0s and 1s 📤 Output Return the minimum number of jumps needed to reach the last cloud 📌 Example Input: n = 7
+c = [0, 0, 1, 0, 0, 1, 0] Explanation:
+
+Avoid indices with 1 → (2 and 5)
+
+Possible paths:
+
+0 → 1 → 3 → 4 → 6 (4 jumps) ✅ 0 → 2 ❌ (not allowed) Output: 4 📌 Another Example Input: n = 6
+c = [0, 0, 0, 0, 1, 0] Output: 3
