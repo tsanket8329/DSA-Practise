@@ -957,3 +957,16 @@ Result values are stored in a separate result array.
 The solution works in linear time complexity O(n).
 The program is optimized for efficient array traversal operations.
 The final output returns an integer array with computed maximum values.
+
+HACKERRANK 34: JUMPING ON THE CLOUDS
+Jumping on the Clouds (HackerRank)
+
+There is a game with clouds placed in a line.
+
+Each cloud is either:
+
+0 → safe (you can land here) 1 → thunderhead (you must avoid) 🎯 Goal
+
+Starting from the first cloud (index 0), reach the last cloud in the minimum number of jumps.
+
+🪜 Rules You can jump: 1 step forward, or 2 steps forward You can only land on clouds with 0 It is guaranteed that reaching the end is always possible 📥 Input An integer n → number of clouds An array c of size n containing only 0s and 1s 📤 Output Return the minimum number of jumps needed to reach the last cloud 📌 Example Input: n = 7
