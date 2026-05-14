@@ -993,4 +993,9 @@ n = 5 arr = [3, 3, 2, 1, 3]
 Output:
 
 2
+Explanation:
+
+The number 3 appears most frequently (3 times) Remove 2 and 1 Remaining array → [3, 3, 3] 🔒 Constraints 1 ≤ 𝑛 ≤ 100 1≤n≤100 1 ≤ 𝑎 𝑟 𝑟 [ 𝑖 ] ≤ 100 1≤arr[i]≤100 💡 Key Idea
+
+Keep the most frequent element and delete all others.
 
