@@ -978,3 +978,19 @@ Possible paths:
 
 0 → 1 → 3 → 4 → 6 (4 jumps) ✅ 0 → 2 ❌ (not allowed) Output: 4 📌 Another Example Input: n = 6
 c = [0, 0, 0, 0, 1, 0] Output: 3
+
+HACKERRANK 35: EQUALIZE THE ARRAY
+Equalize the Array (HackerRank)
+
+Given an array of integers, determine the minimum number of elements to delete so that all remaining elements are equal.
+
+📥 Input An integer n — size of the array An array arr of n integers 📤 Output Return an integer representing the minimum deletions required 📌 Example
+
+Input:
+
+n = 5 arr = [3, 3, 2, 1, 3]
+
+Output:
+
+2
+
