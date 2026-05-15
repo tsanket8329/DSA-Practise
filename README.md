@@ -999,3 +999,11 @@ The number 3 appears most frequently (3 times) Remove 2 and 1 Remaining array �
 
 Keep the most frequent element and delete all others.
 
+HACKERRANK 36: VALID USERNAME REGULAR EXPRESSION
+Valid Username Regular Expression 📌 Problem Summary
+
+You are given a list of usernames. For each username, determine whether it is Valid or Invalid based on the rules below.
+
+📏 Valid Username Rules
+
+A username is considered valid if:
