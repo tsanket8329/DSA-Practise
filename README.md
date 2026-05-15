@@ -1007,3 +1007,8 @@ You are given a list of usernames. For each username, determine whether it is Va
 📏 Valid Username Rules
 
 A username is considered valid if:
+Length Constraint The username must contain 8 to 30 characters (inclusive)
+Allowed Characters The username can only contain: Lowercase letters: a–z Uppercase letters: A–Z Digits: 0–9 Underscore: _
+First Character Rule The first character must be an alphabet (a–z or A–Z) ❌ Invalid Cases
+A username is invalid if:
+
