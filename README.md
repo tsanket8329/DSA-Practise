@@ -1012,3 +1012,10 @@ Allowed Characters The username can only contain: Lowercase letters: a–z Upper
 First Character Rule The first character must be an alphabet (a–z or A–Z) ❌ Invalid Cases
 A username is invalid if:
 
+Length < 8 or > 30 Contains characters other than [a-zA-Z0-9_] Starts with a digit or underscore 🧠 Approach
+
+Instead of checking each rule separately, use a regular expression to enforce all rules at once.
+
+✅ Regular Expression ^[a-zA-Z][a-zA-Z0-9_]{7,29}$ 🔍 Explanation of Regex Part Meaning ^ Start of string [a-zA-Z] First character must be a letter [a-zA-Z0-9_] Allowed characters {7,29} Remaining length (total = 8–30) $ End of string 💻 Implementation class UsernameValidator { public static final String regularExpression = "^[a-zA-Z][a-zA-Z0-9_]{7,29}$"; } 📌 Example Input 8 Julia Samantha Samantha_21 1Samantha Samantha?10_2A JuliaZ007 Julia@007 _Julia007 Output Invalid Valid Valid Invalid Invalid Valid Invalid Invalid 🎯 Key Insight
+
+👉 Convert all conditions into a single regex pattern instead of writing multiple checks.
