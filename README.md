@@ -1039,3 +1039,12 @@ Printing a box should display:
 l b h
 
 (on a single line, space-separated)
+
+
+🧪 Input Format First line: integer n (number of operations) Next n lines: each contains a query of type: Type Operation 1 Print current box 2 l b h Create new box and assign to current 3 l b h Compare new box with current 4 Print volume of current box 5 Copy current box and print 📌 Example
+
+Input:
+
+5 2 2 3 4 1 4 5 3 3 4 5
+
+Output:
