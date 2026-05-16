@@ -1,0 +1,146 @@
+Problem: Box It!
+
+Design a class named Box whose dimensions are integers and private to the class. The dimensions are:
+
+length (l)
+breadth (b)
+height (h)
+🔧 Requirements
+1. Constructors
+Box()
+→ Initializes l = b = h = 0
+Box(int l, int b, int h)
+→ Initializes the box with given dimensions
+Box(Box B)
+→ Copy constructor (copies dimensions from another box)
+2. Member Functions
+int getLength() → returns length
+int getBreadth() → returns breadth
+int getHeight() → returns height
+long long CalculateVolume() → returns volume of box
+3. Operator Overloading
+🔹 Overload < operator
+
+A box A is considered less than box B if:
+
+A.l < B.l
+OR if A.l == B.l AND A.b < B.b
+OR if A.l == B.l, A.b == B.b AND A.h < B.h
+🔹 Overload << operator
+
+Printing a box should display:
+
+l b h
+
+(on a single line, space-separated)
+
+🧪 Input Format
+First line: integer n (number of operations)
+Next n lines: each contains a query of type:
+Type	Operation
+1	Print current box
+2 l b h	Create new box and assign to current
+3 l b h	Compare new box with current
+4	Print volume of current box
+5	Copy current box and print
+📌 Example
+
+Input:
+
+5
+2 2 3 4
+1
+4
+5
+3 3 4 5
+
+Output:
+
+2 3 4
+2 3 4
+24
+2 3 4
+Greater
+⚠️ Constraints
+Dimensions are integers
+No two boxes compared will have all dimensions equal
+CODE
+#include<bits/stdc++.h>
+
+using namespace std;
+
+//Implement the class Box  
+//l,b,h are integers representing the dimensions of the box
+
+// The class should have the following functions : 
+
+// Constructors: 
+// Box();
+// Box(int,int,int);
+// Box(Box);
+
+
+// int getLength(); // Return box's length
+// int getBreadth (); // Return box's breadth
+// int getHeight ();  //Return box's height
+// long long CalculateVolume(); // Return the volume of the box
+
+//Overload operator < as specified
+//bool operator<(Box& b)
+
+//Overload operator << as specified
+//ostream& operator<<(ostream& out, Box& B)
+
+
+void check2()
+{
+	int n;
+	cin>>n;
+	Box temp;
+	for(int i=0;i<n;i++)
+	{
+		int type;
+		cin>>type;
+		if(type ==1)
+		{
+			cout<<temp<<endl;
+		}
+		if(type == 2)
+		{
+			int l,b,h;
+			cin>>l>>b>>h;
+			Box NewBox(l,b,h);
+			temp=NewBox;
+			cout<<temp<<endl;
+		}
+		if(type==3)
+		{
+			int l,b,h;
+			cin>>l>>b>>h;
+			Box NewBox(l,b,h);
+			if(NewBox<temp)
+			{
+				cout<<"Lesser\n";
+			}
+			else
+			{
+				cout<<"Greater\n";
+			}
+		}
+		if(type==4)
+		{
+			cout<<temp.CalculateVolume()<<endl;
+		}
+		if(type==5)
+		{
+			Box NewBox(temp);
+			cout<<NewBox<<endl;
+		}
+
+	}
+}
+
+int main()
+{
+	check2();
+}
