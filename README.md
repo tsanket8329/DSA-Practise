@@ -1048,3 +1048,5 @@ Input:
 5 2 2 3 4 1 4 5 3 3 4 5
 
 Output:
+
+2 3 4 2 3 4 24 2 3 4 Greater ⚠️ Constraints Dimensions are integers No two boxes compared will have all dimensions equal
