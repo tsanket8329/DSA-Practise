@@ -1019,3 +1019,23 @@ Instead of checking each rule separately, use a regular expression to enforce al
 ✅ Regular Expression ^[a-zA-Z][a-zA-Z0-9_]{7,29}$ 🔍 Explanation of Regex Part Meaning ^ Start of string [a-zA-Z] First character must be a letter [a-zA-Z0-9_] Allowed characters {7,29} Remaining length (total = 8–30) $ End of string 💻 Implementation class UsernameValidator { public static final String regularExpression = "^[a-zA-Z][a-zA-Z0-9_]{7,29}$"; } 📌 Example Input 8 Julia Samantha Samantha_21 1Samantha Samantha?10_2A JuliaZ007 Julia@007 _Julia007 Output Invalid Valid Valid Invalid Invalid Valid Invalid Invalid 🎯 Key Insight
 
 👉 Convert all conditions into a single regex pattern instead of writing multiple checks.
+
+HACKERRANK 37: BOX IT!
+Problem: Box It!
+
+Design a class named Box whose dimensions are integers and private to the class. The dimensions are:
+
+length (l) breadth (b) height (h) 🔧 Requirements
+
+Constructors Box() → Initializes l = b = h = 0 Box(int l, int b, int h) → Initializes the box with given dimensions Box(Box B) → Copy constructor (copies dimensions from another box)
+Member Functions int getLength() → returns length int getBreadth() → returns breadth int getHeight() → returns height long long CalculateVolume() → returns volume of box
+Operator Overloading 🔹 Overload < operator
+A box A is considered less than box B if:
+
+A.l < B.l OR if A.l == B.l AND A.b < B.b OR if A.l == B.l, A.b == B.b AND A.h < B.h 🔹 Overload << operator
+
+Printing a box should display:
+
+l b h
+
+(on a single line, space-separated)
