@@ -1061,5 +1061,10 @@ You are required to define a structure named Student that contains the following
 age (integer) first_name (string) last_name (string) standard (integer) 📥 Input Format
 
 Input consists of 4 lines
+Integer → age String → first_name String → last_name Integer → standard 📤 Output Format
+
+Print all the values in a single line separated by spaces:
+
+age first_name last_name standard 📌 Sample Input 15 john carmack 10 📌 Sample Output 15 john carmack 10
 
 
