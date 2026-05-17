@@ -1051,4 +1051,15 @@ Output:
 
 2 3 4 2 3 4 24 2 3 4 Greater ⚠️ Constraints Dimensions are integers No two boxes compared will have all dimensions equal
 
+HACKERRANK 38: STRUCTS
+Problem: Structs (HackerRank)
+
+In C++, a structure (struct) is a way to group variables of different types under a single name.
+
+You are required to define a structure named Student that contains the following fields:
+
+age (integer) first_name (string) last_name (string) standard (integer) 📥 Input Format
+
+Input consists of 4 lines
+
 
