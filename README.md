@@ -1077,4 +1077,9 @@ content
 
 The end tag always starts with /, and the tag names must match.
 
+📌 Task
+
+Given multiple lines of text containing tag-based expressions, extract and print the content enclosed within valid matching tags.
+
+✅ Rules The start tag and end tag must have the same name ❌
 
