@@ -1068,3 +1068,13 @@ Print all the values in a single line separated by spaces:
 age first_name last_name standard 📌 Sample Input 15 john carmack 10 📌 Sample Output 15 john carmack 10
 
 
+HACKERRANK 39: TAG CONTENT EXTRACTOR
+Problem: Tag Content Extractor
+
+In a tag-based language like XML or HTML, contents are enclosed between a start tag and an end tag:
+
+content
+
+The end tag always starts with /, and the tag names must match.
+
+
