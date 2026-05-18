@@ -1,0 +1,85 @@
+Problem: Tag Content Extractor
+
+In a tag-based language like XML or HTML, contents are enclosed between a start tag and an end tag:
+
+<tag>content</tag>
+
+The end tag always starts with /, and the tag names must match.
+
+📌 Task
+
+Given multiple lines of text containing tag-based expressions, extract and print the content enclosed within valid matching tags.
+
+✅ Rules
+The start tag and end tag must have the same name
+❌ <h1>Hello</h2> → invalid
+
+Tags can be nested, but:
+
+Only extract content from the innermost valid tags
+Ignore content that contains nested tags
+
+Example:
+
+<h1><a>valid</a>invalid</h1>
+
+✔ Output: valid
+❌ Ignore: invalid
+
+Tags may contain any printable characters
+📥 Input Format
+First line: integer T (number of test cases)
+Next T lines: each line contains a string with tags
+📤 Output Format
+For each test case:
+Print each valid content on a new line
+
+If no valid content exists, print:
+
+None
+🧪 Sample Input
+4
+<h1>Nayeem loves counseling</h1>
+<h1><h1>Sanjay has no watch</h1></h1><par>So wait for a while</par>
+<Amee>safat codes like a ninja</amee>
+<SA premium>Imtiaz has a secret crush</SA premium>
+🧾 Sample Output
+Nayeem loves counseling
+Sanjay has no watch
+So wait for a while
+None
+Imtiaz has a secret crush
+🎯 Goal
+
+CODE
+import java.io.*;
+import java.util.*;
+import java.util.regex.*;
+
+public class Solution{
+    public static void main(String[] args){
+        
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+        
+        while(testCases > 0){
+            String line = in.nextLine();
+            
+            boolean found = false;
+            
+            Pattern pattern = Pattern.compile("<(.+)>([^<>]+)</\\1>");
+            Matcher matcher = pattern.matcher(line);
+            
+            while(matcher.find()){
+                System.out.println(matcher.group(2));
+                found = true;
+            }
+            
+            if(!found){
+                System.out.println("None");
+            }
+            
+            testCases--;
+        }
+    }
+}
