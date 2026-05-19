@@ -1088,4 +1088,8 @@ Question (Java BigDecimal – HackerRank)
 
 Given an array s of real number strings, sort the array in descending numerical order using Java’s BigDecimal class.
 
+🔹 Important Conditions: Do not change the original format of the numbers Example: "02.34" should remain "02.34" Example: ".12" should remain ".12" If two numbers are numerically equal, keep them in the same order as input (stable sorting). 🔹 Input Format: First line: integer n (size of array) Next n lines: real number strings 🔹 Output: Print the sorted array in descending order 🔹 Example:
+
+Input:
+
 
