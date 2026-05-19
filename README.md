@@ -1083,3 +1083,9 @@ Given multiple lines of text containing tag-based expressions, extract and print
 
 ✅ Rules The start tag and end tag must have the same name ❌
 
+HACKERRANK 40:JAVA BIG DECIMAL
+Question (Java BigDecimal – HackerRank)
+
+Given an array s of real number strings, sort the array in descending numerical order using Java’s BigDecimal class.
+
+
