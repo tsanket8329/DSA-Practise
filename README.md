@@ -1110,3 +1110,19 @@ Implement a function:
 string to_string();
 
 It should return a string in this format:
+
+string to_string();
+
+It should return a string in this format:
+
+age,first_name,last_name,standard 📥 Input age first_name last_name standard 📤 Output
+
+The main function will:
+
+Print age Print last name, first name Print standard Print formatted string 🧪 Example
+
+Input
+
+15 john carmack 10
+
+Output 15 carmack, john 10 15,john,carmack,10
