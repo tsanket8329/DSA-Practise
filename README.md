@@ -1098,3 +1098,15 @@ Output:
 
 90 56.6 50 02.34 0.12 .12 0 000.000 -100
 
+HACKERRANK 41: CLASS IN CPP (STUDENT CLASS)
+Problem: Class in C++ (Student Class)
+
+Create a class named Student to store student details:
+
+age (int) first_name (string) last_name (string) standard (int) ⚙️ Requirements Make all data members private. Create public getter and setter functions for each variable: get_age(), set_age() get_first_name(), set_first_name() get_last_name(), set_last_name() get_standard(), set_standard()
+
+Implement a function:
+
+string to_string();
+
+It should return a string in this format:
