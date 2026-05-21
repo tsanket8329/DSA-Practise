@@ -1137,3 +1137,11 @@ A prime number is a natural number greater than 1 whose only positive divisors a
 Given a large integer n, determine whether it is prime or not prime using Java’s BigInteger class.
 
 📥 Input Format A single line containing an integer n 📤 Output Format Print: "prime" → if the number is prime "not prime" → otherwise 📌 Constraints The number n can have up to 100 digits 📊 Example
+
+Input
+
+13
+
+Output
+
+prime 💡 Explanation 13 has only two divisors: 1 and 13 So, it is a prime number 🎯 Requirement You must use Java’s BigInteger.isProbablePrime() method
