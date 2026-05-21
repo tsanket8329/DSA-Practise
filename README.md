@@ -1126,3 +1126,14 @@ Input
 15 john carmack 10
 
 Output 15 carmack, john 10 15,john,carmack,10
+
+HACKERRANK 42: JAVA PRIMALITY TEST
+Java Primality Test
+
+A prime number is a natural number greater than 1 whose only positive divisors are 1 and itself.
+
+📝 Problem
+
+Given a large integer n, determine whether it is prime or not prime using Java’s BigInteger class.
+
+📥 Input Format A single line containing an integer n 📤 Output Format Print: "prime" → if the number is prime "not prime" → otherwise 📌 Constraints The number n can have up to 100 digits 📊 Example
