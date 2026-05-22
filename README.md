@@ -1145,3 +1145,12 @@ Input
 Output
 
 prime 💡 Explanation 13 has only two divisors: 1 and 13 So, it is a prime number 🎯 Requirement You must use Java’s BigInteger.isProbablePrime() method
+
+HACKERRANK 43: CLASSES AND OBJECTS
+Classes and Objects (HackerRank)
+
+A class defines a blueprint for objects. You are required to implement a class to help compare student scores.
+
+Kristen wants to know how many students scored higher than her in the exams this semester.
+
+📌 Task
