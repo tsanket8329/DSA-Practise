@@ -1154,3 +1154,6 @@ A class defines a blueprint for objects. You are required to implement a class t
 Kristen wants to know how many students scored higher than her in the exams this semester.
 
 📌 Task
+Create a class named Student with the following:
+
+Data Member vector scores → stores 5 exam scores Member Functions void input() Reads 5 integers from input Stores them in scores int calculateTotalScore() Returns the sum of all scores 📥 Input Format First line: integer n → number of students Next n lines: each contains 5 integers (scores of a student) 📤 Output Format Print the number of students who scored strictly higher total marks than Kristen 🧠 Important Notes Kristen is the first student (index 0) Compare all other students with her total score 🧪 Sample Input 3 30 40 45 10 10 40 40 40 10 10 50 20 30 10 10 ✅ Sample Output 1 🔍 Explanation Kristen’s total = 30 + 40 + 45 + 10 + 10 = 135 Only one student has a higher total → output = 1
