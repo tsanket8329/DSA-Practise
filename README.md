@@ -1157,3 +1157,19 @@ Kristen wants to know how many students scored higher than her in the exams this
 Create a class named Student with the following:
 
 Data Member vector scores → stores 5 exam scores Member Functions void input() Reads 5 integers from input Stores them in scores int calculateTotalScore() Returns the sum of all scores 📥 Input Format First line: integer n → number of students Next n lines: each contains 5 integers (scores of a student) 📤 Output Format Print the number of students who scored strictly higher total marks than Kristen 🧠 Important Notes Kristen is the first student (index 0) Compare all other students with her total score 🧪 Sample Input 3 30 40 45 10 10 40 40 40 10 10 50 20 30 10 10 ✅ Sample Output 1 🔍 Explanation Kristen’s total = 30 + 40 + 45 + 10 + 10 = 135 Only one student has a higher total → output = 1
+
+HACKERRANK 44: JAVA BIGINTEGER
+Java BigInteger
+
+In this problem, you have to add and multiply huge numbers! These numbers are so big that you can't contain them in any ordinary data types like a long integer.
+
+Use the power of Java's BigInteger class and solve this problem.
+
+Input Format
+
+There will be two lines containing two numbers:
+
+The first line contains integer a The second line contains integer b Constraints a and b are non-negative integers Each number can have up to 200 digits Output Format
+
+Print two lines:
+
