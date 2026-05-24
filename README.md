@@ -1172,4 +1172,8 @@ There will be two lines containing two numbers:
 The first line contains integer a The second line contains integer b Constraints a and b are non-negative integers Each number can have up to 200 digits Output Format
 
 Print two lines:
+First line: a + b Second line: a × b
 
+Do not print any leading zeros.
+
+Sample Input 1234 20 Sample Output 1254 24680
