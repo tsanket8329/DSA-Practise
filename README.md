@@ -1177,3 +1177,6 @@ First line: a + b Second line: a × b
 Do not print any leading zeros.
 
 Sample Input 1234 20 Sample Output 1254 24680
+
+
+Hacker45: Jva integer
