@@ -1181,3 +1181,17 @@ Sample Input 1234 20 Sample Output 1254 24680
 
 Hacker45: Jva integer
 print two lines
+
+
+HACKERRANK 45: INHERITED CODE
+Inherited Code (HackerRank)
+
+You are given a piece of inherited code that validates usernames for a website.
+
+The function checkUsername(string username):
+
+Throws an exception if the username length is less than 5 Returns: true → if valid false → if invalid (contains "ww" as consecutive characters)
+
+However, the exception BadLengthException is not defined.
+
+🎯 Your Task
