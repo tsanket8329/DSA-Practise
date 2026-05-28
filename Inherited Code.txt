@@ -1,0 +1,104 @@
+Inherited Code (HackerRank)
+
+You are given a piece of inherited code that validates usernames for a website.
+
+The function checkUsername(string username):
+
+Throws an exception if the username length is less than 5
+Returns:
+true → if valid
+false → if invalid (contains "ww" as consecutive characters)
+
+However, the exception BadLengthException is not defined.
+
+🎯 Your Task
+
+Define the class:
+
+BadLengthException
+
+such that:
+
+It stores the length of the username
+When caught, calling what() returns the length as a string
+📥 Input Format
+First line: integer T (number of test cases)
+Next T lines: each contains a username string
+📤 Output Format
+
+For each test case, output:
+
+"Valid" → if username is valid
+"Invalid" → if username contains "ww"
+"Too short: n" → if length < 5 (where n is length)
+📌 Constraints
+Username contains only English letters
+1 ≤ T ≤ ? (typical constraint)
+1 ≤ length(username)
+🧪 Sample Input
+3
+Peter
+Me
+Arxwwz
+✅ Sample Output
+Valid
+Too short: 2
+Invalid
+💡 Explanation
+"Peter" → length ≥ 5, no "ww" → Valid
+"Me" → length = 2 → Exception → Too short: 2
+"Arxwwz" → contains "ww" → Invalid
+CODE
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <exception>
+using namespace std;
+
+/* Define the exception here */
+class BadLengthException : public exception {
+    int len;
+    
+public:
+    BadLengthException(int n) : len(n) {}
+    
+    const char* what() const noexcept override {
+        static string msg;
+        msg = to_string(len);
+        return msg.c_str();
+    }
+};
+
+
+bool checkUsername(string username) {
+	bool isValid = true;
+	int n = username.length();
+	if(n < 5) {
+		throw BadLengthException(n);
+	}
+	for(int i = 0; i < n-1; i++) {
+		if(username[i] == 'w' && username[i+1] == 'w') {
+			isValid = false;
+		}
+	}
+	return isValid;
+}
+
+int main() {
+	int T; cin >> T;
+	while(T--) {
+		string username;
+		cin >> username;
+		try {
+			bool isValid = checkUsername(username);
+			if(isValid) {
+				cout << "Valid" << '\n';
+			} else {
+				cout << "Invalid" << '\n';
+			}
+		} catch (BadLengthException e) {
+			cout << "Too short: " << e.what() << '\n';
+		}
+	}
+	return 0;
+}
