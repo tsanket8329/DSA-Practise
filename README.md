@@ -1195,3 +1195,13 @@ Throws an exception if the username length is less than 5 Returns: true → if v
 However, the exception BadLengthException is not defined.
 
 🎯 Your Task
+
+Define the class:
+
+BadLengthException
+
+such that:
+
+It stores the length of the username When caught, calling what() returns the length as a string 📥 Input Format First line: integer T (number of test cases) Next T lines: each contains a username string 📤 Output Format
+
+For each test case, output:
