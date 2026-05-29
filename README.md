@@ -1208,3 +1208,14 @@ For each test case, output:
 For each test case, output:
 
 "Valid" → if username is valid "Invalid" → if username contains "ww" "Too short: n" → if length < 5 (where n is length) 📌 Constraints Username contains only English letters 1 ≤ T ≤ ? (typical constraint) 1 ≤ length(username) 🧪 Sample Input 3 Peter Me Arxwwz ✅ Sample Output Valid Too short: 2 Invalid 💡 Explanation "Peter" → length ≥ 5, no "ww" → Valid "Me" → length = 2 → Exception → Too short: 2 "Arxwwz" → contains "ww" → Invalid
+
+HACKERRANK 46: EXCEPTIONAL SERVER
+Problem: Exceptional Server (C++)
+
+You are given a server that performs computations using a function:
+
+static int compute(long long A, long long B);
+
+This function may throw different types of exceptions depending on the input.
+
+🎯 Your Task
