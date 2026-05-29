@@ -1219,3 +1219,6 @@ static int compute(long long A, long long B);
 This function may throw different types of exceptions depending on the input.
 
 🎯 Your Task
+For each test case:
+
+Call Server::compute(A, B) Handle exceptions and print the correct message: 📌 Expected Behavior Situation Output Function runs successfully Print result Memory allocation fails (bad_alloc) Not enough memory Standard exception (exception) Exception: Any other exception Other Exception 📥 Input Format First line: integer T (number of test cases) Next T lines: two integers A and B 📤 Output Format For each test case, print the appropriate message After all test cases, print server load using: Server::getLoad() 🧪 Sample Input 2 -8 5 1435434255433 5 ✅ Sample Output Exception: A is negative Not enough memory
