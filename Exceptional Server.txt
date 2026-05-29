@@ -1,0 +1,90 @@
+Problem: Exceptional Server (C++)
+
+You are given a server that performs computations using a function:
+
+static int compute(long long A, long long B);
+
+This function may throw different types of exceptions depending on the input.
+
+🎯 Your Task
+
+For each test case:
+
+Call Server::compute(A, B)
+Handle exceptions and print the correct message:
+📌 Expected Behavior
+Situation	Output
+Function runs successfully	Print result
+Memory allocation fails (bad_alloc)	Not enough memory
+Standard exception (exception)	Exception: <message>
+Any other exception	Other Exception
+📥 Input Format
+First line: integer T (number of test cases)
+Next T lines: two integers A and B
+📤 Output Format
+For each test case, print the appropriate message
+After all test cases, print server load using:
+Server::getLoad()
+🧪 Sample Input
+2
+-8 5
+1435434255433 5
+✅ Sample Output
+Exception: A is negative
+Not enough memory
+2
+CODE
+#include <iostream>
+#include <exception>
+#include <string>
+#include <stdexcept>
+#include <vector>
+#include <cmath>
+using namespace std;
+
+class Server {
+private:
+	static int load;
+public:
+	static int compute(long long A, long long B) {
+		load += 1;
+		if(A < 0) {
+			throw std::invalid_argument("A is negative");
+		}
+		vector<int> v(A, 0);
+		int real = -1, cmplx = sqrt(-1);
+		if(B == 0) throw 0;
+		real = (A/B)*real;
+		int ans = v.at(B);
+		return real + A - B*ans;
+	}
+	static int getLoad() {
+		return load;
+	}
+};
+int Server::load = 0;
+
+int main() {
+	int T; cin >> T;
+	while(T--) {
+		long long A, B;
+		cin >> A >> B;
+
+		/* Enter your code here. */
+try {
+    int result = Server::compute(A, B);
+    cout << result << endl;
+}
+catch (bad_alloc& e) {
+    cout << "Not enough memory" << endl;
+}
+catch (exception& e) {
+    cout << "Exception: " << e.what() << endl;
+}
+catch (...) {
+    cout << "Other Exception" << endl;
+}
+	}
+	cout << Server::getLoad() << endl;
+	return 0;
+}
