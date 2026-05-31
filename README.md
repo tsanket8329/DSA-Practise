@@ -1274,3 +1274,6 @@ Question: Java 1D Array
 You are given an integer n, which represents the size of an array. Then you are given n integers, each on a new line.
 
 Your task: Create an array a of size n. Read the n integers from input. Store each integer in the array at its correct index. First value → a[0] Second value → a[1] and so on… Note:
+You do not need to print anything — the given code already prints the array elements.
+
+Example Input: 5 10 20 30 40 50 Example Output: 10 20 30 40 50
