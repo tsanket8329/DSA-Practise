@@ -1288,3 +1288,14 @@ You are given a 6×6 2D array of integers. You need to find the maximum hourglas
 An hourglass is a subset of values with indices forming this pattern:
 
 a b c d e f g 🎯 Task
+Calculate the maximum sum of any hourglass in the given 6×6 array.
+
+📥 Input Format There are exactly 6 lines of input Each line contains 6 space-separated integers Each integer is in the range -9 to 9 📤 Output Format Print a single integer → the maximum hourglass sum ✅ Sample Input 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 0 2 4 4 0 0 0 0 2 0 0 0 0 1 2 4 0 ✅ Sample Output 19 💡 Explanation
+
+The hourglass with the largest sum is:
+
+2 4 4 2 1 2 4
+
+Sum = 19
+
+⚠️ Constraints Array size is fixed: 6 × 6 Values range: -9 ≤ arr[i][j] ≤ 9
