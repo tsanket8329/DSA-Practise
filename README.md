@@ -1296,6 +1296,6 @@ The hourglass with the largest sum is:
 
 2 4 4 2 1 2 4
 
-Sum = 19
+Sum(addition) = 19
 
 !!Constraints Array size is fixed: 6 × 6 Values range: -9 ≤ arr[i][j] ≤ 9
