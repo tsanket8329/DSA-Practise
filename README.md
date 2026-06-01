@@ -1277,3 +1277,14 @@ Your task: Create an array a of size n. Read the n integers from input. Store ea
 You do not need to print anything — the given code already prints the array elements.
 
 Example Input: 5 10 20 30 40 50 Example Output: 10 20 30 40 50
+
+HACKERRANK 48: JAVA 2D ARRAY
+Problem: Java 2D Array (Hourglass)
+
+You are given a 6×6 2D array of integers. You need to find the maximum hourglass sum.
+
+🔍 What is an Hourglass?
+
+An hourglass is a subset of values with indices forming this pattern:
+
+a b c d e f g 🎯 Task
