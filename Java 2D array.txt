@@ -1,0 +1,86 @@
+Problem: Java 2D Array (Hourglass)
+
+You are given a 6×6 2D array of integers. You need to find the maximum hourglass sum.
+
+🔍 What is an Hourglass?
+
+An hourglass is a subset of values with indices forming this pattern:
+
+a b c
+  d
+e f g
+🎯 Task
+
+Calculate the maximum sum of any hourglass in the given 6×6 array.
+
+📥 Input Format
+There are exactly 6 lines of input
+Each line contains 6 space-separated integers
+Each integer is in the range -9 to 9
+📤 Output Format
+Print a single integer → the maximum hourglass sum
+✅ Sample Input
+1 1 1 0 0 0
+0 1 0 0 0 0
+1 1 1 0 0 0
+0 0 2 4 4 0
+0 0 0 2 0 0
+0 0 1 2 4 0
+✅ Sample Output
+19
+💡 Explanation
+
+The hourglass with the largest sum is:
+
+2 4 4
+  2
+1 2 4
+
+Sum = 19
+
+⚠️ Constraints
+Array size is fixed: 6 × 6
+Values range: -9 ≤ arr[i][j] ≤ 9
+CODE
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        List<List<Integer>> arr = new ArrayList<>();
+
+        // Read 6x6 matrix
+        for (int i = 0; i < 6; i++) {
+            String[] arrRowTempItems = bufferedReader.readLine().trim().split(" ");
+            List<Integer> row = new ArrayList<>();
+            
+            for (int j = 0; j < 6; j++) {
+                row.add(Integer.parseInt(arrRowTempItems[j]));
+            }
+            
+            arr.add(row);
+        }
+
+        // Find maximum hourglass sum
+        int maxSum = Integer.MIN_VALUE;
+
+        for (int i = 0; i <= 3; i++) {
+            for (int j = 0; j <= 3; j++) {
+
+                int sum =
+                        arr.get(i).get(j) + arr.get(i).get(j + 1) + arr.get(i).get(j + 2)
+                      + arr.get(i + 1).get(j + 1)
+                      + arr.get(i + 2).get(j) + arr.get(i + 2).get(j + 1) + arr.get(i + 2).get(j + 2);
+
+                maxSum = Math.max(maxSum, sum);
+            }
+        }
+
+        // Output result
+        System.out.println(maxSum);
+
+        bufferedReader.close();
+    }
+}
