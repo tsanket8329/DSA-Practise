@@ -1298,4 +1298,4 @@ The hourglass with the largest sum is:
 
 Sum = 19
 
-⚠️ Constraints Array size is fixed: 6 × 6 Values range: -9 ≤ arr[i][j] ≤ 9
+!!Constraints Array size is fixed: 6 × 6 Values range: -9 ≤ arr[i][j] ≤ 9
