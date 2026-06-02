@@ -1293,6 +1293,31 @@ Calculate the maximum sum of any hourglass in the given 6×6 array.
 📥 Input Format There are exactly 6 lines of input Each line contains 6 space-separated integers Each integer is in the range -9 to 9 📤 Output Format Print a single integer → the maximum hourglass sum ✅ Sample Input 1 1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 0 0 0 2 4 4 0 0 0 0 2 0 0 0 0 1 2 4 0 ✅ Sample Output 19 💡 Explanation
 
 The hourglass with the largest sum is:
+### HACKERRANK 48: JAVA SUBARRAY
+
+Java Subarray – Problem Statement
+
+A subarray of an array is a sequence of contiguous elements from the array.
+
+For example, if the array is:
+
+[1, -2, 4]
+
+Then valid subarrays are:
+
+[1], [1, -2], [1, -2, 4], [-2], [-2, 4], [4] 📌 Task
+
+Given an array of integers, find the number of subarrays whose sum is negative.
+
+📥 Input Format First line: An integer n (size of array) Second line: n space-separated integers 📤 Output Format Print a single integer → number of subarrays having negative sum 🔒 Constraints 1 ≤ n ≤ 100 -10^4 ≤ arr[i] ≤ 10^4 🧪 Example
+
+Input:
+
+5 1 -2 4 -5 1
+
+Output:
+
+9 🧠 Explanation There are 9 subarrays whose total sum is negative.
 
 2 4 4 2 1 2 4
 
