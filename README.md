@@ -1324,3 +1324,23 @@ Output:
 Sum(addition) = 19
 
 !!Constraints Array size is fixed: 6 × 6 Values range: -9 ≤ arr[i][j] ≤ 9
+### HACKERRANK 49: import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+
+            System.out.println(x / y);
+        }
+        catch (InputMismatchException e) {
+            System.out.println("java.util.InputMismatchException");
+        }
+        catch (ArithmeticException e) {
+            System.out.println(e);
+        }
+    }
+}
