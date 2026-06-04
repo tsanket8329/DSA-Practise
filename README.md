@@ -1344,3 +1344,63 @@ public class Solution {
         }
     }
 }
+### HACKERRANK 50: Messages Order
+Problem Statement
+
+In a messaging system, messages are sent from a sender to a recipient through a network. The network does not guarantee that messages will arrive in the same order in which they were sent. For example, if the sender sends:
+
+hello
+hi
+what's up
+
+the recipient might receive them as:
+
+what's up
+hello
+hi
+
+Your task is to implement the classes Message and MessageFactory so that the recipient can restore the original order of messages before printing them.
+
+Requirements
+Class Message
+Store a text message of type string.
+Provide the method:
+const string& get_text()
+
+which returns the stored text.
+
+Overload the < operator so that messages can be sorted into their original sending order.
+You may add additional constructors, methods, or data members as needed.
+An empty constructor must be provided.
+Class MessageFactory
+Provide an empty constructor.
+Implement:
+Message create_message(const string& text)
+
+which creates and returns a Message object containing the given text.
+
+You may add additional methods or data members as needed.
+Input Format
+
+Several lines of text messages are provided as input in the order they are sent.
+
+Output Format
+
+Print all messages in the same order as they were originally sent.
+
+Sample Input
+Alex
+Hello Monique!
+What'up?
+Not much :(
+Sample Output
+Alex
+Hello Monique!
+What'up?
+Not much :(
+Key Idea
+
+Since the network can shuffle messages, assign a sequence number (ID) to every message when it is created. Store this ID in the Message object and implement operator< to compare IDs. When the recipient sorts the received messages, they will be restored to the original sending order.
+
+Difficulty: Easy–Medium
+Concepts Used: Classes, Constructors, Operator Overloading, Sorting, OOP in C++
