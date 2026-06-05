@@ -1387,6 +1387,56 @@ Several lines of text messages are provided as input in the order they are sent.
 Output Format
 
 Print all messages in the same order as they were originally sent.
+### HACKERRANK 51: JAVA EXCEPTION HANDLING
+HackerRank - Java Exception Handling
+
+You are required to compute the power of a number by implementing a calculator.
+
+Create a class MyCalculator which contains a method:
+
+long power(int n, int p)
+
+The method should return n^p.
+
+Exception Conditions
+
+If either n or p is negative, throw an exception with the message:
+
+n or p should not be negative.
+
+If both n and p are zero, throw an exception with the message:
+
+n and p should not be zero.
+
+The exception should be thrown using:
+
+throw new Exception("message");
+Input Format
+
+Each line contains two integers n and p.
+
+Output Format
+Print n^p if both values are valid.
+Otherwise print the exception message.
+Sample Input
+3 5
+2 4
+0 0
+-1 -2
+-1 3
+Sample Output
+243
+16
+java.lang.Exception: n and p should not be zero.
+java.lang.Exception: n or p should not be negative.
+java.lang.Exception: n or p should not be negative.
+Explanation
+3^5 = 243
+2^4 = 16
+(0,0) is invalid → throw exception.
+Negative values are invalid → throw exception.
+
+Task: Complete the power(int n, int p) method in the MyCalculator class.
 
 Sample Input
 Alex
