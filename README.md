@@ -1454,3 +1454,52 @@ Since the network can shuffle messages, assign a sequence number (ID) to every m
 
 Difficulty: Easy–Medium
 Concepts Used: Classes, Constructors, Operator Overloading, Sorting, OOP in C++
+### HackerRank 52: Java Varargs - Simple Addition
+
+You are given a class Solution and its main method.
+
+Your task is to create a class Add with a method add that can accept a variable number of integer arguments and print their sum in the following format:
+
+num1+num2+...+numN=sum
+Input
+
+Six integers are provided as input, one per line.
+
+Output
+
+The main method will call your add method four times:
+
+ob.add(n1,n2);
+ob.add(n1,n2,n3);
+ob.add(n1,n2,n3,n4,n5);
+ob.add(n1,n2,n3,n4,n5,n6);
+
+For each call, print the expression and its sum.
+
+Sample Input
+1
+2
+3
+4
+5
+6
+Sample Output
+1+2=3
+1+2+3=6
+1+2+3+4+5=15
+1+2+3+4+5+6=21
+Important Constraint
+You must use Varargs (int...).
+Method overloading is not allowed.
+The checker will throw an exception if more than one method named add exists.
+What You Need to Write
+
+Only the Add class:
+
+class Add {
+    public void add(int... nums) {
+        // your code here
+    }
+}
+
+Concept Tested: Java Varargs (int... args) and Reflection (to ensure no overloading).
