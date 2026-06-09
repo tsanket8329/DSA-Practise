@@ -1550,11 +1550,60 @@ public class Solution {
     }
 }
 
-Fill the 4 blanks only.
+### HACKERRANK 53: ACCESSING INHERITED FUNCTIONS
+Accessing Inherited Functions — Question
 
-Answer format:
+You are given three classes A, B, and C. Each class has a protected function func(int &a) that multiplies a by:
 
-1.
-2.
-3.
-4.
+A::func() → multiplies by 2
+B::func() → multiplies by 3
+C::func() → multiplies by 5
+
+Each class also keeps track of how many times its func() is called.
+
+You are also given the following class:
+
+class D
+{
+    int val;
+
+public:
+    D()
+    {
+        val = 1;
+    }
+
+    void update_val(int new_val)
+    {
+        // Implement this
+    }
+
+    void check(int);
+};
+Task
+
+Modify class D and implement update_val(int new_val) such that:
+
+val is updated from 1 to new_val
+You may change val only by calling the inherited func() methods from classes A, B, and C
+new_val is guaranteed to have only 2, 3, and 5 as prime factors
+Example
+
+Input:
+
+30
+
+Output:
+
+Value = 30
+A's func called 1 times
+B's func called 1 times
+C's func called 1 times
+
+Explanation:
+
+1 × 2 = 2
+2 × 3 = 6
+6 × 5 = 30
+
+Implement only the update_val() function and necessary inheritance for class D.
