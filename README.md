@@ -1668,3 +1668,48 @@ setAccessible(true)
 invoke()
 
 Difficulty: Easy-Medium (Java Reflection)
+### HACKERRANK 55: PRIME CHECKER
+HackerRank – Prime Checker
+
+You are given a class Solution and its main method. Your task is to create a class Prime.
+
+The class Prime should contain a single method:
+
+checkPrime
+
+The locked code will call checkPrime with one or more integer arguments. Your method should print only the prime numbers among the given arguments.
+
+Requirements
+Create a class Prime.
+Implement only one method named checkPrime.
+Do not use method overloading.
+The method should accept a variable number of arguments.
+Print all prime numbers passed to the method, separated by spaces.
+If no prime number exists among the arguments, print a blank line.
+Note
+
+The editor contains the line:
+
+BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+which may cause a compile-time error. You must identify and fix it.
+
+Input Format
+
+There are five lines of input, each containing one integer.
+
+Output Format
+
+There will be four lines of output. Each line contains the prime numbers from the arguments passed to checkPrime by the main method.
+
+Sample Input
+2
+1
+3
+4
+5
+Sample Output
+2
+2
+2 3
+2 3 5
