@@ -1,0 +1,206 @@
+HackerRank – Magic Spells (Question)
+
+While playing a video game, you are battling a powerful dark wizard. He casts spells from a distance, giving you only a few seconds to react and conjure your counterspells. For a counterspell to be effective, you must first identify what kind of spell you are dealing with.
+
+The wizard uses scrolls to conjure his spells, and sometimes he uses generic spells that restore his stamina. In that case, you can extract the name of the scroll from the spell. Then you need to find out how similar this new spell is to the spell formulas written in your spell journal.
+
+Complete the body of the counterspell function.
+
+Task
+
+For each spell passed to counterspell(Spell *spell):
+
+If the spell is:
+Fireball → print its power.
+Frostbite → print its power.
+Waterbolt → print its power.
+Thunderstorm → print its power.
+Otherwise, it is a generic Spell.
+Get the spell's scroll name using revealScrollName().
+Get the journal string using SpellJournal::read().
+Find the length of the Longest Common Subsequence (LCS) between the two strings.
+Print the LCS length.
+Input Format
+First line contains an integer T, the number of spells.
+For each spell:
+
+If it is a known spell:
+
+fire power
+frost power
+water power
+thunder power
+
+Otherwise:
+
+scrollName power journalString
+Output Format
+
+For known spells, print:
+
+Fireball: power
+Frostbite: power
+Waterbolt: power
+Thunderstorm: power
+For generic spells, print the length of the LCS on a new line.
+Sample Input
+3
+fire 5
+AquaVitae 999 AruTaVae
+frost 7
+Sample Output
+Fireball: 5
+6
+Frostbite: 7
+Explanation
+fire 5 → Fireball with power 5.
+AquaVitae and AruTaVae have an LCS of length 6.
+frost 7 → Frostbite with power 7.
+Concepts Used
+Inheritance
+Runtime Polymorphism
+dynamic_cast
+Longest Common Subsequence (LCS) using Dynamic Programming
+CODE
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+class Spell { 
+    private:
+        string scrollName;
+    public:
+        Spell(): scrollName("") { }
+        Spell(string name): scrollName(name) { }
+        virtual ~Spell() { }
+        string revealScrollName() {
+            return scrollName;
+        }
+};
+
+class Fireball : public Spell { 
+    private: int power;
+    public:
+        Fireball(int power): power(power) { }
+        void revealFirepower(){
+            cout << "Fireball: " << power << endl;
+        }
+};
+
+class Frostbite : public Spell {
+    private: int power;
+    public:
+        Frostbite(int power): power(power) { }
+        void revealFrostpower(){
+            cout << "Frostbite: " << power << endl;
+        }
+};
+
+class Thunderstorm : public Spell { 
+    private: int power;
+    public:
+        Thunderstorm(int power): power(power) { }
+        void revealThunderpower(){
+            cout << "Thunderstorm: " << power << endl;
+        }
+};
+
+class Waterbolt : public Spell { 
+    private: int power;
+    public:
+        Waterbolt(int power): power(power) { }
+        void revealWaterpower(){
+            cout << "Waterbolt: " << power << endl;
+        }
+};
+
+class SpellJournal {
+    public:
+        static string journal;
+        static string read() {
+            return journal;
+        }
+}; 
+string SpellJournal::journal = "";
+
+void counterspell(Spell *spell) {
+  /* Enter your code here */
+
+    Fireball *f1 = dynamic_cast<Fireball*>(spell);
+    Frostbite *f2 = dynamic_cast<Frostbite*>(spell);
+    Waterbolt *f3 = dynamic_cast<Waterbolt*>(spell);
+    Thunderstorm *f4 = dynamic_cast<Thunderstorm*>(spell);
+
+    if (f1) {
+        f1->revealFirepower();
+    }
+    else if (f2) {
+        f2->revealFrostpower();
+    }
+    else if (f3) {
+        f3->revealWaterpower();
+    }
+    else if (f4) {
+        f4->revealThunderpower();
+    }
+    else {
+        string s1 = spell->revealScrollName();
+        string s2 = SpellJournal::read();
+
+        int n = s1.size();
+        int m = s2.size();
+
+        vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= m; j++) {
+                if (s1[i - 1] == s2[j - 1])
+                    dp[i][j] = dp[i - 1][j - 1] + 1;
+                else
+                    dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
+            }
+        }
+
+        cout << dp[n][m] << endl;
+    }
+
+
+}
+
+class Wizard {
+    public:
+        Spell *cast() {
+            Spell *spell;
+            string s; cin >> s;
+            int power; cin >> power;
+            if(s == "fire") {
+                spell = new Fireball(power);
+            }
+            else if(s == "frost") {
+                spell = new Frostbite(power);
+            }
+            else if(s == "water") {
+                spell = new Waterbolt(power);
+            }
+            else if(s == "thunder") {
+                spell = new Thunderstorm(power);
+            } 
+            else {
+                spell = new Spell(s);
+                cin >> SpellJournal::journal;
+            }
+            return spell;
+        }
+};
+
+int main() {
+    int T;
+    cin >> T;
+    Wizard Arawn;
+    while(T--) {
+        Spell *spell = Arawn.cast();
+        counterspell(spell);
+    }
+    return 0;
+}
