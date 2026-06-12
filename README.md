@@ -1713,3 +1713,68 @@ Sample Output
 2
 2 3
 2 3 5
+### HACKERRANK 56: MAGIC SPELLS
+HackerRank – Magic Spells (Question)
+
+While playing a video game, you are battling a powerful dark wizard. He casts spells from a distance, giving you only a few seconds to react and conjure your counterspells. For a counterspell to be effective, you must first identify what kind of spell you are dealing with.
+
+The wizard uses scrolls to conjure his spells, and sometimes he uses generic spells that restore his stamina. In that case, you can extract the name of the scroll from the spell. Then you need to find out how similar this new spell is to the spell formulas written in your spell journal.
+
+Complete the body of the counterspell function.
+
+Task
+
+For each spell passed to counterspell(Spell *spell):
+
+If the spell is:
+Fireball → print its power.
+Frostbite → print its power.
+Waterbolt → print its power.
+Thunderstorm → print its power.
+Otherwise, it is a generic Spell.
+Get the spell's scroll name using revealScrollName().
+Get the journal string using SpellJournal::read().
+Find the length of the Longest Common Subsequence (LCS) between the two strings.
+Print the LCS length.
+Input Format
+First line contains an integer T, the number of spells.
+For each spell:
+
+If it is a known spell:
+
+fire power
+frost power
+water power
+thunder power
+
+Otherwise:
+
+scrollName power journalString
+Output Format
+
+For known spells, print:
+
+Fireball: power
+Frostbite: power
+Waterbolt: power
+Thunderstorm: power
+For generic spells, print the length of the LCS on a new line.
+Sample Input
+3
+fire 5
+AquaVitae 999 AruTaVae
+frost 7
+Sample Output
+Fireball: 5
+6
+Frostbite: 7
+Explanation
+fire 5 → Fireball with power 5.
+AquaVitae and AruTaVae have an LCS of length 6.
+frost 7 → Frostbite with power 7.
+Concepts Used
+Inheritance
+Runtime Polymorphism
+dynamic_cast
+Longest Common Subsequence (LCS) using Dynamic Programming
+
