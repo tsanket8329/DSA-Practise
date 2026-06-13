@@ -1777,4 +1777,28 @@ Inheritance
 Runtime Polymorphism
 dynamic_cast
 Longest Common Subsequence (LCS) using Dynamic Programming
+### HACKERRANK 57: JAVA FACTORY PATTERN 
+Java Factory Pattern – Question
+
+According to Wikipedia, a factory is simply an object that returns another object from some other method call, which is assumed to be "new".
+
+In this problem, you are given an interface Food. There are two classes Pizza and Cake which implement the Food interface, and they both contain a method getType().
+
+The main function creates an instance of the FoodFactory class. The FoodFactory class contains a method getFood(String) that returns a new instance of Pizza or Cake according to its parameter.
+
+Task: Complete the FoodFactory class by implementing the getFood(String order) method.
+
+Sample Input 1
+cake
+Sample Output 1
+The factory returned class Cake
+Someone ordered a Dessert!
+Sample Input 2
+pizza
+Sample Output 2
+The factory returned class Pizza
+Someone ordered a Fast Food!
+Key Concept
+
+This problem demonstrates the Factory Design Pattern, where an object (the factory) creates and returns instances of other classes based on the input provided.
 
