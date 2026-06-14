@@ -1801,4 +1801,44 @@ Someone ordered a Fast Food!
 Key Concept
 
 This problem demonstrates the Factory Design Pattern, where an object (the factory) creates and returns instances of other classes based on the input provided.
+### HACKERRANK 58: JAVA SINGLETON PATTERN
+HackerRank – Java Singleton Pattern
+
+Problem Statement
+
+"The singleton pattern is a design pattern that restricts the instantiation of a class to one object. This is useful when exactly one object is needed to coordinate actions across the system."
+
+Complete the Singleton class in your editor which contains the following components:
+
+A private non-parameterized constructor.
+A public String instance variable named str.
+A static method named getSingleInstance() that returns the single instance of the Singleton class.
+
+Once submitted, the hidden solution will check your code by taking a String as input and then using your Singleton class to print a line.
+
+Input Format
+
+You will not be handling any input in this challenge.
+
+Output Format
+
+You will not be producing any output in this challenge.
+
+Sample Input
+hello world
+Sample Output
+Hello I am a singleton! Let me say hello world to you
+Task
+
+Complete the following class:
+
+class Singleton{
+
+}
+
+so that:
+
+Only one object of Singleton can ever be created.
+The object can be accessed using Singleton.getSingleInstance().
+The class contains a public String variable str.
 
