@@ -1841,4 +1841,73 @@ so that:
 Only one object of Singleton can ever be created.
 The object can be accessed using Singleton.getSingleInstance().
 The class contains a public String variable str.
+### HACKERRANK 59: C++ CLASS TEMPLATES
+HackerRank – C++ Class Templates
 
+A class template provides a specification for generating classes based on parameters. Class templates are generally used to implement containers. A class template is instantiated by passing a given set of types to it as template arguments.
+
+Example:
+
+template <class T>
+class MyTemplate {
+    T element;
+public:
+    MyTemplate(T arg) { element = arg; }
+    T divideBy2() { return element / 2; }
+};
+
+It is also possible to define a different implementation of a template for a specific type. This is called Template Specialization.
+
+Example:
+
+template <>
+class MyTemplate<char> {
+    char element;
+public:
+    MyTemplate(char arg) { element = arg; }
+
+    char printElement() {
+        return element;
+    }
+};
+Task
+
+You are given a main() function which takes a set of inputs.
+
+The type of input determines the operation to be performed:
+
+For int and float, perform addition.
+For string, perform concatenation.
+
+You need to write:
+
+A class template AddElements that has a function add() for adding two elements of type int or float.
+A template specialization for type string that has a function concatenate() to append the second string to the first string.
+Input Format
+The first line contains an integer n.
+The next n lines contain:
+A type (int, float, or string)
+Followed by two values of that type.
+Constraints
+Type will be one of:
+int
+float
+string
+String length ≤ 100.
+Output Format
+
+The provided code will use your class template to perform the required operation and print the result.
+
+Sample Input
+3
+string John Doe
+int 1 2
+float 4.0 1.5
+Sample Output
+JohnDoe
+3
+5.5
+Explanation
+"John" concatenated with "Doe" gives "JohnDoe".
+1 + 2 = 3.
+4.0 + 1.5 = 5.5.
