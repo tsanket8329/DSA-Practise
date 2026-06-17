@@ -1911,3 +1911,100 @@ Explanation
 "John" concatenated with "Doe" gives "JohnDoe".
 1 + 2 = 3.
 4.0 + 1.5 = 5.5.
+### HACKERRANK 60: JAVA VISITOR PATTERN
+HackerRank – Java Visitor Pattern
+
+An important concept in Object-Oriented Programming is the Open/Closed Principle, which states that software entities should be open for extension but closed for modification. This challenge uses the Visitor Design Pattern to extend functionality without modifying existing tree classes.
+
+A tree implementation is provided with the following classes:
+
+Tree
+TreeNode
+TreeLeaf
+TreeVis
+
+Each tree node has:
+
+getValue() – returns the node's value.
+getColor() – returns the node's color (RED or GREEN).
+getDepth() – returns the node's depth from the root.
+
+The tree is rooted at node 1.
+
+Part I: Implement Three Visitors
+
+Implement the following visitor classes:
+
+1. SumInLeavesVisitor
+
+Return the sum of values stored in all leaf nodes.
+
+2. ProductOfRedNodesVisitor
+
+Return the product of values stored in all red nodes (including leaves), modulo:
+
+1000000007
+3. FancyVisitor
+
+Return the absolute difference between:
+
+Sum of values of non-leaf nodes at even depth
+Sum of values of green leaf nodes
+
+That is:
+
+| (sum of non-leaf nodes at even depth)
+  - (sum of green leaf nodes) |
+Part II: Build the Tree
+
+Read the input and construct the tree.
+
+Input Format
+First line: Integer n, the number of nodes.
+Second line: n integers representing node values.
+Third line: n integers representing node colors:
+0 → RED
+1 → GREEN
+Next n-1 lines:
+Two integers u and v
+Representing an edge between nodes u and v
+
+The tree is always rooted at node 1.
+
+Constraints
+1 ≤ n ≤ 10^5
+
+The tree is guaranteed to be valid and connected.
+
+Sample Input
+5
+4 7 2 5 12
+0 1 0 0 1
+1 2
+1 3
+3 4
+3 5
+Sample Output
+24
+40
+15
+Explanation
+
+Tree:
+
+        4(R)
+       /   \
+    7(G)   2(R)
+           /   \
+        5(R) 12(G)
+Leaves = 7 + 5 + 12 = 24
+Red nodes = 4 × 2 × 5 = 40
+Even-depth non-leaf nodes = 4
+Green leaves = 7 + 12 = 19
+|4 - 19| = 15
+
+Output:
+
+24
+40
+15
