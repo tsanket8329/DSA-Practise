@@ -2008,3 +2008,50 @@ Output:
 24
 40
 15
+### HACKERRANK 61: PREPROCESSOR SOLUTION
+Question (Preprocessor Solution - HackerRank):
+
+You are given a partially completed C++ program that is intended to find the difference between the maximum and minimum values in an array. The code does not compile because several preprocessor macros are missing.
+
+Without modifying the existing code, define the required macros so that the program works correctly.
+
+The macros must support:
+
+Converting text to a string.
+Reading input into vector elements.
+Iterating through a vector.
+Creating functions for finding minimum and maximum values using comparison operators.
+Defining a large constant value INF.
+Input Format
+First line: Integer n, the size of the array.
+Second line: n space-separated integers.
+Output Format
+
+The program should print:
+
+Result = X
+
+where X is the difference between the maximum and minimum element of the array.
+
+Sample Input
+5
+32 332 -23 -154 65
+Sample Output
+Result = 486
+Explanation
+
+Maximum element = 332
+Minimum element = -154
+
+332 - (-154) = 486
+Required Macros
+
+Implement the following macros:
+
+toStr(x)
+io(v)
+foreach(v, i)
+FUNCTION(name, op)
+INF
+
+so that the locked code compiles and produces the correct output.
