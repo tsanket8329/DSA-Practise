@@ -2055,3 +2055,88 @@ FUNCTION(name, op)
 INF
 
 so that the locked code compiles and produces the correct output.
+### HACKERRANK 62: OPERATOR OVERLOADING
+HackerRank - Operator Overloading (Question)
+
+You are given a partially completed program. Your task is to implement a class Matrix that supports matrix addition using operator overloading.
+
+Requirements
+Create a class Matrix.
+
+The class should contain a public member:
+
+vector<vector<int>> a;
+Overload the + operator so that two Matrix objects can be added.
+The overloaded operator should:
+Add corresponding elements of the two matrices.
+Return a new Matrix object containing the result.
+Example
+
+If:
+
+Matrix A =
+2 2
+2 2
+
+Matrix B =
+1 2
+3 4
+
+Then:
+
+A + B =
+3 4
+5 6
+Input Format
+First line contains T, the number of test cases.
+For each test case:
+First line contains N and M, the number of rows and columns.
+Next line contains N × M integers representing the first matrix in row-major order.
+Next line contains N × M integers representing the second matrix in row-major order.
+Output Format
+
+For each test case, print the resulting matrix after addition.
+
+Sample Input
+1
+2 2
+2 2 2 2
+1 2 3 4
+Sample Output
+3 4
+5 6
+Explanation
+
+The matrices are:
+
+2 2      1 2
+2 2  +   3 4
+
+Adding corresponding elements:
+
+3 4
+5 6
+What you need to submit
+
+Only the Matrix class:
+
+class Matrix {
+public:
+    vector<vector<int>> a;
+
+    Matrix operator+(const Matrix& other) {
+        Matrix result;
+        int n = a.size();
+        int m = a[0].size();
+
+        result.a.resize(n, vector<int>(m));
+
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m; j++) {
+                result.a[i][j] = a[i][j] + other.a[i][j];
+            }
+        }
+
+        return result;
+    }
+};
