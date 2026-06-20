@@ -2140,3 +2140,46 @@ public:
         return result;
     }
 };
+### HACKERRANK 63: MODIFIED KAPREKAR NUMBERS
+Modified Kaprekar Numbers — Question Summary
+
+You are given two integers p and q. Find all Modified Kaprekar Numbers in the inclusive range [p, q].
+
+A number n is a Modified Kaprekar Number if:
+
+Compute n².
+Let d be the number of digits in n.
+Split the decimal representation of n² into:
+Left part = all digits except the last d digits.
+Right part = the last d digits.
+Convert both parts to integers (empty left part counts as 0).
+If left + right = n, then n is a Modified Kaprekar Number.
+Example
+n = 45
+45² = 2025
+d = 2
+Split: 20 | 25
+20 + 25 = 45
+
+Therefore, 45 is a Modified Kaprekar Number.
+
+Input
+First line: integer p
+Second line: integer q
+Output
+Print all Modified Kaprekar Numbers between p and q (inclusive), separated by spaces.
+If none exist, print:
+INVALID RANGE
+Sample Input
+1
+100
+Sample Output
+1 9 45 55 99
+Function Signature
+public static void kaprekarNumbers(int p, int q)
+
+Constraints:
+
+1 ≤ p < q ≤ 100000
+
+Expected Approach: Iterate through numbers from p to q, square each number, split according to digit count, and check whether the sum of the two parts equals the original number.
