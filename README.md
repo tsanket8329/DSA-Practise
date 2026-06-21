@@ -2183,3 +2183,56 @@ Constraints:
 1 ≤ p < q ≤ 100000
 
 Expected Approach: Iterate through numbers from p to q, square each number, split according to digit count, and check whether the sum of the two parts equals the original number.
+### HACKERRANK 64: COVARIANT RETURN TYPES
+HackerRank - Covariant Return Types (Question)
+
+Java allows Covariant Return Types, which means an overridden method in a subclass can return a subtype of the return type declared in the superclass.
+
+You are given partially completed classes representing flowers and regions. Implement the class hierarchy shown below:
+
+Flower is the base class.
+Jasmine and Lily extend Flower.
+
+Region contains a method:
+
+Flower yourNationalFlower()
+WestBengal extends Region and overrides yourNationalFlower() to return a Jasmine.
+AndhraPradesh extends Region and overrides yourNationalFlower() to return a Lily.
+
+Each flower class should implement:
+
+String whatsYourName()
+
+which returns the flower's name.
+
+The hidden code will:
+
+Read a state name (WestBengal or AndhraPradesh).
+Create the corresponding object.
+Call yourNationalFlower().
+Print the result of whatsYourName().
+
+You only need to complete the class definitions.
+
+Sample Input
+AndhraPradesh
+Sample Output
+Lily
+Explanation
+
+An AndhraPradesh object returns a Lily object from yourNationalFlower(). Calling whatsYourName() on that object returns "Lily".
+
+Key Concept Tested
+
+Covariant Return Types in Java:
+
+class Region {
+    Flower yourNationalFlower() { ... }
+}
+
+class AndhraPradesh extends Region {
+    @Override
+    Lily yourNationalFlower() { ... } // Valid
+}
+
+A subclass method may return a subclass of the parent method's return type.
