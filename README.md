@@ -2269,3 +2269,20 @@ Sample Input
 3 898
 1 3
 2 12
+Sample Output
+EVEN
+PRIME
+PALINDROME
+ODD
+COMPOSITE
+Explanation
+1 4 → 4 is even → EVEN
+2 5 → 5 is prime → PRIME
+3 898 → 898 is a palindrome → PALINDROME
+1 3 → 3 is odd → ODD
+2 12 → 12 is composite → COMPOSITE
+Constraints
+1 ≤ T ≤ 100
+0 ≤ num ≤ 2^31 - 1
+
+The goal is to implement the required methods using Java 8 Lambda Expressions (or equivalent logic if using Java 7).
