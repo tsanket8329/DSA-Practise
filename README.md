@@ -2236,3 +2236,20 @@ class AndhraPradesh extends Region {
 }
 
 A subclass method may return a subclass of the parent method's return type.
+### HACKERRANK 65: JAVA LAMBDA EXPRESSION
+Java Lambda Expressions – HackerRank
+
+This Java 8 challenge tests your knowledge of Lambda Expressions.
+
+Write the following methods that return a lambda expression performing a specified action:
+
+PerformOperation isOdd()
+Returns true if a number is odd.
+Returns false if a number is even.
+PerformOperation isPrime()
+Returns true if a number is prime.
+Returns false if it is composite.
+PerformOperation isPalindrome()
+Returns true if a number is a palindrome.
+Returns false otherwise.
+Input Format
