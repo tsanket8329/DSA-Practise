@@ -2321,3 +2321,43 @@ should return a new complex number whose:
 
 real part = x.a + y.a
 imaginary part = x.b + y.b
+Operator <<
+
+The stream insertion operator << should print a complex number in the format:
+
+a+ib
+
+For example:
+
+cout << c << endl;
+
+should print:
+
+a+ib
+
+where a and b are the real and imaginary parts of the complex number.
+
+Input Format
+
+Two complex numbers are given as strings in the format:
+
+a+ib
+
+The provided input() function parses these strings and stores the values in objects of class Complex.
+
+Output Format
+
+Print the sum of the two complex numbers in the format:
+
+a+ib
+Sample Input
+3+i4
+5+i6
+Sample Output
+8+i10
+Explanation
+(3 + i4) + (5 + i6)
+= (3 + 5) + i(4 + 6)
+= 8 + i10
+
+You only need to implement the overloaded operators + and <<; the rest of the code is already provided by HackerRank.
