@@ -1,0 +1,137 @@
+HackerRank - Overload Operators (Question)
+
+You are given a class:
+
+class Complex
+{
+public:
+    int a, b;
+};
+
+A complex number is represented as:
+
+a+ib
+
+where:
+
+a = real part
+b = imaginary part
+
+Your task is to overload the + and << operators for the Complex class.
+
+Operator +
+
+The + operator should add two complex numbers according to:
+
+(a+ib)+(c+id)=(a+c)+i(b+d)
+
+For example:
+
+Complex z = x + y;
+
+should return a new complex number whose:
+
+real part = x.a + y.a
+imaginary part = x.b + y.b
+Operator <<
+
+The stream insertion operator << should print a complex number in the format:
+
+a+ib
+
+For example:
+
+cout << c << endl;
+
+should print:
+
+a+ib
+
+where a and b are the real and imaginary parts of the complex number.
+
+Input Format
+
+Two complex numbers are given as strings in the format:
+
+a+ib
+
+The provided input() function parses these strings and stores the values in objects of class Complex.
+
+Output Format
+
+Print the sum of the two complex numbers in the format:
+
+a+ib
+Sample Input
+3+i4
+5+i6
+Sample Output
+8+i10
+Explanation
+(3 + i4) + (5 + i6)
+= (3 + 5) + i(4 + 6)
+= 8 + i10
+
+You only need to implement the overloaded operators + and <<; the rest of the code is already provided by HackerRank.
+CODE
+//Operator Overloading
+
+#include<iostream>
+
+using namespace std;
+
+class Complex
+{
+public:
+    int a,b;
+    void input(string s)
+    {
+        int v1=0;
+        int i=0;
+        while(s[i]!='+')
+        {
+            v1=v1*10+s[i]-'0';
+            i++;
+        }
+        while(s[i]==' ' || s[i]=='+'||s[i]=='i')
+        {
+            i++;
+        }
+        int v2=0;
+        while(i<s.length())
+        {
+            v2=v2*10+s[i]-'0';
+            i++;
+        }
+        a=v1;
+        b=v2;
+    }
+};
+
+//Overload operators + and << for the class complex
+//+ should add two complex numbers as (a+ib) + (c+id) = (a+c) + i(b+d)
+//<< should print a complex number in the format "a+ib"
+Complex operator + (const Complex &x, const Complex &y)
+{
+    Complex res;
+    res.a = x.a + y.a;
+    res.b = x.b + y.b;
+    return res;
+}
+
+ostream& operator << (ostream &out, const Complex &c)
+{
+    out << c.a << "+i" << c.b;
+    return out;
+}
+int main()
+{
+    Complex x,y;
+    string s1,s2;
+    cin>>s1;
+    cin>>s2;
+    x.input(s1);
+    y.input(s2);
+    Complex z=x+y;
+    cout<<z<<endl;
+}
