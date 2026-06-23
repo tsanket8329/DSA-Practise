@@ -2305,3 +2305,19 @@ where:
 
 a = real part
 b = imaginary part
+Your task is to overload the + and << operators for the Complex class.
+
+Operator +
+
+The + operator should add two complex numbers according to:
+
+(a+ib)+(c+id)=(a+c)+i(b+d)
+
+For example:
+
+Complex z = x + y;
+
+should return a new complex number whose:
+
+real part = x.a + y.a
+imaginary part = x.b + y.b
