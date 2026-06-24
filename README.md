@@ -2380,3 +2380,7 @@ Sample Input 0
 HelloWorld
 Sample Output 0
 68e109f0f40ca72a15e05cc22786f8e6
+Sample Input 1
+Javarmi123
+Sample Output 1
+2da2d1e0ce7b4951a858ed2d547ef485
