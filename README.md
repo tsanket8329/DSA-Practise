@@ -2361,3 +2361,16 @@ Explanation
 = 8 + i10
 
 You only need to implement the overloaded operators + and <<; the rest of the code is already provided by HackerRank.
+### HACKERRANK 67: JAVA MD5
+Java MD5
+
+MD5 (Message-Digest Algorithm 5) is a widely used cryptographic hash function.
+
+Given an alphanumeric string S, compute and print its MD5 encryption value.
+
+Input Format
+A single alphanumeric string S
+Constraints
+String S consists only of:
+English alphabet letters (a-z, A-Z)
+Digits (0-9)
