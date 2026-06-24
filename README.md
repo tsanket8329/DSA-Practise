@@ -2374,3 +2374,9 @@ Constraints
 String S consists only of:
 English alphabet letters (a-z, A-Z)
 Digits (0-9)
+Output Format
+Print the MD5 hash of S in hexadecimal format.
+Sample Input 0
+HelloWorld
+Sample Output 0
+68e109f0f40ca72a15e05cc22786f8e6
