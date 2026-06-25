@@ -2399,3 +2399,17 @@ The student wants to attend the maximum number of workshops such that no two wor
 You need to implement:
 
 Structures
+struct Workshop {
+    int start_time;
+    int duration;
+    int end_time;
+};
+
+struct Available_Workshops {
+    int n;
+    Workshop* arr;
+};
+Functions
+1. initialize
+Available_Workshops* initialize(int start_time[], int duration[], int n)
+Create an Available_Workshops object.
