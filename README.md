@@ -2384,3 +2384,18 @@ Sample Input 1
 Javarmi123
 Sample Output 1
 2da2d1e0ce7b4951a858ed2d547ef485
+### HACKERRANK 68: ATTENDING WORKSHOP
+Attending Workshops
+
+A student has signed up for n workshops.
+Each workshop has:
+
+start time
+duration
+end time = start time + duration
+
+The student wants to attend the maximum number of workshops such that no two workshops overlap.
+
+You need to implement:
+
+Structures
