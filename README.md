@@ -2413,3 +2413,18 @@ Functions
 1. initialize
 Available_Workshops* initialize(int start_time[], int duration[], int n)
 Create an Available_Workshops object.
+Fill all workshops using given arrays.
+Compute end_time.
+2. CalculateMaxWorkshops
+int CalculateMaxWorkshops(Available_Workshops* ptr)
+Return maximum number of workshops student can attend.
+Workshops must not overlap.
+Sample Input
+6
+1 3 0 5 5 8
+1 1 6 2 4 1
+Sample Output
+4
+Explanation
+
+Possible workshops attended without overlap = 4.
