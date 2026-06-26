@@ -1,0 +1,51 @@
+Java SHA-256
+
+Cryptographic hash functions are mathematical operations run on digital data. By comparing the computed hash (output of a hashing algorithm) to a known hash value, one can verify data integrity.
+
+SHA-256 is part of the Secure Hash Algorithm 2 (SHA-2) family and produces a 256-bit hash value, typically represented as a 64-character hexadecimal string.
+
+Task
+
+Given a string s, print its SHA-256 hash value.
+
+Input Format
+A single alphanumeric string s
+Constraints
+s contains only:
+English letters (a-z, A-Z)
+Digits (0-9)
+Output Format
+
+Print the SHA-256 hash of the input string.
+
+Sample Input 0
+HelloWorld
+Sample Output 0
+872e4e50ce9990d8b041330c47c9ddd11bec6b503ae9386a99da8584e9bb12c4
+Sample Input 1
+Javarmi123
+Sample Output 1
+f1d5f8d75bb55c777207c251d07d9091dc10fe7d6682db869106aacb4b7df678
+CODE
+import java.io.*;
+import java.util.*;
+import java.security.MessageDigest;
+
+public class Solution {
+
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        byte[] hash = md.digest(input.getBytes("UTF-8"));
+
+        StringBuilder hexString = new StringBuilder();
+
+        for (byte b : hash) {
+            hexString.append(String.format("%02x", b));
+        }
+
+        System.out.println(hexString.toString());
+    }
+}
