@@ -2428,3 +2428,13 @@ Sample Output
 Explanation
 
 Possible workshops attended without overlap = 4.
+### HACKERRANK 69: JAVA SHA-256
+Java SHA-256
+
+Cryptographic hash functions are mathematical operations run on digital data. By comparing the computed hash (output of a hashing algorithm) to a known hash value, one can verify data integrity.
+
+SHA-256 is part of the Secure Hash Algorithm 2 (SHA-2) family and produces a 256-bit hash value, typically represented as a 64-character hexadecimal string.
+
+Task
+
+Given a string s, print its SHA-256 hash value
