@@ -2438,3 +2438,15 @@ SHA-256 is part of the Secure Hash Algorithm 2 (SHA-2) family and produces a 256
 Task
 
 Given a string s, print its SHA-256 hash value
+Input Format
+A single alphanumeric string s
+Constraints
+s contains only:
+English letters (a-z, A-Z)
+Digits (0-9)
+Output Format
+
+Print the SHA-256 hash of the input string.
+
+Sample Input 0
+HelloWorld
