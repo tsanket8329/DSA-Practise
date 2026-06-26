@@ -2450,3 +2450,9 @@ Print the SHA-256 hash of the input string.
 
 Sample Input 0
 HelloWorld
+Sample Output 0
+872e4e50ce9990d8b041330c47c9ddd11bec6b503ae9386a99da8584e9bb12c4
+Sample Input 1
+Javarmi123
+Sample Output 1
+f1d5f8d75bb55c777207c251d07d9091dc10fe7d6682db869106aacb4b7df678
