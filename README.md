@@ -2482,3 +2482,28 @@ If value is invalid, print unknown.
 Enums Given
 enum class Fruit { apple, orange, pear };
 enum class Color { red, green, orange };
+Mapping:
+
+Fruit
+
+0 → apple
+1 → orange
+2 → pear
+
+Color
+
+0 → red
+1 → green
+2 → orange
+Sample Input
+2
+1 0
+3 3
+Sample Output
+green apple
+unknown unknown
+Explanation
+1 0 → Color = green, Fruit = apple
+3 3 → Both invalid → unknown unknown
+
+Task: Define specializations for Traits<Color> and Traits<Fruit>.
