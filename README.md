@@ -2470,3 +2470,15 @@ First line contains integer t, the number of test cases.
 Each of the next t lines contains two space-separated integers:
 First integer = color value
 Second integer = fruit value
+Output Format
+
+For each test case, print:
+
+color name
+fruit name
+
+If value is invalid, print unknown.
+
+Enums Given
+enum class Fruit { apple, orange, pear };
+enum class Color { red, green, orange };
