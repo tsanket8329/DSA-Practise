@@ -2456,3 +2456,17 @@ Sample Input 1
 Javarmi123
 Sample Output 1
 f1d5f8d75bb55c777207c251d07d9091dc10fe7d6682db869106aacb4b7df678
+### HACKERRANK 70: C++ CLASS TEMPLATE SPECIALIZATION
+C++ Class Template Specialization
+
+You are given a main function which reads the enumeration values for two different types as input, then prints out the corresponding enumeration names.
+
+Write a class template that can provide the names of the enumeration values for both types.
+
+If the enumeration value is not valid, then print unknown.
+
+Input Format
+First line contains integer t, the number of test cases.
+Each of the next t lines contains two space-separated integers:
+First integer = color value
+Second integer = fruit value
