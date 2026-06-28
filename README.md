@@ -2533,3 +2533,39 @@ Returns:
 
 String → next lexicographically greater string
 "no answer" if impossible
+Input Format
+First line contains integer T (number of test cases)
+Next T lines each contain a string w
+Constraints
+String contains only lowercase letters a-z
+Sample Input 0
+5
+ab
+bb
+hefg
+dhck
+dkhc
+Sample Output 0
+ba
+no answer
+hegf
+dhkc
+hcdk
+Sample Input 1
+6
+lmno
+dcba
+dcbb
+abdc
+abcd
+fedcbabcd
+Sample Output 1
+lmon
+no answer
+no answer
+acbd
+abdc
+fedcbabdc
+Example
+"ab" → next bigger = "ba"
+"bb" → no greater permutation exists → "no answer"
