@@ -2507,3 +2507,15 @@ Explanation
 3 3 → Both invalid → unknown unknown
 
 Task: Define specializations for Traits<Color> and Traits<Fruit>.
+### HACKERRANK 71: BIGGER IS GREATER
+Bigger is Greater — HackerRank
+
+Lexicographical order is often known as alphabetical order when dealing with strings.
+A string is greater than another string if it comes later in a lexicographically sorted list.
+
+Given a word, create a new word by swapping some or all of its characters. This new word must satisfy:
+
+It must be greater than the original word
+It must be the smallest word that satisfies condition 1
+
+If no such string exists, return "no answer".
