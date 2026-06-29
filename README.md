@@ -2595,3 +2595,23 @@ Minimum distance = 3
 Output:
 
 3
+Example 2
+
+Input:
+
+a = [1, 2, 3, 4]
+
+No repeated elements.
+
+Output:
+
+-1
+Constraints
+Array size can be large, so efficient solutions are preferred.
+Function Signature
+public static int minimumDistances(List<Integer> a)
+
+Return:
+
+Minimum distance between equal elements
+-1 if no pair exists.
