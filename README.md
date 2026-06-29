@@ -2579,3 +2579,19 @@ Distance between two positions i and j is:
 |i - j|
 
 If no matching pair exists, return -1.
+Example 1
+
+Input:
+
+a = [7, 1, 3, 4, 1, 7]
+
+Equal pairs:
+
+7 at index (0, 5) → distance = 5
+1 at index (1, 4) → distance = 3
+
+Minimum distance = 3
+
+Output:
+
+3
