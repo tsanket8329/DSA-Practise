@@ -2569,3 +2569,13 @@ fedcbabdc
 Example
 "ab" → next bigger = "ba"
 "bb" → no greater permutation exists → "no answer"
+### HACKERRANK 72: MINIMUM DISTANCES
+Problem Statement
+
+Given an array a, find the minimum distance between any pair of equal elements.
+
+Distance between two positions i and j is:
+
+|i - j|
+
+If no matching pair exists, return -1.
