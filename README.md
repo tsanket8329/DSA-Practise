@@ -2615,3 +2615,63 @@ Return:
 
 Minimum distance between equal elements
 -1 if no pair exists.
+### HACKERRANK 73: HALLOWEEN SALE
+Halloween Sale — Question
+
+You want to buy video games from an online store.
+
+The first game costs p dollars.
+Every next game costs d dollars less than the previous one.
+The price keeps decreasing until it reaches m dollars.
+After that, every game costs exactly m dollars.
+
+You have a budget of s dollars.
+
+Your task is to determine how many games you can buy.
+
+Function
+
+Implement:
+
+int howManyGames(int p, int d, int m, int s)
+
+Returns:
+
+Number of games that can be bought.
+Input
+
+Four integers:
+
+p → initial price
+d → discount after each purchase
+m → minimum possible price
+s → total budget
+Constraints
+Price never goes below m
+Can buy games until budget is insufficient
+Example 1
+
+Input:
+
+20 3 6 80
+
+Prices:
+
+20, 17, 14, 11, 8, 6
+
+Total spent:
+
+76
+
+Output:
+
+6
+Example 2
+
+Input:
+
+20 3 6 85
+
+Output:
+
+7
