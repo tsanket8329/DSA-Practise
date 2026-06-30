@@ -1,0 +1,129 @@
+Halloween Sale — Question
+
+You want to buy video games from an online store.
+
+The first game costs p dollars.
+Every next game costs d dollars less than the previous one.
+The price keeps decreasing until it reaches m dollars.
+After that, every game costs exactly m dollars.
+
+You have a budget of s dollars.
+
+Your task is to determine how many games you can buy.
+
+Function
+
+Implement:
+
+int howManyGames(int p, int d, int m, int s)
+
+Returns:
+
+Number of games that can be bought.
+Input
+
+Four integers:
+
+p → initial price
+d → discount after each purchase
+m → minimum possible price
+s → total budget
+Constraints
+Price never goes below m
+Can buy games until budget is insufficient
+Example 1
+
+Input:
+
+20 3 6 80
+
+Prices:
+
+20, 17, 14, 11, 8, 6
+
+Total spent:
+
+76
+
+Output:
+
+6
+Example 2
+
+Input:
+
+20 3 6 85
+
+Output:
+
+7
+CODE
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'howManyGames' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. INTEGER p
+     *  2. INTEGER d
+     *  3. INTEGER m
+     *  4. INTEGER s
+     */
+
+    public static int howManyGames(int p, int d, int m, int s) {
+    // Return the number of games you can buy
+    //public static int howManyGames(int p, int d, int m, int s) {
+    int count = 0;
+    int price = p;
+
+    while (s >= price) {
+        s -= price;
+        count++;
+
+        price = Math.max(m, price - d);
+    }
+
+    return count;
+}
+
+    }
+
+
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        int p = Integer.parseInt(firstMultipleInput[0]);
+
+        int d = Integer.parseInt(firstMultipleInput[1]);
+
+        int m = Integer.parseInt(firstMultipleInput[2]);
+
+        int s = Integer.parseInt(firstMultipleInput[3]);
+
+        int answer = Result.howManyGames(p, d, m, s);
+
+        bufferedWriter.write(String.valueOf(answer));
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
