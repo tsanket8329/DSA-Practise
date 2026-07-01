@@ -2675,3 +2675,52 @@ Input:
 Output:
 
 7
+### HACKERRANK 74: TIME IN WORDS
+HackerRank - The Time in Words question:
+
+Given the time in numerals, convert it into words.
+
+Rules:
+
+At 00 minutes, use "o' clock"
+For minutes 1–30, use "past"
+For minutes 31–59, use "to"
+Special words:
+15 → quarter
+30 → half
+Function Description
+
+Complete the function:
+
+public static String timeInWords(int h, int m)
+
+Parameters:
+
+int h → hour
+int m → minutes
+
+Returns:
+
+String → time in words
+Input Format
+First line: integer h (hour)
+Second line: integer m (minutes)
+Constraints
+1 <= h <= 12
+0 <= m < 60
+Examples
+Input
+5
+47
+Output
+thirteen minutes to six
+Input
+3
+00
+Output
+three o' clock
+Input
+7
+15
+Output
+quarter past seven
