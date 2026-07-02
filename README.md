@@ -2766,3 +2766,17 @@ Sample Output
 6
 3
 5
+Explanation
+Test Case 1:
+Money = 10, Cost = 2
+Buy 10/2 = 5 chocolates
+5 wrappers → exchange for 1 free chocolate
+Total = 6
+Test Case 2:
+Buy 12/4 = 3 chocolates
+Only 3 wrappers, need 4
+Total = 3
+Test Case 3:
+Buy 6/2 = 3 chocolates
+Exchange wrappers repeatedly
+Total = 5
