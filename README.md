@@ -2724,3 +2724,22 @@ Input
 15
 Output
 quarter past seven
+
+
+Chocolate Feast — Problem Statement
+
+Little Bobby loves chocolate. He frequently goes to his favorite store, Penny Auntie, to buy chocolates. The store has a promotion:
+
+For every m wrappers, Bobby can exchange them for 1 free chocolate.
+
+Given:
+
+n → amount of money Bobby has
+c → cost of one chocolate
+m → number of wrappers needed for one free chocolate
+
+Find the total number of chocolates Bobby can eat if he uses the promotion optimally.
+
+Function Description
+
+Complete the function:
