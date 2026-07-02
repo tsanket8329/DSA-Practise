@@ -2743,3 +2743,26 @@ Find the total number of chocolates Bobby can eat if he uses the promotion optim
 Function Description
 
 Complete the function:
+int chocolateFeast(int n, int c, int m)
+Parameters:
+int n: initial money
+int c: cost of one chocolate
+int m: wrappers needed for one free chocolate
+Returns:
+int: total chocolates Bobby can eat
+Input Format
+First line contains integer t → number of test cases.
+Next t lines contain three integers:
+n c m
+Constraints
+1 ≤ t ≤ 100
+1 ≤ n, c, m ≤ 10^5
+Sample Input
+3
+10 2 5
+12 4 4
+6 2 2
+Sample Output
+6
+3
+5
