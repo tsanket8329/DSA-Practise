@@ -1,0 +1,128 @@
+Chocolate Feast — Problem Statement
+
+Little Bobby loves chocolate. He frequently goes to his favorite store, Penny Auntie, to buy chocolates. The store has a promotion:
+
+For every m wrappers, Bobby can exchange them for 1 free chocolate.
+
+Given:
+
+n → amount of money Bobby has
+c → cost of one chocolate
+m → number of wrappers needed for one free chocolate
+
+Find the total number of chocolates Bobby can eat if he uses the promotion optimally.
+
+Function Description
+
+Complete the function:
+
+int chocolateFeast(int n, int c, int m)
+Parameters:
+int n: initial money
+int c: cost of one chocolate
+int m: wrappers needed for one free chocolate
+Returns:
+int: total chocolates Bobby can eat
+Input Format
+First line contains integer t → number of test cases.
+Next t lines contain three integers:
+n c m
+Constraints
+1 ≤ t ≤ 100
+1 ≤ n, c, m ≤ 10^5
+Sample Input
+3
+10 2 5
+12 4 4
+6 2 2
+Sample Output
+6
+3
+5
+Explanation
+Test Case 1:
+Money = 10, Cost = 2
+Buy 10/2 = 5 chocolates
+5 wrappers → exchange for 1 free chocolate
+Total = 6
+Test Case 2:
+Buy 12/4 = 3 chocolates
+Only 3 wrappers, need 4
+Total = 3
+Test Case 3:
+Buy 6/2 = 3 chocolates
+Exchange wrappers repeatedly
+Total = 5
+CODE
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'chocolateFeast' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts following parameters:
+     *  1. INTEGER n
+     *  2. INTEGER c
+     *  3. INTEGER m
+     */
+
+   public static int chocolateFeast(int n, int c, int m) {
+    int chocolates = n / c;   // chocolates bought initially
+    int wrappers = chocolates;
+    int total = chocolates;
+
+    while (wrappers >= m) {
+        int free = wrappers / m;   // free chocolates
+        total += free;
+        wrappers = (wrappers % m) + free;
+    }
+
+    return total;
+}
+
+    }
+
+
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int t = Integer.parseInt(bufferedReader.readLine().trim());
+
+        IntStream.range(0, t).forEach(tItr -> {
+            try {
+                String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+                int n = Integer.parseInt(firstMultipleInput[0]);
+
+                int c = Integer.parseInt(firstMultipleInput[1]);
+
+                int m = Integer.parseInt(firstMultipleInput[2]);
+
+                int result = Result.chocolateFeast(n, c, m);
+
+                bufferedWriter.write(String.valueOf(result));
+                bufferedWriter.newLine();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
