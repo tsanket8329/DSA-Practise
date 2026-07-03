@@ -1,0 +1,123 @@
+Service Lane
+
+A driver is driving on the freeway. The check engine light of his vehicle is on, and the driver wants to get service immediately. Luckily, a service lane runs parallel to the highway. It varies in width along its length.
+
+You will be given an array of widths at points along the road (indices), then a list of the indices of entry and exit points. Considering each entry and exit point pair, calculate the maximum size vehicle that can travel that segment of the service lane safely.
+
+Vehicle types:
+
+1 → Bike
+2 → Car
+3 → Truck
+
+The largest vehicle that can pass through a segment is determined by the minimum width in that segment.
+
+Function Description
+
+Complete the serviceLane function.
+
+Parameters:
+int n → size of width array
+int width[n] → width of each segment
+int cases[t][2] → each test case contains entry and exit indices
+Returns:
+int[t] → maximum vehicle size for each test case
+Input Format
+First line contains two integers n and t
+n = number of width measurements
+t = number of test cases
+Second line contains n space-separated integers representing width
+Next t lines contain two integers i and j
+i = entry index
+j = exit index
+Constraints
+2 ≤ n ≤ 1000
+1 ≤ t ≤ 1000
+0 ≤ i < j < n
+Width values are only 1, 2, or 3
+Sample Input
+8 5
+2 3 1 2 3 2 3 3
+0 3
+4 6
+6 7
+3 5
+0 7
+Sample Output
+1
+2
+3
+2
+1
+Explanation
+
+Width array:
+
+[2, 3, 1, 2, 3, 2, 3, 3]
+
+Queries:
+
+(0,3) → widths = [2,3,1,2] → min = 1
+(4,6) → widths = [3,2,3] → min = 2
+(6,7) → widths = [3,3] → min = 3
+(3,5) → widths = [2,3,2] → min = 2
+(0,7) → widths = [2,3,1,2,3,2,3,3] → min = 1
+
+So output is:
+
+1
+2
+3
+2
+1
+CODE
+import java.util.*;
+
+public class Solution {
+
+    public static List<Integer> serviceLane(int n, List<Integer> width, List<List<Integer>> cases) {
+        List<Integer> ans = new ArrayList<>();
+
+        for (List<Integer> c : cases) {
+            int start = c.get(0);
+            int end = c.get(1);
+
+            int minWidth = Integer.MAX_VALUE;
+
+            for (int i = start; i <= end; i++) {
+                minWidth = Math.min(minWidth, width.get(i));
+            }
+
+            ans.add(minWidth);
+        }
+
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int t = sc.nextInt();
+
+        List<Integer> width = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            width.add(sc.nextInt());
+        }
+
+        List<List<Integer>> cases = new ArrayList<>();
+        for (int i = 0; i < t; i++) {
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            cases.add(Arrays.asList(a, b));
+        }
+
+        List<Integer> result = serviceLane(n, width, cases);
+
+        for (int x : result) {
+            System.out.println(x);
+        }
+
+        sc.close();
+    }
+}
