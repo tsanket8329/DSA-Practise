@@ -2725,8 +2725,7 @@ Input
 Output
 quarter past seven
 
-
-Chocolate Feast — Problem Statement
+### HACKERRANK 75: Chocolate Feast — Problem Statement
 
 Little Bobby loves chocolate. He frequently goes to his favorite store, Penny Auntie, to buy chocolates. The store has a promotion:
 
@@ -2780,3 +2779,76 @@ Test Case 3:
 Buy 6/2 = 3 chocolates
 Exchange wrappers repeatedly
 Total = 5
+### HACKERRANK 76: SERVICE LANE
+Service Lane
+
+A driver is driving on the freeway. The check engine light of his vehicle is on, and the driver wants to get service immediately. Luckily, a service lane runs parallel to the highway. It varies in width along its length.
+
+You will be given an array of widths at points along the road (indices), then a list of the indices of entry and exit points. Considering each entry and exit point pair, calculate the maximum size vehicle that can travel that segment of the service lane safely.
+
+Vehicle types:
+
+1 → Bike
+2 → Car
+3 → Truck
+
+The largest vehicle that can pass through a segment is determined by the minimum width in that segment.
+
+Function Description
+
+Complete the serviceLane function.
+
+Parameters:
+int n → size of width array
+int width[n] → width of each segment
+int cases[t][2] → each test case contains entry and exit indices
+Returns:
+int[t] → maximum vehicle size for each test case
+Input Format
+First line contains two integers n and t
+n = number of width measurements
+t = number of test cases
+Second line contains n space-separated integers representing width
+Next t lines contain two integers i and j
+i = entry index
+j = exit index
+Constraints
+2 ≤ n ≤ 1000
+1 ≤ t ≤ 1000
+0 ≤ i < j < n
+Width values are only 1, 2, or 3
+Sample Input
+8 5
+2 3 1 2 3 2 3 3
+0 3
+4 6
+6 7
+3 5
+0 7
+Sample Output
+1
+2
+3
+2
+1
+Explanation
+
+Width array:
+
+[2, 3, 1, 2, 3, 2, 3, 3]
+
+Queries:
+
+(0,3) → widths = [2,3,1,2] → min = 1
+(4,6) → widths = [3,2,3] → min = 2
+(6,7) → widths = [3,3] → min = 3
+(3,5) → widths = [2,3,2] → min = 2
+(0,7) → widths = [2,3,1,2,3,2,3,3] → min = 1
+
+So output is:
+
+1
+2
+3
+2
+1
