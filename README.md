@@ -2878,3 +2878,19 @@ k: maximum problems per page
 arr: list containing number of problems in each chapter
 Returns
 Integer: number of special problems
+Input Format
+First line contains two integers n and k
+Second line contains n space-separated integers representing arr
+Constraints
+1 ≤ n ≤ 100
+1 ≤ k ≤ 100
+1 ≤ arr[i] ≤ 100
+Sample Input
+5 3
+4 2 6 1 10
+Sample Output
+4
+Explanation
+
+There are 4 special problems in the workbook.
+A problem is special when its problem number matches the page number it appears on.
