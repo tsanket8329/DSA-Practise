@@ -2867,3 +2867,14 @@ Every new chapter starts on a new page.
 Page numbering starts from 1.
 
 Your task is to count how many special problems are in the workbook.
+Function Description
+
+Complete the function:
+
+workbook(int n, int k, List<Integer> arr)
+Parameters
+n: number of chapters
+k: maximum problems per page
+arr: list containing number of problems in each chapter
+Returns
+Integer: number of special problems
