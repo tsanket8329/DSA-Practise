@@ -2852,3 +2852,18 @@ So output is:
 3
 2
 1
+### HACKERRANK 77: Lisa's Workbook
+Lisa's Workbook — Problem Statement
+
+Lisa just got a new math workbook. A workbook contains exercise problems grouped into chapters. Lisa believes a problem to be special if its problem number (within a chapter) is the same as the page number where it appears.
+
+Workbook rules:
+
+There are n chapters, numbered from 1 to n.
+Chapter i contains arr[i] problems, numbered from 1 to arr[i].
+Each page can hold at most k problems.
+Only the last page of a chapter may contain fewer than k problems.
+Every new chapter starts on a new page.
+Page numbering starts from 1.
+
+Your task is to count how many special problems are in the workbook.
