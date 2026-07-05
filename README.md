@@ -2894,3 +2894,80 @@ Explanation
 
 There are 4 special problems in the workbook.
 A problem is special when its problem number matches the page number it appears on.
+#HACKERRANK 78: FLATLAND SPACE STATIONS
+HackerRank – Flatland Space Stations
+
+Flatland is a country with n cities, some of which have space stations. The cities are numbered consecutively from 0 to n − 1, and each adjacent pair of cities is connected by a road of length 1. The cities are arranged in a straight line (not a circle).
+
+Determine the maximum distance from any city to its nearest space station.
+
+Example
+
+Input:
+
+n = 5
+c = [0, 4]
+
+Cities with space stations are 0 and 4.
+
+Distances to the nearest space station:
+
+City 0 → 0
+City 1 → 1
+City 2 → 2
+City 3 → 1
+City 4 → 0
+
+Maximum distance = 2
+
+Function Description
+
+Complete the function:
+
+int flatlandSpaceStations(int n, vector<int> c);
+Parameters
+int n – the total number of cities.
+vector<int> c – the indices of cities that contain space stations.
+Returns
+int – the maximum distance any city is from its nearest space station.
+Input Format
+The first line contains two space-separated integers:
+n – the number of cities.
+m – the number of space stations.
+The second line contains m distinct integers representing the cities that have space stations.
+Constraints
+1 ≤ n ≤ 10^5
+1 ≤ m ≤ n
+0 ≤ c[i] < n
+There is at least one space station.
+No city contains more than one space station.
+Output Format
+
+Print a single integer — the maximum distance from any city to its nearest space station.
+
+Sample Input 0
+5 2
+0 4
+Sample Output 0
+2
+Explanation
+
+The nearest-space-station distances are:
+
+City	Distance
+0	0
+1	1
+2	2
+3	1
+4	0
+
+The maximum distance is 2.
+
+Sample Input 1
+6 6
+0 1 2 4 3 5
+Sample Output 1
+0
+Explanation
+
+Every city has a space station, so the maximum distance is 0.
