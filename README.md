@@ -2971,3 +2971,68 @@ Sample Output 1
 Explanation
 
 Every city has a space station, so the maximum distance is 0.
+### HACKERRANK 78: FAIR RATIONS
+HackerRank – Fair Rations (Problem Statement)
+
+You are the benevolent ruler of Rankhacker Castle, and today you're distributing bread. Your subjects stand in a line, and each person already has some number of loaves.
+
+You must distribute the minimum number of additional loaves while following these rules:
+
+Whenever you give 1 loaf to a person, you must also give 1 loaf to one of their immediate neighbors (either the person in front of them or behind them).
+After all the bread has been distributed, every person must have an even number of loaves.
+
+If it is impossible to achieve this, print NO.
+
+Function Description
+
+Complete the function:
+
+fairRations(List<Integer> B)
+Parameter
+B: A list of integers where B[i] is the number of loaves the ith person initially has.
+Returns
+A string:
+The minimum number of loaves distributed, or
+"NO" if it is impossible.
+Input Format
+The first line contains an integer N, the number of people.
+The second line contains N space-separated integers representing the initial number of loaves each person has.
+Constraints
+2 ≤ N ≤ 1000
+1 ≤ B[i] ≤ 100
+Sample Input 1
+5
+2 3 4 5 6
+Sample Output 1
+4
+Explanation
+
+Initial loaves:
+
+2 3 4 5 6
+Give one loaf each to persons 2 and 3:
+2 4 5 5 6
+Give one loaf each to persons 3 and 4:
+2 4 6 6 6
+
+All counts are now even, and a total of 4 loaves were distributed.
+
+Sample Input 2
+2
+1 2
+Sample Output 2
+NO
+Explanation
+
+The first person has an odd number of loaves and the second person has an even number. Since loaves must always be given to two adjacent people together, it is impossible to make both counts even.
+
+Approach
+Traverse the array from left to right.
+Whenever a person has an odd number of loaves:
+Give one loaf to that person.
+Give one loaf to the next person.
+Increase the answer by 2.
+After the traversal, if the last person still has an odd number of loaves, print "NO"; otherwise, print the total loaves distributed.
+
+Time Complexity: O(N)
+Space Complexity: O(1)
