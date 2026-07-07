@@ -3036,3 +3036,59 @@ After the traversal, if the last person still has an odd number of loaves, print
 
 Time Complexity: O(N)
 Space Complexity: O(1)
+### HACKERRANK 79: CAVITY MAP
+HackerRank – Cavity Map
+
+You are given a square grid where each cell contains a digit representing its depth.
+
+A cell is called a cavity if:
+
+It is not on the border of the grid.
+Its depth is strictly greater than the depths of all four adjacent cells (up, down, left, and right).
+
+Two cells are adjacent only if they share a side (not diagonally).
+
+Your task is to replace every cavity with the character X and return the modified grid.
+
+Example
+
+Input
+
+989
+191
+111
+
+Output
+
+989
+1X1
+111
+
+Explanation
+
+The center cell (9) is not on the border.
+It is greater than its four neighbors (8, 1, 1, 1).
+Therefore, it is replaced with X.
+Sample Input
+4
+1112
+1912
+1892
+1234
+Sample Output
+1112
+1X12
+18X2
+1234
+Explanation
+The two cells containing 9 are not on the border.
+Each is strictly greater than its top, bottom, left, and right neighbors.
+Hence, both are replaced with X.
+Constraints
+1 ≤ n ≤ 100
+The grid is n × n.
+Each cell contains a digit from 0 to 9.
+Function Signature (Java)
+public static List<String> cavityMap(List<String> grid)
+
+Return the modified grid after replacing all cavities with X.
