@@ -1,0 +1,141 @@
+HackerRank – Cavity Map
+
+You are given a square grid where each cell contains a digit representing its depth.
+
+A cell is called a cavity if:
+
+It is not on the border of the grid.
+Its depth is strictly greater than the depths of all four adjacent cells (up, down, left, and right).
+
+Two cells are adjacent only if they share a side (not diagonally).
+
+Your task is to replace every cavity with the character X and return the modified grid.
+
+Example
+
+Input
+
+989
+191
+111
+
+Output
+
+989
+1X1
+111
+
+Explanation
+
+The center cell (9) is not on the border.
+It is greater than its four neighbors (8, 1, 1, 1).
+Therefore, it is replaced with X.
+Sample Input
+4
+1112
+1912
+1892
+1234
+Sample Output
+1112
+1X12
+18X2
+1234
+Explanation
+The two cells containing 9 are not on the border.
+Each is strictly greater than its top, bottom, left, and right neighbors.
+Hence, both are replaced with X.
+Constraints
+1 ≤ n ≤ 100
+The grid is n × n.
+Each cell contains a digit from 0 to 9.
+Function Signature (Java)
+public static List<String> cavityMap(List<String> grid)
+
+Return the modified grid after replacing all cavities with X.
+CODE
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+class Result {
+
+    /*
+     * Complete the 'cavityMap' function below.
+     *
+     * The function is expected to return a STRING_ARRAY.
+     * The function accepts STRING_ARRAY grid as parameter.
+     */
+
+    public static List<String> cavityMap(List<String> grid) {
+        int n = grid.size();
+
+        char[][] ans = new char[n][];
+
+        // Copy original grid
+        for (int i = 0; i < n; i++) {
+            ans[i] = grid.get(i).toCharArray();
+        }
+
+        // Check only inner cells
+        for (int i = 1; i < n - 1; i++) {
+            for (int j = 1; j < n - 1; j++) {
+
+                char curr = grid.get(i).charAt(j);
+
+                if (curr > grid.get(i - 1).charAt(j) &&
+                    curr > grid.get(i + 1).charAt(j) &&
+                    curr > grid.get(i).charAt(j - 1) &&
+                    curr > grid.get(i).charAt(j + 1)) {
+
+                    ans[i][j] = 'X';
+                }
+            }
+        }
+
+        List<String> result = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            result.add(new String(ans[i]));
+        }
+
+        return result;
+    }
+
+}
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<String> grid = IntStream.range(0, n).mapToObj(i -> {
+            try {
+                return bufferedReader.readLine();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        })
+            .collect(toList());
+
+        List<String> result = Result.cavityMap(grid);
+
+        bufferedWriter.write(
+            result.stream()
+                .collect(joining("\n"))
+            + "\n"
+        );
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
