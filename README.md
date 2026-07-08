@@ -3140,4 +3140,33 @@ Test Case 1
 n = 3
 a = 1
 b = 2
+There are n - 1 = 2 gaps.
+
+Possible sequences:
+
+0 → 1 → 2   (1,1)
+0 → 1 → 3   (1,2)
+0 → 2 → 3   (2,1)
+0 → 2 → 4   (2,2)
+
+Possible last stone values:
+
+2 3 4
+Test Case 2
+n = 4
+a = 10
+b = 100
+
+There are 3 gaps.
+
+Possible last stone values:
+
+30
+120
+210
+300
+
+Hence the output is:
+
+30 120 210 300
 
