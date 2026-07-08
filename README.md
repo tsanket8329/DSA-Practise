@@ -3092,3 +3092,52 @@ Function Signature (Java)
 public static List<String> cavityMap(List<String> grid)
 
 Return the modified grid after replacing all cavities with X.
+
+HackerRank – Manasa and Stones
+
+Manasa is hiking with her friends and finds a trail of stones with numbers on them. She notices that the difference between any two consecutive stones is always one of two possible values, a or b.
+
+The first stone has the value 0. There are n stones in total (including the last stone), so there are n - 1 gaps between consecutive stones.
+
+Your task is to determine all possible values of the last stone, considering every possible arrangement of the differences a and b.
+
+Return the possible values in ascending order, with no duplicates.
+
+Function Description
+
+Complete the function:
+
+stones(int n, int a, int b)
+Parameters
+int n – Total number of stones.
+int a – One possible difference between consecutive stones.
+int b – The other possible difference between consecutive stones.
+Returns
+List<Integer> – All possible values of the last stone, sorted in ascending order.
+Input Format
+The first line contains an integer T, the number of test cases.
+For each test case:
+The first line contains n.
+The second line contains a.
+The third line contains b.
+Constraints
+1 ≤ T ≤ 10
+1 ≤ n ≤ 1000
+0 ≤ a, b ≤ 1000
+Sample Input
+2
+3
+1
+2
+4
+10
+100
+Sample Output
+2 3 4
+30 120 210 300
+Explanation
+Test Case 1
+n = 3
+a = 1
+b = 2
+
