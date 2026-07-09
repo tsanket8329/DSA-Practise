@@ -3093,7 +3093,7 @@ public static List<String> cavityMap(List<String> grid)
 
 Return the modified grid after replacing all cavities with X.
 
-HackerRank – Manasa and Stones
+###HackerRank 80 – Manasa and Stones
 
 Manasa is hiking with her friends and finds a trail of stones with numbers on them. She notices that the difference between any two consecutive stones is always one of two possible values, a or b.
 
@@ -3169,4 +3169,11 @@ Possible last stone values:
 Hence the output is:
 
 30 120 210 300
+# HACKERRANK 81: THE GRID SEARCH
+The Grid Search
 
+Given a 2D array of digits represented as an array of strings, determine whether a smaller pattern of digits exists within the larger grid.
+
+Each string in the grid represents one row. The pattern is considered found if all rows of the pattern match a contiguous block of characters in the grid.
+
+For example, consider the following grid:
