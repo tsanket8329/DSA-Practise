@@ -3190,3 +3190,90 @@ The pattern is:
 111111
 
 The pattern begins at the second row and the third column of the grid and continues in the following two rows. Therefore, the pattern is present in the grid, and the answer is YES.
+Function Description
+
+Complete the function gridSearch.
+
+gridSearch has the following parameters:
+
+string G[R]: the grid to search
+string P[r]: the pattern to search for
+Returns
+string: Return "YES" if the pattern exists in the grid, otherwise return "NO".
+Input Format
+The first line contains an integer t, the number of test cases.
+
+For each test case:
+
+The first line contains two space-separated integers R and C, the number of rows in the grid and the number of columns in each row.
+The next R lines each contain a string of C digits representing the grid.
+The next line contains two space-separated integers r and c, the number of rows and columns in the pattern.
+The next r lines each contain a string of c digits representing the pattern.
+Constraints
+1 ≤ t ≤ 5
+1 ≤ r ≤ R ≤ 1000
+1 ≤ c ≤ C ≤ 1000
+All characters are digits (0–9).
+Sample Input
+2
+10 10
+7283455864
+6731158619
+8988242643
+3830589324
+2229505813
+5633845374
+6473530293
+7053106601
+0834282956
+4607924137
+3 4
+9505
+3845
+3530
+15 15
+400453592126560
+114213133098692
+474386082879648
+522356951189169
+887109450487496
+252802633388782
+502771484966748
+075975207693780
+511799789562806
+404007454272504
+549043809916080
+962410809534811
+445893523733475
+768705303214174
+650629270887160
+2 2
+99
+99
+Sample Output
+YES
+NO
+Explanation
+
+Test Case 1:
+
+The pattern
+
+9505
+3845
+3530
+
+appears in the grid exactly, so the output is:
+
+YES
+
+Test Case 2:
+
+The pattern
+
+99
+99
+
+does not occur anywhere in the grid, so the output is:
+
+NO
