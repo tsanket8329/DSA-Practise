@@ -3177,3 +3177,16 @@ Given a 2D array of digits represented as an array of strings, determine whether
 Each string in the grid represents one row. The pattern is considered found if all rows of the pattern match a contiguous block of characters in the grid.
 
 For example, consider the following grid:
+1234567890
+0987654321
+1111111111
+1111111111
+2222222222
+
+The pattern is:
+
+876543
+111111
+111111
+
+The pattern begins at the second row and the third column of the grid and continues in the following two rows. Therefore, the pattern is present in the grid, and the answer is YES.
