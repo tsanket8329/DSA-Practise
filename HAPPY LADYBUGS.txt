@@ -1,0 +1,151 @@
+Happy Ladybugs (HackerRank)
+
+Happy Ladybugs is a board game with the following rules:
+
+The board is represented by a string b of length n.
+Each character in the string represents one cell on the board.
+If b[i] is an underscore (_), then the cell is empty.
+If b[i] is an uppercase English letter (A–Z), then the cell contains a ladybug of that color.
+A ladybug is happy if at least one of its adjacent cells (left or right) contains another ladybug of the same color.
+In one move, you may move any ladybug to any empty cell.
+
+Given the board configuration for multiple games, determine whether it is possible to make all ladybugs happy after performing zero or more moves.
+
+Return "YES" if it is possible; otherwise, return "NO".
+
+Function Description
+
+Complete the function:
+
+happyLadybugs(String b)
+Parameter
+String b: the initial arrangement of the ladybugs on the board.
+Returns
+String: "YES" if all ladybugs can be made happy, otherwise "NO".
+Input Format
+The first line contains an integer g, the number of games.
+For each game:
+The first line contains an integer n, the length of the board.
+The second line contains the string b.
+Constraints
+1 ≤ g ≤ 100
+1 ≤ n ≤ 100
+b contains only uppercase English letters (A–Z) and underscores (_).
+Sample Input 0
+4
+7
+RBY_YBR
+6
+X_Y__X
+2
+__
+6
+B_RRBR
+Sample Output 0
+YES
+NO
+YES
+YES
+Explanation
+RBY_YBR → Ladybugs can be rearranged so that every bug has an adjacent bug of the same color. Output: YES.
+X_Y__X → The single Y can never have a matching neighbor. Output: NO.
+__ → There are no ladybugs, so all are trivially happy. Output: YES.
+B_RRBR → Rearranging the bugs makes every ladybug happy. Output: YES.
+Sample Input 1
+5
+5
+AABBC
+7
+AABBC_C
+1
+_
+10
+DD__FQ_QQF
+6
+AABCBC
+Sample Output 1
+NO
+YES
+YES
+YES
+NO
+CODE
+import java.io.*;
+import java.util.*;
+import java.util.stream.*;
+
+class Result {
+
+    /*
+     * Complete the 'happyLadybugs' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts STRING b as parameter.
+     */
+
+    public static String happyLadybugs(String b) {
+        int[] freq = new int[26];
+        boolean hasEmpty = false;
+
+        // Count frequency of each ladybug and check for empty cell
+        for (char ch : b.toCharArray()) {
+            if (ch == '_') {
+                hasEmpty = true;
+            } else {
+                freq[ch - 'A']++;
+            }
+        }
+
+        // If any ladybug appears only once, it can never be happy
+        for (int f : freq) {
+            if (f == 1) {
+                return "NO";
+            }
+        }
+
+        // If there is an empty space, rearrangement is possible
+        if (hasEmpty) {
+            return "YES";
+        }
+
+        // No empty space: check if all ladybugs are already happy
+        int n = b.length();
+        for (int i = 0; i < n; i++) {
+            boolean left = (i > 0 && b.charAt(i) == b.charAt(i - 1));
+            boolean right = (i < n - 1 && b.charAt(i) == b.charAt(i + 1));
+
+            if (!left && !right) {
+                return "NO";
+            }
+        }
+
+        return "YES";
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int g = Integer.parseInt(bufferedReader.readLine().trim());
+
+        IntStream.range(0, g).forEach(gItr -> {
+            try {
+                int n = Integer.parseInt(bufferedReader.readLine().trim());
+
+                String b = bufferedReader.readLine();
+
+                String result = Result.happyLadybugs(b);
+
+                bufferedWriter.write(result);
+                bufferedWriter.newLine();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
