@@ -3306,3 +3306,45 @@ The first line contains an integer g, the number of games.
 For each game:
 The first line contains an integer n, the length of the board.
 The second line contains the string b.
+Constraints
+1 ≤ g ≤ 100
+1 ≤ n ≤ 100
+b contains only uppercase English letters (A–Z) and underscores (_).
+Sample Input 0
+4
+7
+RBY_YBR
+6
+X_Y__X
+2
+__
+6
+B_RRBR
+Sample Output 0
+YES
+NO
+YES
+YES
+Explanation
+RBY_YBR → Ladybugs can be rearranged so that every bug has an adjacent bug of the same color. Output: YES.
+X_Y__X → The single Y can never have a matching neighbor. Output: NO.
+__ → There are no ladybugs, so all are trivially happy. Output: YES.
+B_RRBR → Rearranging the bugs makes every ladybug happy. Output: YES.
+Sample Input 1
+5
+5
+AABBC
+7
+AABBC_C
+1
+_
+10
+DD__FQ_QQF
+6
+AABCBC
+Sample Output 1
+NO
+YES
+YES
+YES
+NO
