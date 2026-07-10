@@ -3294,3 +3294,15 @@ Given the board configuration for multiple games, determine whether it is possib
 Return "YES" if it is possible; otherwise, return "NO".
 
 Function Description
+Complete the function:
+
+happyLadybugs(String b)
+Parameter
+String b: the initial arrangement of the ladybugs on the board.
+Returns
+String: "YES" if all ladybugs can be made happy, otherwise "NO".
+Input Format
+The first line contains an integer g, the number of games.
+For each game:
+The first line contains an integer n, the length of the board.
+The second line contains the string b.
