@@ -3277,3 +3277,20 @@ The pattern
 does not occur anywhere in the grid, so the output is:
 
 NO
+### HACKERRANK 82: HAPPY LADYBUGS
+Happy Ladybugs (HackerRank)
+
+Happy Ladybugs is a board game with the following rules:
+
+The board is represented by a string b of length n.
+Each character in the string represents one cell on the board.
+If b[i] is an underscore (_), then the cell is empty.
+If b[i] is an uppercase English letter (A–Z), then the cell contains a ladybug of that color.
+A ladybug is happy if at least one of its adjacent cells (left or right) contains another ladybug of the same color.
+In one move, you may move any ladybug to any empty cell.
+
+Given the board configuration for multiple games, determine whether it is possible to make all ladybugs happy after performing zero or more moves.
+
+Return "YES" if it is possible; otherwise, return "NO".
+
+Function Description
