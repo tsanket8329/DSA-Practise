@@ -3348,3 +3348,15 @@ YES
 YES
 YES
 NO
+### HACKERRANK 83: 3D SURFACE AREA
+HackerRank – 3D Surface Area
+
+Madison is a little girl who is fond of toys. Her friend Mason works in a toy manufacturing factory. Mason has a 2D board A of size H × W with H rows and W columns. The board is divided into cells of size 1 × 1, where each cell (i, j) contains an integer A[i][j].
+
+To create a toy, Mason stacks A[i][j] cubes of size 1 × 1 × 1 on the corresponding cell (i, j).
+
+Given the board, determine the total 3D surface area of the resulting solid.
+
+Input Format
+The first line contains two space-separated integers H and W, representing the number of rows and columns.
+The next H lines each contain W space-separated integers, where the jth integer in the ith line is A[i][j].
