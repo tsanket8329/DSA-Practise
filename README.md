@@ -3370,3 +3370,25 @@ Print a single integer representing the total surface area of the 3D object.
 Sample Input 0
 1 1
 1
+Sample Output 0
+6
+Explanation
+
+A single cube has:
+
+Top = 1
+Bottom = 1
+Four side faces = 4
+
+Total surface area = 6.
+
+Sample Input 1
+3 3
+1 3 4
+2 2 3
+1 2 4
+Sample Output 1
+60
+Explanation
+
+The cubes are stacked according to the given heights. Adjacent stacks hide the touching faces, so only the exposed faces contribute to the total surface area. The resulting total surface area is 60.
