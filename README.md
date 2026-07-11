@@ -3360,3 +3360,13 @@ Given the board, determine the total 3D surface area of the resulting solid.
 Input Format
 The first line contains two space-separated integers H and W, representing the number of rows and columns.
 The next H lines each contain W space-separated integers, where the jth integer in the ith line is A[i][j].
+Constraints
+1 ≤ H, W ≤ 100
+1 ≤ A[i][j] ≤ 100
+Output Format
+
+Print a single integer representing the total surface area of the 3D object.
+
+Sample Input 0
+1 1
+1
