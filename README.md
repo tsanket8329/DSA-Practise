@@ -3431,3 +3431,12 @@ A single integer:
 t — the given time.
 Constraints
 1 ≤ t ≤ 10^12
+Sample Input
+4
+Sample Output
+6
+Explanation
+
+Time 4 is the beginning of the second cycle. The counter resets to 6 (twice the initial value of the previous cycle, which was 3), so the displayed value is:
+
+6
