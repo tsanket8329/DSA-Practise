@@ -3398,3 +3398,36 @@ Strange Counter – Problem Statement
 There is a strange counter. At the first second, it displays the number 3. Every second, the displayed number decreases by 1 until it reaches 1. On the next second, the counter resets to twice the initial value of the previous cycle and starts counting down again.
 
 The sequence begins as follows:
+Time (t)	Counter Value
+1	3
+2	2
+3	1
+4	6
+5	5
+6	4
+7	3
+8	2
+9	1
+10	12
+...	...
+
+Given a time t, determine the value displayed by the counter at that moment.
+
+Function Description
+
+Complete the function strangeCounter.
+
+Parameter:
+
+long t: the time at which the counter value is required.
+
+Returns:
+
+long: the value displayed by the counter at time t.
+Input Format
+
+A single integer:
+
+t — the given time.
+Constraints
+1 ≤ t ≤ 10^12
