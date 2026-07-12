@@ -3392,3 +3392,9 @@ Sample Output 1
 Explanation
 
 The cubes are stacked according to the given heights. Adjacent stacks hide the touching faces, so only the exposed faces contribute to the total surface area. The resulting total surface area is 60.
+### HACKERRANK 84: STRANGE COUNTER
+Strange Counter – Problem Statement
+
+There is a strange counter. At the first second, it displays the number 3. Every second, the displayed number decreases by 1 until it reaches 1. On the next second, the counter resets to twice the initial value of the previous cycle and starts counting down again.
+
+The sequence begins as follows:
