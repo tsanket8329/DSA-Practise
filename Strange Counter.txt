@@ -1,0 +1,90 @@
+Strange Counter – Problem Statement
+
+There is a strange counter. At the first second, it displays the number 3. Every second, the displayed number decreases by 1 until it reaches 1. On the next second, the counter resets to twice the initial value of the previous cycle and starts counting down again.
+
+The sequence begins as follows:
+
+Time (t)	Counter Value
+1	3
+2	2
+3	1
+4	6
+5	5
+6	4
+7	3
+8	2
+9	1
+10	12
+...	...
+
+Given a time t, determine the value displayed by the counter at that moment.
+
+Function Description
+
+Complete the function strangeCounter.
+
+Parameter:
+
+long t: the time at which the counter value is required.
+
+Returns:
+
+long: the value displayed by the counter at time t.
+Input Format
+
+A single integer:
+
+t — the given time.
+Constraints
+1 ≤ t ≤ 10^12
+Sample Input
+4
+Sample Output
+6
+Explanation
+
+Time 4 is the beginning of the second cycle. The counter resets to 6 (twice the initial value of the previous cycle, which was 3), so the displayed value is:
+
+6
+CODE
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    /*
+     * Complete the 'strangeCounter' function below.
+     *
+     * The function is expected to return a LONG_INTEGER.
+     * The function accepts LONG_INTEGER t as parameter.
+     */
+
+    public static long strangeCounter(long t) {
+        long cycle = 3;
+        long start = 1;
+
+        while (t > start + cycle - 1) {
+            start += cycle;
+            cycle *= 2;
+        }
+
+        return cycle - (t - start);
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        long t = Long.parseLong(bufferedReader.readLine().trim());
+
+        long result = Result.strangeCounter(t);
+
+        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.newLine();
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
