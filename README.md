@@ -3475,3 +3475,26 @@ Constraints
 5
 0≤k<n
 Sample Input
+3
+2 1
+3 0
+3 2
+Sample Output
+2 1
+1 2 3
+-1
+Explanation
+Test Case 1
+
+For n = 2 and k = 1:
+
+Permutation:
+
+2 1
+
+Check:
+
+|2 − 1| = 1
+|1 − 2| = 1
+
+Hence, it is a valid absolute permutation.
