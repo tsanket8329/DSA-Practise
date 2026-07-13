@@ -3440,3 +3440,18 @@ Explanation
 Time 4 is the beginning of the second cycle. The counter resets to 6 (twice the initial value of the previous cycle, which was 3), so the displayed value is:
 
 6
+
+HackerRank – Absolute Permutation
+Problem Statement
+
+We define P to be a permutation of the first n natural numbers in the range [1, n]. Let P[i] denote the value at position i in permutation P using 1-based indexing.
+
+A permutation P is called an absolute permutation if:
+
+∣P[i]−i∣=k
+
+for every position i, where k is a given integer.
+
+Given n and k, print the lexicographically smallest absolute permutation. If no such permutation exists, print -1.
+
+Function Description
