@@ -3514,3 +3514,12 @@ Every element stays in its original position, so:
 |3 − 3| = 0
 
 Thus, it is a valid absolute permutation.
+Test Case 3
+
+For n = 3 and k = 2:
+
+No permutation satisfies |P[i] - i| = 2 for every position.
+
+Therefore, the output is:
+
+-1
