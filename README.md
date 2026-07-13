@@ -3461,3 +3461,17 @@ absolutePermutation(int n, int k)
 Parameters
 int n – the number of natural numbers.
 int k – the required absolute difference.
+Returns
+int[] – the lexicographically smallest absolute permutation.
+If no valid permutation exists, return [-1].
+Input Format
+The first line contains an integer t, the number of test cases.
+Each of the next t lines contains two space-separated integers:
+n
+k
+Constraints
+1≤t≤20
+1≤n≤10
+5
+0≤k<n
+Sample Input
