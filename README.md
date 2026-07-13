@@ -3498,3 +3498,19 @@ Check:
 |1 − 2| = 1
 
 Hence, it is a valid absolute permutation.
+
+Test Case 2
+
+For n = 3 and k = 0:
+
+Permutation:
+
+1 2 3
+
+Every element stays in its original position, so:
+
+|1 − 1| = 0
+|2 − 2| = 0
+|3 − 3| = 0
+
+Thus, it is a valid absolute permutation.
