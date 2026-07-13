@@ -3455,3 +3455,9 @@ for every position i, where k is a given integer.
 Given n and k, print the lexicographically smallest absolute permutation. If no such permutation exists, print -1.
 
 Function Description
+Complete the function:
+
+absolutePermutation(int n, int k)
+Parameters
+int n – the number of natural numbers.
+int k – the required absolute difference.
