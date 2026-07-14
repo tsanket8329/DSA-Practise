@@ -3441,7 +3441,7 @@ Time 4 is the beginning of the second cycle. The counter resets to 6 (twice the 
 
 6
 
-HackerRank – Absolute Permutation
+### HackerRank 85 – Absolute Permutation
 Problem Statement
 
 We define P to be a permutation of the first n natural numbers in the range [1, n]. Let P[i] denote the value at position i in permutation P using 1-based indexing.
@@ -3523,3 +3523,105 @@ No permutation satisfies |P[i] - i| = 2 for every position.
 Therefore, the output is:
 
 -1
+### HACKERRANK 86: BOMBERMAN
+Bomberman
+
+Bomberman lives in a rectangular grid. Each cell in the grid either contains a bomb or is empty.
+
+A bomb detonates exactly 3 seconds after it is planted. When a bomb explodes, it destroys:
+
+Itself
+The cell directly above
+The cell directly below
+The cell to the left
+The cell to the right
+
+If another bomb is in one of these neighboring cells, it is destroyed without exploding, so there is no chain reaction.
+
+Bomberman follows these actions repeatedly:
+
+Initially, some cells already contain bombs (the given grid).
+After 1 second, Bomberman does nothing.
+After 2 seconds, Bomberman plants bombs in every empty cell, filling the entire grid.
+After 3 seconds, all bombs that were planted exactly 3 seconds earlier explode.
+Bomberman then repeats steps 3 and 4 forever.
+
+Given the initial grid configuration and the number of seconds n, determine the state of the grid after n seconds.
+
+Function Description
+
+Complete the function:
+
+char** bomberMan(int n, int grid_count, char** grid, int* result_count)
+Parameters
+int n – Number of seconds to simulate.
+int grid_count – Number of rows in the grid.
+char** grid – Initial grid, where:
+'O' represents a bomb.
+'.' represents an empty cell.
+int* result_count – Store the number of rows in the returned grid.
+Returns
+char** – The grid configuration after n seconds.
+Input Format
+The first line contains three integers:
+r – Number of rows.
+c – Number of columns.
+n – Number of seconds.
+The next r lines each contain a string of length c, representing the initial grid.
+Constraints
+1 ≤ r, c ≤ 200
+1 ≤ n ≤ 10^9
+Sample Input
+6 7 3
+.......
+...O...
+....O..
+.......
+OO.....
+OO.....
+Sample Output
+OOO.OOO
+OO...OO
+OOO...O
+..OO.OO
+...OOOO
+...OOOO
+Explanation
+
+Initial grid:
+
+.......
+...O...
+....O..
+.......
+OO.....
+OO.....
+
+After 1 second (no changes):
+
+.......
+...O...
+....O..
+.......
+OO.....
+OO.....
+
+After 2 seconds (all empty cells filled with bombs):
+
+OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+
+After 3 seconds, the bombs from the initial grid explode, resulting in:
+
+OOO.OOO
+OO...OO
+OOO...O
+..OO.OO
+...OOOO
+...OOOO
+
+This is the required output for n = 3.
