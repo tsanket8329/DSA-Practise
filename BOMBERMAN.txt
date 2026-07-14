@@ -1,0 +1,327 @@
+Bomberman
+
+Bomberman lives in a rectangular grid. Each cell in the grid either contains a bomb or is empty.
+
+A bomb detonates exactly 3 seconds after it is planted. When a bomb explodes, it destroys:
+
+Itself
+The cell directly above
+The cell directly below
+The cell to the left
+The cell to the right
+
+If another bomb is in one of these neighboring cells, it is destroyed without exploding, so there is no chain reaction.
+
+Bomberman follows these actions repeatedly:
+
+Initially, some cells already contain bombs (the given grid).
+After 1 second, Bomberman does nothing.
+After 2 seconds, Bomberman plants bombs in every empty cell, filling the entire grid.
+After 3 seconds, all bombs that were planted exactly 3 seconds earlier explode.
+Bomberman then repeats steps 3 and 4 forever.
+
+Given the initial grid configuration and the number of seconds n, determine the state of the grid after n seconds.
+
+Function Description
+
+Complete the function:
+
+char** bomberMan(int n, int grid_count, char** grid, int* result_count)
+Parameters
+int n – Number of seconds to simulate.
+int grid_count – Number of rows in the grid.
+char** grid – Initial grid, where:
+'O' represents a bomb.
+'.' represents an empty cell.
+int* result_count – Store the number of rows in the returned grid.
+Returns
+char** – The grid configuration after n seconds.
+Input Format
+The first line contains three integers:
+r – Number of rows.
+c – Number of columns.
+n – Number of seconds.
+The next r lines each contain a string of length c, representing the initial grid.
+Constraints
+1 ≤ r, c ≤ 200
+1 ≤ n ≤ 10^9
+Sample Input
+6 7 3
+.......
+...O...
+....O..
+.......
+OO.....
+OO.....
+Sample Output
+OOO.OOO
+OO...OO
+OOO...O
+..OO.OO
+...OOOO
+...OOOO
+Explanation
+
+Initial grid:
+
+.......
+...O...
+....O..
+.......
+OO.....
+OO.....
+
+After 1 second (no changes):
+
+.......
+...O...
+....O..
+.......
+OO.....
+OO.....
+
+After 2 seconds (all empty cells filled with bombs):
+
+OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+OOOOOOO
+
+After 3 seconds, the bombs from the initial grid explode, resulting in:
+
+OOO.OOO
+OO...OO
+OOO...O
+..OO.OO
+...OOOO
+...OOOO
+
+This is the required output for n = 3.
+CODE
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+char* readline();
+char* ltrim(char*);
+char* rtrim(char*);
+char** split_string(char*);
+
+int parse_int(char*);
+
+char** explode(int rows, int cols, char** grid) {
+    char** res = (char**)malloc(rows * sizeof(char*));
+
+    for (int i = 0; i < rows; i++) {
+        res[i] = (char*)malloc((cols + 1) * sizeof(char));
+        for (int j = 0; j < cols; j++)
+            res[i][j] = 'O';
+        res[i][cols] = '\0';
+    }
+
+    int dr[] = {0, 1, -1, 0, 0};
+    int dc[] = {0, 0, 0, 1, -1};
+
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (grid[i][j] == 'O') {
+                for (int k = 0; k < 5; k++) {
+                    int nr = i + dr[k];
+                    int nc = j + dc[k];
+                    if (nr >= 0 && nr < rows && nc >= 0 && nc < cols)
+                        res[nr][nc] = '.';
+                }
+            }
+        }
+    }
+
+    return res;
+}
+
+char** bomberMan(int n, int grid_count, char** grid, int* result_count) {
+    int rows = grid_count;
+    int cols = strlen(grid[0]);
+
+    *result_count = rows;
+
+    if (n == 1)
+        return grid;
+
+    if (n % 2 == 0) {
+        char** full = (char**)malloc(rows * sizeof(char*));
+
+        for (int i = 0; i < rows; i++) {
+            full[i] = (char*)malloc((cols + 1) * sizeof(char));
+            for (int j = 0; j < cols; j++)
+                full[i][j] = 'O';
+            full[i][cols] = '\0';
+        }
+
+        return full;
+    }
+
+    char** first = explode(rows, cols, grid);
+
+    if (n % 4 == 3)
+        return first;
+
+    char** second = explode(rows, cols, first);
+
+    return second;
+}
+
+int main()
+{
+    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+
+    char** first_multiple_input = split_string(rtrim(readline()));
+
+    int r = parse_int(*(first_multiple_input + 0));
+
+    int c = parse_int(*(first_multiple_input + 1));
+
+    int n = parse_int(*(first_multiple_input + 2));
+
+    char** grid = malloc(r * sizeof(char*));
+
+    for (int i = 0; i < r; i++) {
+        char* grid_item = readline();
+
+        *(grid + i) = grid_item;
+    }
+
+    int result_count;
+    char** result = bomberMan(n, r, grid, &result_count);
+
+    for (int i = 0; i < result_count; i++) {
+        fprintf(fptr, "%s", *(result + i));
+
+        if (i != result_count - 1) {
+            fprintf(fptr, "\n");
+        }
+    }
+
+    fprintf(fptr, "\n");
+
+    fclose(fptr);
+
+    return 0;
+}
+
+char* readline() {
+    size_t alloc_length = 1024;
+    size_t data_length = 0;
+
+    char* data = malloc(alloc_length);
+
+    while (true) {
+        char* cursor = data + data_length;
+        char* line = fgets(cursor, alloc_length - data_length, stdin);
+
+        if (!line) {
+            break;
+        }
+
+        data_length += strlen(cursor);
+
+        if (data_length < alloc_length - 1 || data[data_length - 1] == '\n') {
+            break;
+        }
+
+        alloc_length <<= 1;
+
+        data = realloc(data, alloc_length);
+
+        if (!data) {
+            data = '\0';
+            break;
+        }
+    }
+
+    if (data[data_length - 1] == '\n') {
+        data[data_length - 1] = '\0';
+        data = realloc(data, data_length);
+
+        if (!data)
+            data = '\0';
+    } else {
+        data = realloc(data, data_length + 1);
+
+        if (!data) {
+            data = '\0';
+        } else {
+            data[data_length] = '\0';
+        }
+    }
+
+    return data;
+}
+
+char* ltrim(char* str) {
+    if (!str)
+        return '\0';
+
+    if (!*str)
+        return str;
+
+    while (*str != '\0' && isspace(*str))
+        str++;
+
+    return str;
+}
+
+char* rtrim(char* str) {
+    if (!str)
+        return '\0';
+
+    if (!*str)
+        return str;
+
+    char* end = str + strlen(str) - 1;
+
+    while (end >= str && isspace(*end))
+        end--;
+
+    *(end + 1) = '\0';
+
+    return str;
+}
+
+char** split_string(char* str) {
+    char** splits = NULL;
+    char* token = strtok(str, " ");
+
+    int spaces = 0;
+
+    while (token) {
+        splits = realloc(splits, sizeof(char*) * ++spaces);
+
+        if (!splits)
+            return splits;
+
+        splits[spaces - 1] = token;
+
+        token = strtok(NULL, " ");
+    }
+
+    return splits;
+}
+
+int parse_int(char* str) {
+    char* endptr;
+    int value = strtol(str, &endptr, 10);
+
+    if (endptr == str || *endptr != '\0')
+        exit(EXIT_FAILURE);
+
+    return value;
+}
