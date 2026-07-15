@@ -3625,3 +3625,22 @@ OOO...O
 ...OOOO
 
 This is the required output for n = 3.
+
+
+Ema's Supercomputer
+
+Ema built a quantum computer! Help her test its capabilities by solving the problem below.
+
+You are given a grid of size n × m, where each cell contains either:
+
+'G' (Good cell)
+'B' (Bad cell)
+
+A valid plus consists of a center cell and four arms (up, down, left, right) of equal length extending from the center. Every cell in the plus must be 'G'.
+
+The arm length can be 0, in which case the plus consists of only the center cell.
+
+The area of a plus is:
+
+Area = 4 × arm_length + 1
+
