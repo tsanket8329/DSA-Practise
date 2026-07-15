@@ -1,0 +1,214 @@
+Ema's Supercomputer
+
+Ema built a quantum computer! Help her test its capabilities by solving the problem below.
+
+You are given a grid of size n × m, where each cell contains either:
+
+'G' (Good cell)
+'B' (Bad cell)
+
+A valid plus consists of a center cell and four arms (up, down, left, right) of equal length extending from the center. Every cell in the plus must be 'G'.
+
+The arm length can be 0, in which case the plus consists of only the center cell.
+
+The area of a plus is:
+
+Area = 4 × arm_length + 1
+
+You need to choose two valid pluses such that:
+
+They do not overlap (they cannot share any cell).
+The product of their areas is maximized.
+
+Return the maximum possible product of the areas of the two pluses.
+
+Function Description
+
+Complete the function:
+
+int twoPluses(vector<string> grid)
+Parameter
+grid: An array of strings representing the grid.
+Returns
+An integer representing the maximum product of the areas of two non-overlapping valid pluses.
+Input Format
+The first line contains two space-separated integers n and m, the number of rows and columns.
+Each of the next n lines contains a string of length m consisting only of 'G' and 'B'.
+Constraints
+2 ≤ n, m ≤ 15
+Sample Input 0
+5 6
+GGGGGG
+GBBBGB
+GGGGGG
+GGBBGB
+GGGGGG
+Sample Output 0
+5
+Sample Input 1
+6 6
+BGBBGB
+GGGGGG
+BGBBGB
+GGGGGG
+BGBBGB
+BGBBGB
+Sample Output 1
+25
+Explanation
+A plus may have arm length 0, giving an area of 1.
+Larger pluses have larger areas but require more consecutive 'G' cells.
+The objective is to find the two largest non-overlapping valid pluses whose area product is maximum.
+CODE
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+vector<string> split(const string &);
+
+/*
+ * Complete the 'twoPluses' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING_ARRAY grid as parameter.
+ */
+
+int twoPluses(vector<string> grid) {
+    int n = grid.size();
+    int m = grid[0].size();
+
+    struct Plus {
+        int area;
+        vector<pair<int, int>> cells;
+    };
+
+    vector<Plus> pluses;
+
+    // Generate all possible pluses
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            if (grid[i][j] == 'B') continue;
+
+            int len = 0;
+            while (true) {
+                if (i - len < 0 || i + len >= n ||
+                    j - len < 0 || j + len >= m)
+                    break;
+
+                if (grid[i - len][j] == 'B' ||
+                    grid[i + len][j] == 'B' ||
+                    grid[i][j - len] == 'B' ||
+                    grid[i][j + len] == 'B')
+                    break;
+
+                vector<pair<int, int>> cells;
+                cells.push_back({i, j});
+
+                for (int k = 1; k <= len; k++) {
+                    cells.push_back({i - k, j});
+                    cells.push_back({i + k, j});
+                    cells.push_back({i, j - k});
+                    cells.push_back({i, j + k});
+                }
+
+                pluses.push_back({4 * len + 1, cells});
+                len++;
+            }
+        }
+    }
+
+    int ans = 0;
+
+    for (int i = 0; i < (int)pluses.size(); i++) {
+        for (int j = i + 1; j < (int)pluses.size(); j++) {
+            bool overlap = false;
+
+            set<pair<int, int>> used(pluses[i].cells.begin(), pluses[i].cells.end());
+
+            for (auto &p : pluses[j].cells) {
+                if (used.count(p)) {
+                    overlap = true;
+                    break;
+                }
+            }
+
+            if (!overlap) {
+                ans = max(ans, pluses[i].area * pluses[j].area);
+            }
+        }
+    }
+
+    return ans;
+}
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string first_multiple_input_temp;
+    getline(cin, first_multiple_input_temp);
+
+    vector<string> first_multiple_input = split(rtrim(first_multiple_input_temp));
+
+    int n = stoi(first_multiple_input[0]);
+
+    int m = stoi(first_multiple_input[1]);
+
+    vector<string> grid(n);
+
+    for (int i = 0; i < n; i++) {
+        string grid_item;
+        getline(cin, grid_item);
+
+        grid[i] = grid_item;
+    }
+
+    int result = twoPluses(grid);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
+
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
+}
+
+vector<string> split(const string &str) {
+    vector<string> tokens;
+
+    string::size_type start = 0;
+    string::size_type end = 0;
+
+    while ((end = str.find(" ", start)) != string::npos) {
+        tokens.push_back(str.substr(start, end - start));
+
+        start = end + 1;
+    }
+
+    tokens.push_back(str.substr(start));
+
+    return tokens;
+}
