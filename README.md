@@ -3655,3 +3655,20 @@ Function Description
 
 Complete the function:
 
+
+int twoPluses(vector<string> grid)
+Parameter
+grid: An array of strings representing the grid.
+Returns
+An integer representing the maximum product of the areas of two non-overlapping valid pluses.
+Input Format
+The first line contains two space-separated integers n and m, the number of rows and columns.
+Each of the next n lines contains a string of length m consisting only of 'G' and 'B'.
+Constraints
+2 ≤ n, m ≤ 15
+Sample Input 0
+5 6
+GGGGGG
+GBBBGB
+GGGGGG
+
