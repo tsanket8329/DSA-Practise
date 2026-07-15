@@ -3644,3 +3644,14 @@ The area of a plus is:
 
 Area = 4 × arm_length + 1
 
+You need to choose two valid pluses such that:
+
+They do not overlap (they cannot share any cell).
+The product of their areas is maximized.
+
+Return the maximum possible product of the areas of the two pluses.
+
+Function Description
+
+Complete the function:
+
