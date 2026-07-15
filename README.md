@@ -3671,4 +3671,22 @@ Sample Input 0
 GGGGGG
 GBBBGB
 GGGGGG
+GGBBGB
+GGGGGG
+Sample Output 0
+5
+Sample Input 1
+6 6
+BGBBGB
+GGGGGG
+BGBBGB
+GGGGGG
+BGBBGB
+BGBBGB
+Sample Output 1
+25
+Explanation
+A plus may have arm length 0, giving an area of 1.
+Larger pluses have larger areas but require more consecutive 'G' cells.
+The objective is to find the two largest non-overlapping valid pluses whose area product is maximum
 
