@@ -3691,3 +3691,19 @@ A plus may have arm length 0, giving an area of 1.
 Larger pluses have larger areas but require more consecutive 'G' cells.
 The objective is to find the two largest non-overlapping valid pluses whose area product is maximum
 
+Larry's Array
+
+Larry has been given a permutation of the natural numbers from 1 to n stored in an array.
+
+He wants to determine whether the array can be sorted in ascending order using the following operation any number of times:
+
+Choose any 3 consecutive elements in the array.
+Rotate them to the left:
+(A[i], A[i+1], A[i+2]) → (A[i+1], A[i+2], A[i])
+
+For example, if the chosen elements are [6, 5, 2], after one rotation they become [5, 2, 6].
+
+Your task is to determine whether the given array can be sorted using this operation.
+
+If it can be sorted, print "YES"; otherwise, print "NO".
+
