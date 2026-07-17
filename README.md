@@ -3811,3 +3811,17 @@ Sample Input 2
 3
 3 1 2
 Sample Output 2
+no
+Sample Input 3
+6
+1 5 4 3 2 6
+Sample Output 3
+yes
+reverse 2 5
+Explanation
+Sample 1: Swapping the two elements sorts the array.
+Sample 2: The array cannot be sorted using a single swap or a single reverse.
+
+Sample 3: Reversing the subarray [5, 4, 3, 2] (indices 2 to 5) results in the sorted array:
+
+1 2 3 4 5 6
