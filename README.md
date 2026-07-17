@@ -3800,3 +3800,14 @@ The first line contains an integer n, the number of elements in the array.
 The second line contains n space-separated distinct integers representing the array.
 Constraints
 2 ≤ n ≤ 100000
+All array elements are distinct.
+Sample Input 1
+2
+4 2
+Sample Output 1
+yes
+swap 1 2
+Sample Input 2
+3
+3 1 2
+Sample Output 2
