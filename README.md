@@ -3691,7 +3691,7 @@ A plus may have arm length 0, giving an area of 1.
 Larger pluses have larger areas but require more consecutive 'G' cells.
 The objective is to find the two largest non-overlapping valid pluses whose area product is maximum
 
-Larry's Array
+### HACKERRANK 88: Larry's Array
 
 Larry has been given a permutation of the natural numbers from 1 to n stored in an array.
 
@@ -3769,4 +3769,34 @@ Test Case 3:
 No sequence of valid rotations can sort the array.
 
 Hence, the answer is NO.
+### HACKERRANK 89: ALMOST SORTED
+Almost Sorted (HackerRank)
 
+Given an array of distinct integers, determine whether it can be sorted in ascending order by performing exactly one of the following operations at most once:
+
+Swap two elements.
+Reverse one contiguous subarray.
+Output Rules
+
+If the array is already sorted, print:
+
+yes
+
+If the array can be sorted using exactly one operation, print:
+
+yes
+
+followed by:
+
+swap l r if swapping the elements at 1-based indices l and r sorts the array.
+Otherwise, reverse l r if reversing the subarray from index l to r sorts the array.
+If both swap and reverse can sort the array, choose swap.
+
+If neither operation can sort the array, print:
+
+no
+Input Format
+The first line contains an integer n, the number of elements in the array.
+The second line contains n space-separated distinct integers representing the array.
+Constraints
+2 ≤ n ≤ 100000
