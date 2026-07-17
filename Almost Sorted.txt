@@ -1,0 +1,168 @@
+Almost Sorted (HackerRank)
+
+Given an array of distinct integers, determine whether it can be sorted in ascending order by performing exactly one of the following operations at most once:
+
+Swap two elements.
+Reverse one contiguous subarray.
+Output Rules
+
+If the array is already sorted, print:
+
+yes
+
+If the array can be sorted using exactly one operation, print:
+
+yes
+
+followed by:
+
+swap l r if swapping the elements at 1-based indices l and r sorts the array.
+Otherwise, reverse l r if reversing the subarray from index l to r sorts the array.
+If both swap and reverse can sort the array, choose swap.
+
+If neither operation can sort the array, print:
+
+no
+Input Format
+The first line contains an integer n, the number of elements in the array.
+The second line contains n space-separated distinct integers representing the array.
+Constraints
+2 ≤ n ≤ 100000
+All array elements are distinct.
+Sample Input 1
+2
+4 2
+Sample Output 1
+yes
+swap 1 2
+Sample Input 2
+3
+3 1 2
+Sample Output 2
+no
+Sample Input 3
+6
+1 5 4 3 2 6
+Sample Output 3
+yes
+reverse 2 5
+Explanation
+Sample 1: Swapping the two elements sorts the array.
+Sample 2: The array cannot be sorted using a single swap or a single reverse.
+
+Sample 3: Reversing the subarray [5, 4, 3, 2] (indices 2 to 5) results in the sorted array:
+
+1 2 3 4 5 6
+CODE
+#include <bits/stdc++.h>
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+vector<string> split(const string &);
+
+/*
+ * Complete the 'almostSorted' function below.
+ *
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+void almostSorted(vector<int> arr) {
+    int n = arr.size();
+
+    int l = 0;
+    while (l < n - 1 && arr[l] < arr[l + 1])
+        l++;
+
+    if (l == n - 1) {
+        cout << "yes\n";
+        return;
+    }
+
+    int r = n - 1;
+    while (r > 0 && arr[r] > arr[r - 1])
+        r--;
+
+    // Try swap
+    swap(arr[l], arr[r]);
+    if (is_sorted(arr.begin(), arr.end())) {
+        cout << "yes\n";
+        cout << "swap " << l + 1 << " " << r + 1 << "\n";
+        return;
+    }
+
+    // Undo swap
+    swap(arr[l], arr[r]);
+
+    // Try reverse
+    reverse(arr.begin() + l, arr.begin() + r + 1);
+    if (is_sorted(arr.begin(), arr.end())) {
+        cout << "yes\n";
+        cout << "reverse " << l + 1 << " " << r + 1 << "\n";
+        return;
+    }
+
+    cout << "no\n";
+}
+
+int main() {
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
+
+    string arr_temp_temp;
+    getline(cin, arr_temp_temp);
+
+    vector<string> arr_temp = split(rtrim(arr_temp_temp));
+
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; i++) {
+        arr[i] = stoi(arr_temp[i]);
+    }
+
+    almostSorted(arr);
+
+    return 0;
+}
+
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(),
+                not1(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(),
+                not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
+}
+
+vector<string> split(const string &str) {
+    vector<string> tokens;
+
+    string::size_type start = 0;
+    string::size_type end = 0;
+
+    while ((end = str.find(" ", start)) != string::npos) {
+        tokens.push_back(str.substr(start, end - start));
+        start = end + 1;
+    }
+
+    tokens.push_back(str.substr(start));
+
+    return tokens;
+}
