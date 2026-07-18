@@ -3825,3 +3825,17 @@ Sample 2: The array cannot be sorted using a single swap or a single reverse.
 Sample 3: Reversing the subarray [5, 4, 3, 2] (indices 2 to 5) results in the sorted array:
 
 1 2 3 4 5 6
+### HACKERRANK 90: MATRIX LAYER ROTATION
+Matrix Layer Rotation (HackerRank)
+
+You are given a 2D matrix of dimensions m × n and a positive integer r. Rotate the matrix r times in the anti-clockwise direction and print the resulting matrix.
+
+The rotation is performed layer by layer (also called rings). During one rotation, every element in a layer shifts by one position anti-clockwise.
+
+A matrix may contain multiple layers, and each layer should be rotated independently.
+
+It is guaranteed that the smaller of m and n is even.
+
+Function Description
+
+Complete the function:
