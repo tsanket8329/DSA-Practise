@@ -3853,3 +3853,47 @@ m – number of rows
 n – number of columns
 r – number of rotations
 The next m lines each contain n space-separated integers representing the matrix.
+Constraints
+2 ≤ m, n ≤ 300
+2 ≤ min(m, n)
+min(m, n) is even
+1 ≤ r ≤ 10^9
+1 ≤ matrix[i][j] ≤ 10^8
+Sample Input 1
+4 4 2
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+Sample Output 1
+3 4 8 12
+2 11 10 16
+1 7 6 15
+5 9 13 14
+Explanation
+
+The matrix is rotated two times in the anti-clockwise direction, rotating each layer independently.
+
+Sample Input 2
+5 4 7
+1 2 3 4
+7 8 9 10
+13 14 15 16
+19 20 21 22
+25 26 27 28
+Sample Output 2
+28 27 26 25
+22 9 15 19
+16 8 21 13
+10 14 20 7
+4 3 2 1
+Sample Input 3
+2 2 3
+1 1
+1 1
+Sample Output 3
+1 1
+1 1
+Explanation
+
+All elements are identical, so rotating the matrix any number of times results in the same matrix.
