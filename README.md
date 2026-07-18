@@ -3839,3 +3839,17 @@ It is guaranteed that the smaller of m and n is even.
 Function Description
 
 Complete the function:
+void matrixRotation(vector<vector<int>> matrix, int r)
+Parameters
+matrix: A 2D integer array of size m × n.
+r: The number of anti-clockwise rotations.
+Output
+
+Print the rotated matrix. Each row should be printed on a separate line with elements separated by spaces.
+
+Input Format
+The first line contains three integers:
+m – number of rows
+n – number of columns
+r – number of rotations
+The next m lines each contain n space-separated integers representing the matrix.
