@@ -3975,3 +3975,4 @@ baab
 
 3501. Maximize Active Section with Trade II
       This solution finds the minimum number of deletions required to make an array strictly increasing while maintaining the original order of elements. It is based on the Longest Increasing Subsequence (LIS) concept. The length of the LIS is computed using Binary Search (lower_bound), resulting in an efficient O(n log n) time complexity. The minimum deletions are calculated as n - LIS length.
+      is solution finds the minimum number of deletions required to make an array strictly increasing while maintaining the original order of elements. It is based on the Longest Increasing Subsequence (LIS) concept. The length of the LIS is computed using Binary Search (lower_bound), resulting in an efficient O(n log n) time complexity. The minimum deletions are calculated as n - LIS length.ynamic Programming Optimization.
