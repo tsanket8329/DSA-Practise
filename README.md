@@ -3992,4 +3992,14 @@ string s: the CamelCase string.
 Returns
 int: the number of words in s.
 Input Format
+A single line containing the string s.
 
+Constraints
+1 ≤ |s| ≤ 10^5
+s contains only English alphabet letters.
+s is guaranteed to be a valid CamelCase string.
+Example
+
+Input
+
+oneTwoThree
