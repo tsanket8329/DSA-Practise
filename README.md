@@ -4003,3 +4003,30 @@ Example
 Input
 
 oneTwoThree
+Output
+
+3
+
+Explanation
+
+The string contains the words:
+
+one
+Two
+Three
+
+Hence, the answer is 3.
+
+Sample Input
+saveChangesInTheEditor
+Sample Output
+5
+Explanation
+
+The string contains five words:
+
+save
+Changes
+In
+The
+Editor
