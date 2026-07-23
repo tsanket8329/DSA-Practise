@@ -3971,8 +3971,25 @@ Explanation:
 baab
 → bb
 → Empty String
+### HACKERRANK 93: CAMELCASE
+CamelCase
 
+Alice wrote a sequence of words using CamelCase formatting. In CamelCase:
 
-3501. Maximize Active Section with Trade II
-      This solution finds the minimum number of deletions required to make an array strictly increasing while maintaining the original order of elements. It is based on the Longest Increasing Subsequence (LIS) concept. The length of the LIS is computed using Binary Search (lower_bound), resulting in an efficient O(n log n) time complexity. The minimum deletions are calculated as n - LIS length.
-      is solution finds the minimum number of deletions required to make an array strictly increasing while maintaining the original order of elements. It is based on the Longest Increasing Subsequence (LIS) concept. The length of the LIS is computed using Binary Search (lower_bound), resulting in an efficient O(n log n) time complexity. The minimum deletions are calculated as n - LIS length.ynamic Programming Optimization.
+The string is formed by concatenating one or more English words.
+The first word consists entirely of lowercase letters.
+Every subsequent word starts with an uppercase letter, followed by lowercase letters.
+
+Given a CamelCase string s, determine the number of words it contains.
+
+Function Description
+
+Complete the function:
+
+int camelcase(string s)
+Parameter
+string s: the CamelCase string.
+Returns
+int: the number of words in s.
+Input Format
+
