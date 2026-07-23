@@ -1,0 +1,100 @@
+CamelCase
+
+Alice wrote a sequence of words using CamelCase formatting. In CamelCase:
+
+The string is formed by concatenating one or more English words.
+The first word consists entirely of lowercase letters.
+Every subsequent word starts with an uppercase letter, followed by lowercase letters.
+
+Given a CamelCase string s, determine the number of words it contains.
+
+Function Description
+
+Complete the function:
+
+int camelcase(string s)
+Parameter
+string s: the CamelCase string.
+Returns
+int: the number of words in s.
+Input Format
+
+A single line containing the string s.
+
+Constraints
+1 ≤ |s| ≤ 10^5
+s contains only English alphabet letters.
+s is guaranteed to be a valid CamelCase string.
+Example
+
+Input
+
+oneTwoThree
+
+Output
+
+3
+
+Explanation
+
+The string contains the words:
+
+one
+Two
+Three
+
+Hence, the answer is 3.
+
+Sample Input
+saveChangesInTheEditor
+Sample Output
+5
+Explanation
+
+The string contains five words:
+
+save
+Changes
+In
+The
+Editor
+CODE
+#include <bits/stdc++.h>
+
+using namespace std;
+
+/*
+ * Complete the 'camelcase' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+int camelcase(string s) {
+    if (s.empty()) return 0;
+
+    int count = 1;
+
+    for (char c : s) {
+        if (isupper(c))
+            count++;
+    }
+
+    return count;
+}
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string s;
+    getline(cin, s);
+
+    int result = camelcase(s);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
