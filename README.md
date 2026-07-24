@@ -4039,3 +4039,15 @@ One common task for computers is to sort data. Since sorting is a simple problem
 Insertion Sort
 
 This challenge focuses on Insertion Sort with a nearly sorted array.
+You are given a sorted array with one unsorted element in the rightmost position. Your task is to insert this element into its correct position so that the array remains sorted.
+
+Instead of directly inserting the element, demonstrate the insertion process step by step:
+
+Store the value of the last element.
+Starting from the second last element, compare each element with the stored value.
+If the current element is greater than the stored value:
+Shift it one position to the right.
+Print the entire array.
+Continue until you find an element smaller than or equal to the stored value (or reach the beginning of the array).
+Insert the stored value into its correct position.
+Print the final array.
