@@ -4030,3 +4030,12 @@ Changes
 In
 The
 Editor
+### HACKERRANK 94: INSERTION SORT - PART 1
+Insertion Sort - Part 1 (HackerRank)
+Problem Statement
+
+One common task for computers is to sort data. Since sorting is a simple problem with many possible solutions, it is often used to introduce the study of algorithms.
+
+Insertion Sort
+
+This challenge focuses on Insertion Sort with a nearly sorted array.
