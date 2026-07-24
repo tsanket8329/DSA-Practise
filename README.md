@@ -4051,3 +4051,48 @@ Print the entire array.
 Continue until you find an element smaller than or equal to the stored value (or reach the beginning of the array).
 Insert the stored value into its correct position.
 Print the final array.
+Example
+
+Input
+
+1 2 4 5 3
+
+Output
+
+1 2 4 5 5
+1 2 4 4 5
+1 2 3 4 5
+Function Description
+
+Complete the function:
+
+void insertionSort1(int n, vector<int> arr)
+Parameters
+n: the size of the array
+arr: an array of integers
+Returns
+Nothing. Print the array after every shift and after the final insertion.
+Input Format
+The first line contains an integer n, the size of the array.
+The second line contains n space-separated integers representing the array.
+Constraints
+1 ≤ n ≤ 1000
+-10000 ≤ arr[i] ≤ 10000
+Output Format
+
+Print the array as a row of space-separated integers each time an element is shifted or inserted.
+
+Sample Input
+5
+2 4 6 8 3
+Sample Output
+2 4 6 8 8
+2 4 6 6 8
+2 4 4 6 8
+2 3 4 6 8
+Explanation
+Remove 3 from the last position and store it.
+Since 8 > 3, shift 8 to the right and print the array.
+Since 6 > 3, shift 6 to the right and print the array.
+Since 4 > 3, shift 4 to the right and print the array.
+Since 2 < 3, insert 3 after 2 and print the final sorted array.
