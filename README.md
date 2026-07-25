@@ -4096,3 +4096,78 @@ Since 8 > 3, shift 8 to the right and print the array.
 Since 6 > 3, shift 6 to the right and print the array.
 Since 4 > 3, shift 4 to the right and print the array.
 Since 2 < 3, insert 3 after 2 and print the final sorted array.
+
+Strong Password
+
+Louise joined a social networking site and needs to create a strong password. A password is considered strong if it satisfies all of the following conditions:
+
+Its length is at least 6.
+It contains at least one digit (0-9).
+It contains at least one lowercase English letter (a-z).
+It contains at least one uppercase English letter (A-Z).
+
+It contains at least one special character from:
+
+!@#$%^&*()-+
+
+Louise has already entered a password of length n, but she is not sure if it is strong.
+
+Your task is to determine the minimum number of characters that must be added to make the password strong.
+
+Function Signature
+int minimumNumber(int n, string password);
+Parameters
+int n – the length of the password.
+string password – the password entered by Louise.
+Returns
+int – the minimum number of characters that need to be added.
+Example 1
+
+Input
+
+3
+Ab1
+
+Output
+
+3
+
+Explanation
+
+Contains:
+✔ Uppercase (A)
+✔ Lowercase (b)
+✔ Digit (1)
+✘ Special character
+Length = 3, but must be at least 6.
+
+Adding 3 characters (for example, $hk) makes the password Ab1$hk, which satisfies all conditions.
+
+Example 2
+
+Input
+
+11
+#HackerRank
+
+Output
+
+1
+
+Explanation
+The password already has:
+
+✔ Uppercase
+✔ Lowercase
+✔ Special character
+✘ Digit
+
+Adding one digit makes it a strong password.
+
+Constraints
+1 ≤ n ≤ 100
+All characters in the password are one of:
+a-z
+A-Z
+0-9
+!@#$%^&*()-+
