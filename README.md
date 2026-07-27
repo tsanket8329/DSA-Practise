@@ -4170,4 +4170,47 @@ All characters in the password are one of:
 a-z
 A-Z
 0-9
-!@#$%^&*()-+
+### HACKERRANK 95: INSERTION SORT - PART 2
+Insertion Sort - Part 2 (Question)
+
+Problem Statement
+
+In Insertion Sort - Part 1, you inserted one element into an already sorted array. Now, using the same approach repeatedly, sort the entire array.
+
+The first element is already considered sorted. Starting from the second element, insert each element into its correct position among the previously sorted elements. After each insertion, print the current state of the array.
+
+Function Description
+
+Complete the function:
+
+void insertionSort2(int n, vector<int> arr)
+Parameters
+int n: the number of elements in the array.
+vector<int> arr: the array of integers.
+Output
+
+Print the entire array after each iteration of insertion sort, with elements separated by spaces.
+
+Input Format
+The first line contains an integer n, the size of the array.
+The second line contains n space-separated integers representing the array.
+Constraints
+1 ≤ n ≤ 1000
+-10^4 ≤ arr[i] ≤ 10^4
+Sample Input
+6
+1 4 3 5 6 2
+Sample Output
+1 4 3 5 6 2
+1 3 4 5 6 2
+1 3 4 5 6 2
+1 3 4 5 6 2
+1 2 3 4 5 6
+Explanation
+The first element (1) is already sorted.
+Insert 4 into the sorted portion → no change.
+Insert 3 → move 4 right and place 3.
+Insert 5 → already in the correct position.
+Insert 6 → already in the correct position.
+Insert 2 → shift larger elements right and insert 2 at its correct position.
+Print the array after each insertion.
