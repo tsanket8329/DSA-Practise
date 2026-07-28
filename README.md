@@ -4214,3 +4214,45 @@ Insert 5 → already in the correct position.
 Insert 6 → already in the correct position.
 Insert 2 → shift larger elements right and insert 2 at its correct position.
 Print the array after each insertion.
+### HACKERRANK 96: CORRECTNESS AND THE LOOP INVARIANT
+Correctness and the Loop Invariant
+
+In the previous challenge, you wrote code to perform an Insertion Sort on an unsorted array. But how would you prove that the code is correct? In computer science, this is done using a loop invariant, which helps show that an algorithm works correctly for every possible input.
+
+Loop Invariant
+
+A loop invariant is a condition that remains true before and after every iteration of a loop. To prove an algorithm is correct, you show:
+
+Initialization: The invariant is true before the first iteration.
+Maintenance: If it is true before an iteration, it remains true after that iteration.
+Termination: When the loop finishes, the invariant guarantees that the algorithm has produced the correct result.
+
+For Insertion Sort, the loop invariant is:
+
+At the start of each iteration of the outer loop, the subarray from index 0 to i-1 contains the original elements in sorted order.
+
+Challenge
+
+The Insertion Sort implementation provided contains an error. Your task is to:
+
+Fix the error in the code.
+Sort the array using Insertion Sort.
+Print the array only once, after it has been completely sorted.
+Input Format
+The first line contains an integer n, the size of the array.
+The second line contains n space-separated integers representing the array.
+Constraints
+1 ≤ n ≤ 1000
+-10^4 ≤ arr[i] ≤ 10^4
+Output Format
+
+Print the sorted array as space-separated integers on a single line.
+
+Sample Input
+6
+7 4 3 5 6 2
+Sample Output
+2 3 4 5 6 7
+Explanation
+
+After correcting the Insertion Sort implementation, the array is sorted in ascending order. Print the final sorted array only once after the algorithm completes.
