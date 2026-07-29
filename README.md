@@ -4256,3 +4256,56 @@ Sample Output
 Explanation
 
 After correcting the Insertion Sort implementation, the array is sorted in ascending order. Print the final sorted array only once after the algorithm completes.
+### HACKERRANK 97: CAESAR CIPHER
+Question: Caesar Cipher
+
+Julius Caesar protected his confidential information by encrypting it using a cipher. Caesar's cipher shifts each letter in a string by a fixed number of positions in the alphabet. If the shift goes past the end of the alphabet, it wraps around to the beginning.
+
+Both uppercase and lowercase letters should be shifted while preserving their case. Non-alphabetic characters (such as digits, punctuation, or symbols) should remain unchanged.
+
+Function Description
+
+Complete the function:
+
+string caesarCipher(string s, int k);
+
+Parameters:
+
+string s: the original (unencrypted) string.
+int k: the number of positions to shift each alphabetic character.
+
+Returns:
+
+string: the encrypted string.
+Input Format
+The first line contains an integer n, the length of the string.
+The second line contains the string s.
+The third line contains an integer k, the rotation factor.
+Constraints
+1 ≤ n ≤ 100
+0 ≤ k ≤ 1000
+The string contains valid ASCII characters and no spaces.
+Sample Input
+11
+middle-Outz
+2
+Sample Output
+okffng-Qwvb
+Explanation
+
+With a rotation of 2:
+
+m → o
+i → k
+d → f
+l → n
+e → g
+- remains -
+O → Q
+u → w
+t → v
+z → b
+
+Thus, the encrypted string is:
+
+okffng-Qwvb
