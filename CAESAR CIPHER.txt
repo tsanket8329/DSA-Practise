@@ -1,0 +1,132 @@
+Question: Caesar Cipher
+
+Julius Caesar protected his confidential information by encrypting it using a cipher. Caesar's cipher shifts each letter in a string by a fixed number of positions in the alphabet. If the shift goes past the end of the alphabet, it wraps around to the beginning.
+
+Both uppercase and lowercase letters should be shifted while preserving their case. Non-alphabetic characters (such as digits, punctuation, or symbols) should remain unchanged.
+
+Function Description
+
+Complete the function:
+
+string caesarCipher(string s, int k);
+
+Parameters:
+
+string s: the original (unencrypted) string.
+int k: the number of positions to shift each alphabetic character.
+
+Returns:
+
+string: the encrypted string.
+Input Format
+The first line contains an integer n, the length of the string.
+The second line contains the string s.
+The third line contains an integer k, the rotation factor.
+Constraints
+1 ≤ n ≤ 100
+0 ≤ k ≤ 1000
+The string contains valid ASCII characters and no spaces.
+Sample Input
+11
+middle-Outz
+2
+Sample Output
+okffng-Qwvb
+Explanation
+
+With a rotation of 2:
+
+m → o
+i → k
+d → f
+l → n
+e → g
+- remains -
+O → Q
+u → w
+t → v
+z → b
+
+Thus, the encrypted string is:
+
+okffng-Qwvb
+CODE
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+
+/*
+ * Complete the 'caesarCipher' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts following parameters:
+ *  1. STRING s
+ *  2. INTEGER k
+ */
+
+string caesarCipher(string s, int k) {
+    k %= 26;  // Reduce unnecessary rotations
+
+    for (char &c : s) {
+        if (c >= 'a' && c <= 'z') {
+            c = 'a' + (c - 'a' + k) % 26;
+        }
+        else if (c >= 'A' && c <= 'Z') {
+            c = 'A' + (c - 'A' + k) % 26;
+        }
+        // Non-alphabetic characters remain unchanged
+    }
+
+    return s;
+}
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
+
+    string s;
+    getline(cin, s);
+
+    string k_temp;
+    getline(cin, k_temp);
+
+    int k = stoi(ltrim(rtrim(k_temp)));
+
+    string result = caesarCipher(s, k);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
+
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
+}
