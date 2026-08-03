@@ -4330,3 +4330,7 @@ maxEndHere[i] stores the maximum subarray sum ending at index i using Kadane's a
 Initialize maxEndHere[0] = arr[0].
 For each index, compute max(arr[i], maxEndHere[i-1] + arr[i]) to either start a new subarray or extend the previous one.
 Calculate the sum of the first k elements and store it in windowSum.
+Initialize the answer ans with this first window sum.
+Slide the window one element at a time by adding the new element and removing the old one.
+Update ans with the current window sum (subarray of exactly k elements).
+Check if the current window can be extended to the left by adding maxEndHere[i-k].
