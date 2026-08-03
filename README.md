@@ -4323,3 +4323,10 @@ It is allowed to remap the keys numbered 2 to 9 to distinct collections of lette
 Return the minimum number of pushes needed to type word after remapping the keys.
 
 An example mapping of letters to keys on a telephone keypad is given below. Note that 1, *, #, and 0 do not map to any letters.
+
+####################################
+Max Sum Subarray of Size at least K
+maxEndHere[i] stores the maximum subarray sum ending at index i using Kadane's algorithm.
+Initialize maxEndHere[0] = arr[0].
+For each index, compute max(arr[i], maxEndHere[i-1] + arr[i]) to either start a new subarray or extend the previous one.
+Calculate the sum of the first k elements and store it in windowSum.
