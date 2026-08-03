@@ -4334,3 +4334,5 @@ Initialize the answer ans with this first window sum.
 Slide the window one element at a time by adding the new element and removing the old one.
 Update ans with the current window sum (subarray of exactly k elements).
 Check if the current window can be extended to the left by adding maxEndHere[i-k].
+If adding the previous maximum sum increases the result, update ans.
+After all windows are processed, return ans, which is the maximum sum of any subarray having length at least k.
