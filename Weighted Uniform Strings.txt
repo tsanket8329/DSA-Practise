@@ -1,0 +1,191 @@
+Weighted Uniform Strings
+
+A weighted string is a string of lowercase English letters where each letter has a weight corresponding to its position in the alphabet:
+
+a = 1
+b = 2
+c = 3
+...
+z = 26
+
+The weight of a string is the sum of the weights of its characters.
+
+A uniform string consists of a single character repeated one or more times. Examples of uniform strings are "a", "ccc", and "zzzz". Strings like "ab" or "cac" are not uniform.
+
+Given a string s, consider all possible uniform contiguous substrings of s. Let U be the set of their weights.
+
+You are given several queries. For each query, determine whether its value exists in U.
+
+For each query, output:
+
+"Yes" if the queried weight exists in U
+"No" otherwise
+Example
+
+Input
+
+s = "abccddde"
+queries = [1, 3, 12, 5, 9, 10]
+
+Uniform Substrings and Their Weights
+
+Substring	Weight
+a	1
+b	2
+c	3
+cc	6
+d	4
+dd	8
+ddd	12
+e	5
+
+Output
+
+Yes
+Yes
+Yes
+Yes
+No
+No
+Function Description
+
+Complete the function:
+
+vector<string> weightedUniformStrings(string s, vector<int> queries);
+Parameters
+string s — the input string
+vector<int> queries — the query values
+Returns
+vector<string> — for each query, return "Yes" if the weight exists, otherwise "No".
+Input Format
+The first line contains the string s.
+The second line contains an integer q, the number of queries.
+Each of the next q lines contains an integer representing a query.
+Constraints
+1 ≤ |s| ≤ 10^5
+1 ≤ q ≤ 10^5
+s contains only lowercase English letters.
+1 ≤ queries[i] ≤ 10^7
+Sample Input
+abccddde
+6
+1
+3
+12
+5
+9
+10
+Sample Output
+Yes
+Yes
+Yes
+Yes
+No
+No
+CODE
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+
+/*
+ * Complete the 'weightedUniformStrings' function below.
+ *
+ * The function s expected to return a STRING_ARRAY.
+ * The function accepts following parameters:
+ *  1. STRING s
+ *  2. INTEGER_ARRAY queries
+ */
+
+vector<string> weightedUniformStrings(string s, vector<int> queries) {
+    unordered_set<int> weights;
+
+    int currentWeight = 0;
+    char prev = '\0';
+
+    for (char c : s) {
+        int w = c - 'a' + 1;
+
+        if (c == prev)
+            currentWeight += w;
+        else
+            currentWeight = w;
+
+        weights.insert(currentWeight);
+        prev = c;
+    }
+
+    vector<string> ans;
+
+    for (int q : queries) {
+        if (weights.count(q))
+            ans.push_back("Yes");
+        else
+            ans.push_back("No");
+    }
+
+    return ans;
+}
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string s;
+    getline(cin, s);
+
+    string queries_count_temp;
+    getline(cin, queries_count_temp);
+
+    int queries_count = stoi(ltrim(rtrim(queries_count_temp)));
+
+    vector<int> queries(queries_count);
+
+    for (int i = 0; i < queries_count; i++) {
+        string queries_item_temp;
+        getline(cin, queries_item_temp);
+
+        int queries_item = stoi(ltrim(rtrim(queries_item_temp)));
+
+        queries[i] = queries_item;
+    }
+
+    vector<string> result = weightedUniformStrings(s, queries);
+
+    for (size_t i = 0; i < result.size(); i++) {
+        fout << result[i];
+
+        if (i != result.size() - 1) {
+            fout << "\n";
+        }
+    }
+
+    fout << "\n";
+
+    fout.close();
+
+    return 0;
+}
+
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
+}
