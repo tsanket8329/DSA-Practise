@@ -4310,29 +4310,90 @@ Thus, the encrypted string is:
 
 okffng-Qwvb
 
+### HACKERRANK 98: WEIGHTED UNIFORM STRINGS
+Weighted Uniform Strings
+
+A weighted string is a string of lowercase English letters where each letter has a weight corresponding to its position in the alphabet:
+
+a = 1
+b = 2
+c = 3
+...
+z = 26
+
+The weight of a string is the sum of the weights of its characters.
+
+A uniform string consists of a single character repeated one or more times. Examples of uniform strings are "a", "ccc", and "zzzz". Strings like "ab" or "cac" are not uniform.
+
+Given a string s, consider all possible uniform contiguous substrings of s. Let U be the set of their weights.
+
+You are given several queries. For each query, determine whether its value exists in U.
+
+For each query, output:
+
+"Yes" if the queried weight exists in U
+"No" otherwise
+Example
+
+Input
+
+s = "abccddde"
+queries = [1, 3, 12, 5, 9, 10]
+
+Uniform Substrings and Their Weights
+
+Substring	Weight
+a	1
+b	2
+c	3
+cc	6
+d	4
+dd	8
+ddd	12
+e	5
+
+Output
+
+Yes
+Yes
+Yes
+Yes
+No
+No
+Function Description
+
+Complete the function:
+
+vector<string> weightedUniformStrings(string s, vector<int> queries);
+Parameters
+string s — the input string
+vector<int> queries — the query values
+Returns
+vector<string> — for each query, return "Yes" if the weight exists, otherwise "No".
+Input Format
+The first line contains the string s.
+The second line contains an integer q, the number of queries.
+Each of the next q lines contains an integer representing a query.
+Constraints
+1 ≤ |s| ≤ 10^5
+1 ≤ q ≤ 10^5
+s contains only lowercase English letters.
+1 ≤ queries[i] ≤ 10^7
+Sample Input
+abccddde
+6
+1
+3
+12
+5
+9
+10
+Sample Output
+Yes
+Yes
+Yes
+Yes
+No
+No
 
 
-
-3014. Minimum Number of Pushes to Type Word I
-You are given a string word containing distinct lowercase English letters.
-
-Telephone keypads have keys mapped with distinct collections of lowercase English letters, which can be used to form words by pushing them. For example, the key 2 is mapped with ["a","b","c"], we need to push the key one time to type "a", two times to type "b", and three times to type "c" .
-
-It is allowed to remap the keys numbered 2 to 9 to distinct collections of letters. The keys can be remapped to any amount of letters, but each letter must be mapped to exactly one key. You need to find the minimum number of times the keys will be pushed to type the string word.
-
-Return the minimum number of pushes needed to type word after remapping the keys.
-
-An example mapping of letters to keys on a telephone keypad is given below. Note that 1, *, #, and 0 do not map to any letters.
-
-####################################
-Max Sum Subarray of Size at least K
-maxEndHere[i] stores the maximum subarray sum ending at index i using Kadane's algorithm.
-Initialize maxEndHere[0] = arr[0].
-For each index, compute max(arr[i], maxEndHere[i-1] + arr[i]) to either start a new subarray or extend the previous one.
-Calculate the sum of the first k elements and store it in windowSum.
-Initialize the answer ans with this first window sum.
-Slide the window one element at a time by adding the new element and removing the old one.
-Update ans with the current window sum (subarray of exactly k elements).
-Check if the current window can be extended to the left by adding maxEndHere[i-k].
-If adding the previous maximum sum increases the result, update ans.
-After all windows are processed, return ans, which is the maximum sum of any subarray having length at least k.
