@@ -4395,5 +4395,101 @@ Yes
 Yes
 No
 No
+### HACKERRANK 99: SEPARATE THE NUMBERS
+Separate the Numbers
 
+A numeric string s is considered beautiful if it can be split into a sequence of two or more positive integers a
+1
+	​
+
+,a
+2
+	​
+
+,…,a
+n
+	​
+
+ such that:
+
+Each number is exactly 1 greater than the previous number:
+
+a
+i+1
+	​
+
+=a
+i
+	​
+
++1
+No number in the sequence contains leading zeros.
+The sequence must be formed in the same order as the digits appear in the string (rearranging digits is not allowed).
+
+For each given string, determine whether it is beautiful.
+
+If it is beautiful, print:
+
+YES x
+
+where x is the first number in the sequence. If multiple valid sequences exist, print the smallest possible starting number.
+
+Otherwise, print:
+
+NO
+Function Description
+
+Complete the function separateNumbers:
+
+void separateNumbers(string s)
+Parameter
+s: A string representing a positive integer.
+Output
+
+Print:
+
+YES x if the string is beautiful, where x is the first number in the sequence.
+NO otherwise.
+Input Format
+The first line contains an integer q, the number of queries.
+Each of the next q lines contains a numeric string s.
+Constraints
+1 ≤ q ≤ 10
+1 ≤ |s| ≤ 32
+Sample Input 0
+7
+1234
+91011
+99100
+101103
+010203
+13
+1
+Sample Output 0
+YES 1
+YES 9
+YES 99
+NO
+NO
+NO
+NO
+Explanation
+1234 → 1, 2, 3, 4 ✓
+91011 → 9, 10, 11 ✓
+99100 → 99, 100 ✓
+101103 cannot be split into consecutive integers ✗
+010203 starts with a leading zero ✗
+13 cannot be split into consecutive integers ✗
+1 contains only one number ✗
+Sample Input 1
+4
+99910001001
+7891011
+9899100
+999100010001
+Sample Output 1
+YES 999
+YES 7
+YES 98
+NO
 
