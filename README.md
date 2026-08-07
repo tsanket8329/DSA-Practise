@@ -4492,4 +4492,42 @@ YES 999
 YES 7
 YES 98
 NO
+### HACKERRANK 100: FUNNY STRING
+Question: Funny String
 
+Given a string s, determine whether it is Funny.
+
+To check if a string is funny:
+
+Create a reversed copy of the string.
+Calculate the absolute difference between the ASCII values of every pair of adjacent characters in the original string.
+Do the same for the reversed string.
+If both lists of differences are identical, return "Funny".
+Otherwise, return "Not Funny".
+Example 1
+
+Input:
+
+acxz
+
+Output:
+
+Funny
+Example 2
+
+Input:
+
+bcxz
+
+Output:
+
+Not Funny
+Function
+string funnyString(string s) {
+    // Write your code here
+}
+
+Constraints:
+
+1 <= |s| <= 10000
+s contains lowercase English letters.
