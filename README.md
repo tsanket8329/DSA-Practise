@@ -4531,3 +4531,37 @@ Constraints:
 
 1 <= |s| <= 10000
 s contains lowercase English letters.
+### HACKERRANK 101: COUNTING SORT 1
+Question: Counting Sort 1
+
+Given an array of integers where each integer is between 0 and 99, return a frequency array of size 100, where result[i] represents how many times the value i appears in the input array.
+
+Example 1
+
+Input:
+6
+1 4 1 2 7 4
+
+Output:
+0 2 1 0 2 0 0 1 0 0 ... 0
+
+Explanation:
+
+1 appears 2 times
+2 appears 1 time
+4 appears 2 times
+7 appears 1 time
+All other values appear 0 times.
+
+Constraints:
+
+1 ≤ n ≤ 1000
+0 ≤ arr[i] ≤ 99
+
+Task: Complete:
+
+vector<int> countingSort(vector<int> arr) {
+    // write your code
+}
+
+Try solving it yourself first.
