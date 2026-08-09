@@ -4565,3 +4565,26 @@ vector<int> countingSort(vector<int> arr) {
 }
 
 Try solving it yourself first.
+### HACKERRANK 102: COUNTING SORT 2
+Question
+
+Given an unsorted array of integers where each integer is in the range 0 to 99, use the Counting Sort algorithm to sort the array in ascending order.
+
+You must count how many times each value occurs and then reconstruct the sorted array from those frequencies.
+
+Example:
+
+Input:
+
+5
+1 1 3 2 1
+
+Output:
+
+1 1 1 2 3
+
+Function:
+
+vector<int> countingSort(vector<int> arr)
+
+Return the sorted array.
