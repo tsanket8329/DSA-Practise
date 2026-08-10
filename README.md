@@ -4588,3 +4588,39 @@ Function:
 vector<int> countingSort(vector<int> arr)
 
 Return the sorted array.
+### HACKERRANK 103: GEMSTONES
+Question: Gemstones
+
+There is a collection of rocks where each rock contains different types of minerals. Each mineral is represented by a lowercase English letter (a–z).
+
+A mineral is called a gemstone if it appears at least once in every rock.
+
+Given an array of strings arr, where each string represents the minerals present in one rock, return the number of gemstones.
+
+Example
+Input:
+arr = ["abcd", "abc", "bc"]
+
+Output:
+2
+Explanation
+a → present in rock 1 and 2, but not rock 3 ❌
+b → present in all three rocks ✅
+c → present in all three rocks ✅
+d → present only in rock 1 ❌
+
+Therefore, there are 2 gemstones.
+
+Function to Complete
+int gemstones(vector<string> arr) {
+    // Write your code here
+}
+Sample Input
+3
+abcd
+abc
+bc
+Sample Output
+2
+
+Your task: Write the complete gemstones() function in C++.
