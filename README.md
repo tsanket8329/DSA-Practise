@@ -4624,3 +4624,37 @@ Sample Output
 2
 
 Your task: Write the complete gemstones() function in C++.
+### HACKERRANK 104: ALTERNATING CHARACTERS
+Question: Alternating Characters
+
+You are given a string s containing only the characters A and B.
+
+You can delete any number of characters from the string. Your goal is to make the string alternating, meaning no two adjacent characters are the same.
+
+Return the minimum number of deletions required.
+
+Example 1
+Input:
+AAAA
+
+Output:
+3
+Example 2
+Input:
+AAABBB
+
+Output:
+4
+Example 3
+Input:
+ABABAB
+
+Output:
+0
+Function
+int alternatingCharacters(string s);
+Constraints
+1 <= |s| <= 10^5
+s contains only A and B.
+
+Expected Complexity: O(n) time and O(1) extra space.
