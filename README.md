@@ -4658,3 +4658,60 @@ Constraints
 s contains only A and B.
 
 Expected Complexity: O(n) time and O(1) extra space.
+### HACKERRANK 105: THE FULL COUNTING SORT
+The Full Counting Sort
+
+Use the counting sort to order a list of strings associated with integers. If two strings are associated with the same integer, they must be printed in their original order, i.e., your sorting algorithm should be stable.
+
+Additionally, replace the strings in the first half of the input array with the character "-" (dash) before sorting.
+
+Your task is to design a stable counting sort and print the resulting strings.
+
+Function Description
+
+Complete the function:
+
+void countSort(vector<vector<string>> arr)
+
+where each element of arr contains:
+
+arr[i][0] → an integer (stored as a string)
+arr[i][1] → the associated string
+Input Format
+The first line contains an integer n, the number of pairs.
+The next n lines each contain:
+an integer x (as a string)
+a string s
+Rules
+Replace every string in the first n/2 elements with "-".
+Sort the pairs by their integer key using counting sort.
+If multiple pairs have the same key, maintain their original relative order (stable sort).
+Print all resulting strings in sorted order, separated by spaces.
+Example
+
+Input
+
+4
+0 ab
+1 cd
+0 ef
+1 gh
+
+After replacing the first half:
+
+0 -
+1 -
+0 ef
+1 gh
+
+After stable counting sort:
+
+- ef - gh
+Constraints
+1 ≤ n ≤ 10^5
+n is even.
+Keys are non-negative integers.
+Strings consist of lowercase English letters.
+Expected Complexity
+Time: O(n + k) where k is the maximum key.
+Space: O(n + k)
