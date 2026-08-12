@@ -1,0 +1,166 @@
+The Full Counting Sort
+
+Use the counting sort to order a list of strings associated with integers. If two strings are associated with the same integer, they must be printed in their original order, i.e., your sorting algorithm should be stable.
+
+Additionally, replace the strings in the first half of the input array with the character "-" (dash) before sorting.
+
+Your task is to design a stable counting sort and print the resulting strings.
+
+Function Description
+
+Complete the function:
+
+void countSort(vector<vector<string>> arr)
+
+where each element of arr contains:
+
+arr[i][0] → an integer (stored as a string)
+arr[i][1] → the associated string
+Input Format
+The first line contains an integer n, the number of pairs.
+The next n lines each contain:
+an integer x (as a string)
+a string s
+Rules
+Replace every string in the first n/2 elements with "-".
+Sort the pairs by their integer key using counting sort.
+If multiple pairs have the same key, maintain their original relative order (stable sort).
+Print all resulting strings in sorted order, separated by spaces.
+Example
+
+Input
+
+4
+0 ab
+1 cd
+0 ef
+1 gh
+
+After replacing the first half:
+
+0 -
+1 -
+0 ef
+1 gh
+
+After stable counting sort:
+
+- ef - gh
+Constraints
+1 ≤ n ≤ 10^5
+n is even.
+Keys are non-negative integers.
+Strings consist of lowercase English letters.
+Expected Complexity
+Time: O(n + k) where k is the maximum key.
+Space: O(n + k)
+CODE
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+vector<string> split(const string &);
+
+/*
+ * Complete the 'countSort' function below.
+ *
+ * The function accepts 2D_STRING_ARRAY arr as parameter.
+ */
+
+void countSort(vector<vector<string>> arr) {
+    int n = arr.size();
+
+    // Find maximum key
+    int mx = 0;
+    for (auto &x : arr)
+        mx = max(mx, stoi(x[0]));
+
+    // Buckets for stable counting sort
+    vector<vector<string>> buckets(mx + 1);
+
+    for (int i = 0; i < n; i++) {
+        int key = stoi(arr[i][0]);
+
+        if (i < n / 2)
+            buckets[key].push_back("-");
+        else
+            buckets[key].push_back(arr[i][1]);
+    }
+
+    // Print result
+    for (int i = 0; i <= mx; i++) {
+        for (string &s : buckets[i]) {
+            cout << s << " ";
+        }
+    }
+}
+
+int main()
+{
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
+
+    vector<vector<string>> arr(n);
+
+    for (int i = 0; i < n; i++) {
+        arr[i].resize(2);
+
+        string arr_row_temp_temp;
+        getline(cin, arr_row_temp_temp);
+
+        vector<string> arr_row_temp = split(rtrim(arr_row_temp_temp));
+
+        for (int j = 0; j < 2; j++) {
+            string arr_row_item = arr_row_temp[j];
+
+            arr[i][j] = arr_row_item;
+        }
+    }
+
+    countSort(arr);
+
+    return 0;
+}
+
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
+}
+
+vector<string> split(const string &str) {
+    vector<string> tokens;
+
+    string::size_type start = 0;
+    string::size_type end = 0;
+
+    while ((end = str.find(" ", start)) != string::npos) {
+        tokens.push_back(str.substr(start, end - start));
+
+        start = end + 1;
+    }
+
+    tokens.push_back(str.substr(start));
+
+    return tokens;
+}
