@@ -1,0 +1,157 @@
+C++ Variadics
+
+A template parameter pack is a template parameter that accepts zero or more template arguments (types, non-types, or templates).
+
+Your task is to create a template function named:
+
+reversed_binary_value
+
+The function should:
+
+Accept an arbitrary number of bool values as template parameters.
+These boolean values represent the bits of a binary number in reverse order (least significant bit first).
+Return the integer value represented by those bits.
+
+For example:
+
+reversed_binary_value<0,0,1>();
+
+The bits are:
+
+1 0 0
+
+since they are given in reverse order.
+
+This represents:
+
+100₂ = 4
+
+So the function should return:
+
+4
+Input Format
+
+The first line contains an integer T, the number of test cases.
+
+Each of the next T lines contains two integers:
+
+x — the value to compare against.
+y — the range multiplier.
+Constraints
+Number of template parameters passed to reversed_binary_value is always 6.
+0 ≤ y ≤ 1
+Output Format
+
+For each test case, print a string of 64 binary characters (0 or 1).
+
+For each possible 6-bit combination:
+
+Print 1 if
+reversed_binary_value<digits...>() + 64 * y == x
+Otherwise print 0.
+Sample Input
+2
+65 1
+10 0
+Sample Output
+0100000000000000000000000000000000000000000000000000000000000000
+0000000000100000000000000000000000000000000000000000000000000000
+Explanation
+Test Case 1
+
+Input:
+
+65 1
+
+The program checks values:
+
+64, 65, 66, ..., 127
+
+Only 65 matches x.
+
+Therefore, only the second character is 1.
+
+Test Case 2
+
+Input:
+
+10 0
+
+The program checks values:
+
+0,1,2,...,63
+
+Only 10 matches x.
+
+Therefore, only the 11th character is 1.
+
+What You Need to Implement
+
+You only need to implement this function:
+
+template<bool... digits>
+int reversed_binary_value();
+
+For example:
+
+reversed_binary_value<1,0,1>();
+
+represents the reversed bits:
+
+LSB → MSB
+1 0 1
+
+Binary value:
+
+101₂ = 5
+
+So the function should return:
+
+5
+
+The rest of the code (CheckValues, main, etc.) is already provided by HackerRank.
+CODE
+#include <iostream>
+using namespace std;
+
+template<bool... digits>
+int reversed_binary_value() {
+    bool bits[] = {digits...};
+    int value = 0;
+
+    for (int i = 0; i < sizeof...(digits); i++) {
+        if (bits[i])
+            value += (1 << i);
+    }
+
+    return value;
+}
+
+template<int n, bool... digits>
+struct CheckValues {
+    static void check(int x, int y) {
+        CheckValues<n - 1, 0, digits...>::check(x, y);
+        CheckValues<n - 1, 1, digits...>::check(x, y);
+    }
+};
+
+template<bool... digits>
+struct CheckValues<0, digits...> {
+    static void check(int x, int y) {
+        cout << (reversed_binary_value<digits...>() + 64 * y == x);
+    }
+};
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+        int x, y;
+        cin >> x >> y;
+        CheckValues<6>::check(x, y);
+        cout << endl;
+    }
+
+    return 0;
+}
