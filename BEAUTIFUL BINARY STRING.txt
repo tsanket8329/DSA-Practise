@@ -1,0 +1,118 @@
+Problem Statement
+
+Alice has a binary string b of length n. She considers a string beautiful if it does not contain the substring "010".
+
+Your task is to determine the minimum number of bits that must be changed so that the string becomes beautiful.
+
+A bit change means changing:
+
+'0' to '1', or
+'1' to '0'.
+Input Format
+The first line contains an integer n, the length of the binary string.
+The second line contains the binary string b.
+Constraints
+1 ≤ n ≤ 100
+Output Format
+
+Print a single integer denoting the minimum number of changes required.
+
+Sample Input
+7
+0101010
+Sample Output
+2
+Explanation
+
+The string contains two occurrences of "010".
+
+One possible transformation is:
+
+0101010
+  ^   ^
+0111011
+
+After changing two bits, the string no longer contains "010".
+
+Sample Input 2
+5
+01100
+Sample Output 2
+0
+Explanation
+
+The string already does not contain "010", so no changes are needed.
+
+Expected Approach
+
+Scan the string from left to right. Whenever you find the substring "010", increment the answer and change the last '0' to '1' (or skip ahead by 3 positions). This greedy approach gives the minimum number of changes in O(n) time.
+CODE
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+
+/*
+ * Complete the 'beautifulBinaryString' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING b as parameter.
+ */
+
+int beautifulBinaryString(string b) {
+    int cnt = 0;
+
+    for (int i = 0; i + 2 < b.size(); i++) {
+        if (b.substr(i, 3) == "010") {
+            cnt++;
+            b[i + 2] = '1';   // break the pattern
+        }
+    }
+
+    return cnt;
+}
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
+
+    string b;
+    getline(cin, b);
+
+    int result = beautifulBinaryString(b);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
+
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
+}
