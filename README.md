@@ -4828,3 +4828,52 @@ So the function should return:
 5
 
 The rest of the code (CheckValues, main, etc.) is already provided by HackerRank.
+### HACKERRANK 107: BEAUTIFUL BINARY STRING
+Problem Statement
+
+Alice has a binary string b of length n. She considers a string beautiful if it does not contain the substring "010".
+
+Your task is to determine the minimum number of bits that must be changed so that the string becomes beautiful.
+
+A bit change means changing:
+
+'0' to '1', or
+'1' to '0'.
+Input Format
+The first line contains an integer n, the length of the binary string.
+The second line contains the binary string b.
+Constraints
+1 ≤ n ≤ 100
+Output Format
+
+Print a single integer denoting the minimum number of changes required.
+
+Sample Input
+7
+0101010
+Sample Output
+2
+Explanation
+
+The string contains two occurrences of "010".
+
+One possible transformation is:
+
+0101010
+  ^   ^
+0111011
+
+After changing two bits, the string no longer contains "010".
+
+Sample Input 2
+5
+01100
+Sample Output 2
+0
+Explanation
+
+The string already does not contain "010", so no changes are needed.
+
+Expected Approach
+
+Scan the string from left to right. Whenever you find the substring "010", increment the answer and change the last '0' to '1' (or skip ahead by 3 positions). This greedy approach gives the minimum number of changes in O(n) time.
