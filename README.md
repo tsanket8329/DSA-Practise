@@ -4877,3 +4877,59 @@ The string already does not contain "010", so no changes are needed.
 Expected Approach
 
 Scan the string from left to right. Whenever you find the substring "010", increment the answer and change the last '0' to '1' (or skip ahead by 3 positions). This greedy approach gives the minimum number of changes in O(n) time.
+### HACKERRANK 108: THE MINION GAME
+The Minion Game (HackerRank)
+
+Problem Statement
+
+Kevin and Stuart want to play The Minion Game.
+
+Game Rules
+Both players are given the same string S.
+Both players have to make substrings using the letters of the string S.
+Stuart has to make words starting with consonants.
+Kevin has to make words starting with vowels (A, E, I, O, U).
+The game ends when both players have made all possible substrings.
+Scoring
+
+A player gets +1 point for each occurrence of the substring in the string.
+
+For example:
+
+S = BANANA
+
+Kevin's vowel-beginning substring:
+
+ANA
+
+ANA appears 2 times in BANANA, so Kevin gets 2 points.
+
+Your task is to determine the winner of the game and print their score.
+
+Function Description
+
+Complete the function:
+
+def minion_game(string):
+
+Parameter
+
+string: The input string consisting of uppercase English letters.
+
+Output
+Print:
+
+"Kevin <score>" if Kevin wins.
+"Stuart <score>" if Stuart wins.
+"Draw" if both scores are equal.
+Input Format
+
+A single line containing the string S.
+
+Constraints
+1 ≤ len(S) ≤ 10^6
+S contains only uppercase English letters (A-Z).
+Sample Input
+BANANA
+Sample Output
+Stuart 12
