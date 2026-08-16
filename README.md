@@ -4933,3 +4933,97 @@ Sample Input
 BANANA
 Sample Output
 Stuart 12
+### HACKERRANK 109: CLOSEST NUMBERS
+Closest Numbers – HackerRank
+Problem Statement
+
+Sorting is useful as the first step in many different tasks. The most common task is to make finding things easier, but there are other uses as well. In this problem, sorting helps determine which pair(s) of elements have the smallest absolute difference.
+
+Given an unsorted array of distinct integers, find all pairs of elements that have the minimum absolute difference.
+
+If there are multiple pairs with the same minimum difference, return all such pairs in ascending order (as they appear after sorting).
+
+Function Description
+
+Complete the closestNumbers function.
+
+public static List<Integer> closestNumbers(List<Integer> arr)
+
+Parameter:
+
+arr: A list of distinct integers.
+
+Returns:
+
+A list of integers containing all pairs with the smallest absolute difference.
+Input Format
+The first line contains an integer n, the number of elements in the array.
+The second line contains n space-separated integers.
+Constraints
+2 ≤ n ≤ 2 × 10^5
+-10^7 ≤ arr[i] ≤ 10^7
+All elements in arr are distinct.
+Output Format
+
+Print all pairs having the minimum absolute difference as space-separated integers.
+
+Sample Input 0
+10
+-20 -3916237 -357920 -3620601 7374819 -7330761 30 6246457 -6461594 266854
+Sample Output 0
+-20 30
+
+Explanation:
+
+After sorting:
+
+-7330761 -6461594 -3916237 -3620601 -357920 -20 30 266854 6246457 7374819
+
+The smallest absolute difference is:
+
+30 - (-20) = 50
+
+Hence the output is:
+
+-20 30
+Sample Input 1
+12
+-20 -3916237 -357920 -3620601 7374819 -7330761 30 6246457 -6461594 266854 -520 -470
+Sample Output 1
+-520 -470 -20 30
+
+Explanation:
+
+Minimum absolute difference = 50.
+
+Valid pairs:
+
+(-520, -470)
+(-20, 30)
+Sample Input 2
+4
+5 4 3 2
+Sample Output 2
+2 3 3 4 4 5
+
+Explanation:
+
+After sorting:
+
+2 3 4 5
+
+Minimum absolute difference = 1.
+
+Valid pairs:
+
+(2, 3)
+(3, 4)
+(4, 5)
+Approach
+Sort the array.
+Compute the minimum difference between every pair of adjacent elements.
+Traverse the sorted array again and collect every adjacent pair whose difference equals the minimum.
+Return the resulting list.
+
+Time Complexity: O(n log n)
+Space Complexity: O(1) (excluding the output list).
