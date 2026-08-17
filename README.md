@@ -5027,3 +5027,72 @@ Return the resulting list.
 
 Time Complexity: O(n log n)
 Space Complexity: O(1) (excluding the output list).
+### HACEKRRANK 110: HOTEL PRICES
+Hotel Prices (Debugging)
+
+The given code defines two classes:
+
+HotelRoom – represents a standard hotel room.
+HotelApartment – represents a hotel apartment.
+
+Each room has two properties:
+
+bedrooms – number of bedrooms.
+bathrooms – number of bathrooms.
+Pricing
+
+Hotel Room
+
+Price = 50 × bedrooms + 100 × bathrooms
+
+Hotel Apartment
+
+Price = (Price of a Hotel Room with the same bedrooms and bathrooms) + 100
+
+For example, if a hotel room costs 150, then a hotel apartment with the same number of bedrooms and bathrooms costs 250.
+
+The hotel code reads today's bookings and calculates the total profit. However, the calculated profit is sometimes lower than expected.
+
+Your task is to debug the existing HotelRoom and HotelApartment classes so that the total profit is calculated correctly.
+
+Input Format
+The first line contains an integer n, the number of booked rooms.
+
+Each of the next n lines contains:
+
+room_type bedrooms bathrooms
+
+where room_type is either:
+
+standard
+apartment
+Constraints
+1 ≤ n ≤ 1000
+1 ≤ bedrooms ≤ 100
+1 ≤ bathrooms ≤ 100
+Output Format
+
+Print a single integer representing the total profit earned by the hotel.
+
+Sample Input
+2
+standard 3 1
+apartment 1 1
+Sample Output
+500
+Explanation
+
+Standard room:
+
+50 × 3 + 100 × 1 = 250
+
+Apartment:
+
+50 × 1 + 100 × 1 + 100 = 250
+
+Total profit:
+
+250 + 250 = 500
+Expected Idea
+
+Since objects are stored as HotelRoom*, get_price() must be virtual in the base class so that the overridden version in HotelApartment is called for apartment objects. This is a question on runtime polymorphism (function overriding using virtual functions) in C++.
