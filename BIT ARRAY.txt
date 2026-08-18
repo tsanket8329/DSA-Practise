@@ -1,0 +1,77 @@
+Bit Array
+
+You are given four integers N, S, P, Q.
+
+Use them to generate a sequence a as follows:
+
+a[0] = S mod 2^31
+
+
+for i = 1 to N − 1
+    a[i] = (a[i−1] * P + Q) mod 2^31
+
+Your task is to determine how many distinct integers appear in the sequence a.
+
+Input Format
+
+A single line containing four space-separated integers:
+
+N S P Q
+Output Format
+
+Print a single integer — the number of distinct values in the generated sequence.
+
+Sample Input
+3 1 1 1
+Sample Output
+3
+Explanation
+
+The sequence is:
+
+a[0] = 1
+a[1] = 2
+a[2] = 3
+
+All three values are distinct, so the answer is:
+
+3
+CODE
+#include <bits/stdc++.h>
+using namespace std;
+
+using ull = unsigned long long;
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    ull N, S, P, Q;
+    cin >> N >> S >> P >> Q;
+
+    const ull MOD = 1ULL << 31;
+
+    ull first = S % MOD;
+    ull prev = first;
+    ull cur = first;
+
+    if (N == 0) {
+        cout << 0;
+        return 0;
+    }
+
+    ull ans = 1;
+
+    for (ull i = 1; i < N; i++) {
+        cur = (cur * P + Q) % MOD;
+
+        if (cur == first || cur == prev)
+            break;
+
+        prev = cur;
+        ans++;
+    }
+
+    cout << ans;
+    return 0;
+}
