@@ -5096,3 +5096,42 @@ Total profit:
 Expected Idea
 
 Since objects are stored as HotelRoom*, get_price() must be virtual in the base class so that the overridden version in HotelApartment is called for apartment objects. This is a question on runtime polymorphism (function overriding using virtual functions) in C++.
+### HACKERRANK 111: BIT ARRAY
+Bit Array
+
+You are given four integers N, S, P, Q.
+
+Use them to generate a sequence a as follows:
+
+a[0] = S mod 2^31
+
+
+for i = 1 to N − 1
+    a[i] = (a[i−1] * P + Q) mod 2^31
+
+Your task is to determine how many distinct integers appear in the sequence a.
+
+Input Format
+
+A single line containing four space-separated integers:
+
+N S P Q
+Output Format
+
+Print a single integer — the number of distinct values in the generated sequence.
+
+Sample Input
+3 1 1 1
+Sample Output
+3
+Explanation
+
+The sequence is:
+
+a[0] = 1
+a[1] = 2
+a[2] = 3
+
+All three values are distinct, so the answer is:
+
+3
