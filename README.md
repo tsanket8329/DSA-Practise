@@ -5135,3 +5135,66 @@ a[2] = 3
 All three values are distinct, so the answer is:
 
 3
+
+Merge the Tools!
+
+Consider the following:
+
+A string s of length n, where n is divisible by k.
+An integer k, where k is a factor of n.
+
+Split the string s into n / k equal substrings of length k.
+
+For each substring:
+
+Create a new string by removing duplicate characters while preserving the order of their first occurrence.
+Print the resulting string on a new line.
+Example
+
+Input:
+
+AABCAAADA
+3
+
+The substrings are:
+
+AAB
+CAA
+ADA
+
+After removing duplicate characters:
+
+AB
+CA
+AD
+
+Output:
+
+AB
+CA
+AD
+Function Description
+
+Complete the function:
+
+def merge_the_tools(string, k):
+Parameters
+string: the input string.
+k: the length of each substring.
+Output
+
+Print each processed substring on a new line.
+
+Input Format
+First line: a string s.
+Second line: an integer k.
+Constraints
+1 ≤ len(s) ≤ 10^4
+len(s) is a multiple of k.
+Sample Input
+AABCAAADA
+3
+Sample Output
+AB
+CA
+AD
