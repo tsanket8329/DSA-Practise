@@ -1,0 +1,157 @@
+The Love-Letter Mystery
+
+James found a love letter that his friend Harry has written to his girlfriend. James is a prankster, so he decides to meddle with the letter. He changes all the words in the letter into palindromes.
+
+To do this, he follows two rules:
+
+He can only reduce the value of a letter by 1, i.e., he can change d → c, but he cannot change c → d or d → b in one operation.
+The letter 'a' may not be reduced any further.
+
+Each reduction in the value of any letter counts as one operation.
+
+Your task is to find the minimum number of operations required to convert a given string into a palindrome.
+
+Example
+
+Input:
+
+abc
+
+Operations:
+
+abc → abb → aba
+
+Output:
+
+2
+Function Description
+
+Complete the function:
+
+public static int theLoveLetterMystery(String s)
+Parameter
+String s: the input string.
+Returns
+int: the minimum number of operations required.
+Input Format
+The first line contains an integer q, the number of test cases.
+Each of the next q lines contains a string s.
+Constraints
+1 ≤ q ≤ 10
+1 ≤ |s| ≤ 10^4
+s contains only lowercase English letters (a-z).
+Sample Input
+4
+abc
+abcba
+abcd
+cba
+Sample Output
+2
+0
+4
+2
+Explanation
+Test Case 1
+abc
+↓
+abb
+↓
+aba
+
+Operations = 2
+
+Test Case 2
+abcba
+
+Already a palindrome.
+
+Operations = 0
+
+Test Case 3
+abcd
+↓
+abcc
+↓
+abcb
+↓
+abca
+↓
+abba
+
+Operations = 4
+
+Test Case 4
+cba
+↓
+bba
+↓
+aba
+
+Operations = 2
+
+Approach
+
+Use two pointers:
+
+One at the beginning (left)
+One at the end (right)
+
+For every pair of characters:
+
+Add abs(s.charAt(left) - s.charAt(right)) to the answer.
+Move both pointers toward the center.
+
+This gives the minimum number of reductions needed.
+
+Time Complexity: O(n) per test case
+Space Complexity: O(1)
+CODE
+import java.io.*;
+import java.util.*;
+
+class Result {
+
+    /*
+     * Complete the 'theLoveLetterMystery' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts STRING s as parameter.
+     */
+
+    public static int theLoveLetterMystery(String s) {
+        int operations = 0;
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right) {
+            operations += Math.abs(s.charAt(left) - s.charAt(right));
+            left++;
+            right--;
+        }
+
+        return operations;
+    }
+
+}
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int q = Integer.parseInt(bufferedReader.readLine().trim());
+
+        for (int qItr = 0; qItr < q; qItr++) {
+            String s = bufferedReader.readLine();
+
+            int result = Result.theLoveLetterMystery(s);
+
+            bufferedWriter.write(String.valueOf(result));
+            bufferedWriter.newLine();
+        }
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
+}
