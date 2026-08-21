@@ -5307,3 +5307,20 @@ This gives the minimum number of reductions needed.
 
 Time Complexity: O(n) per test case
 Space Complexity: O(1)
+### HACKERRANK 113: ITERTOOLS.PRODUCT
+itertools.product() — Question
+
+You are given two lists, A and B. Your task is to find their Cartesian product using Python's itertools.product() function.
+
+The Cartesian product contains all possible pairs where one element is taken from A and one from B.
+
+Input:
+
+1 2
+3 4
+
+Output:
+
+(1, 3) (1, 4) (2, 3) (2, 4)
+
+Task: Write a Python program to solve this problem using itertools.product().
