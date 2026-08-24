@@ -1,0 +1,67 @@
+HackerRank — Capitalize!
+
+You are given the full name of a person. Your task is to capitalize the name appropriately.
+
+For example:
+
+alison heck
+
+should become:
+
+Alison Heck
+Input Format
+
+A single line containing the full name.
+
+Constraints
+The string consists of alphanumeric characters and spaces.
+In a word, only the first character should be capitalized.
+If a word starts with a number, its remaining characters should not be changed.
+
+For example:
+
+12abc
+
+remains:
+
+12abc
+Output Format
+
+Print the capitalized full name.
+
+Sample Input
+chris alan
+Sample Output
+Chris Alan
+CODE
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    words = s.split(" ")
+    result = []
+
+    for word in words:
+        if word:
+            result.append(word[0].upper() + word[1:])
+        else:
+            result.append("")
+
+    return " ".join(result)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
