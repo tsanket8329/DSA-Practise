@@ -5443,4 +5443,39 @@ Budget Left: 5
 Senior Member
 Spend: 40
 Budget Left: 60
+### HACKERRANK 114: CAPITALIZE
+HackerRank — Capitalize!
 
+You are given the full name of a person. Your task is to capitalize the name appropriately.
+
+For example:
+
+alison heck
+
+should become:
+
+Alison Heck
+Input Format
+
+A single line containing the full name.
+
+Constraints
+The string consists of alphanumeric characters and spaces.
+In a word, only the first character should be capitalized.
+If a word starts with a number, its remaining characters should not be changed.
+
+For example:
+
+12abc
+
+remains:
+
+12abc
+Output Format
+
+Print the capitalized full name.
+
+Sample Input
+chris alan
+Sample Output
+Chris Alan
