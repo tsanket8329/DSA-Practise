@@ -5520,3 +5520,41 @@ Customer 5 buys size 18 for 60.
 Customer 6 wants size 10, which is not available.
 
 Total earnings = 55 + 45 + 40 + 60 = 200.
+### HACKERRANK 116: ITERTOOLS.PERMUTATION()
+Question: itertools.permutations()
+
+You are given a string S and an integer K.
+
+Your task is to print all possible permutations of size K of the string S, in lexicographic (alphabetical) order.
+
+Input Format
+
+A single line containing:
+
+A string S
+An integer K
+Constraints
+The string contains only uppercase English letters.
+1 ≤ K ≤ len(S)
+Output Format
+
+Print each permutation on a separate line.
+
+Sample Input
+HACK 2
+Sample Output
+AC
+AH
+AK
+CA
+CH
+CK
+HA
+HC
+HK
+KA
+KC
+KH
+
+Example:
+For S = HACK and K = 2, generate every possible arrangement of 2 characters from HACK and print them alphabetically.
