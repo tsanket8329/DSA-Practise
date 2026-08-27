@@ -1,0 +1,51 @@
+HackerRank — Polar Coordinates
+
+Question:
+You are given a complex number. Convert it into its polar coordinates.
+
+A complex number has the form:
+
+a + bj
+
+where:
+
+a = real part
+b = imaginary part
+
+The polar coordinates are:
+
+Modulus — distance from the origin
+Phase angle — angle made with the positive x-axis
+
+Python's cmath module provides functions to calculate both.
+
+Input Format
+
+A single line containing a valid complex number.
+
+Output Format
+
+Print two lines:
+
+First line: modulus
+Second line: phase angle
+
+The answer should be correct up to 3 decimal places.
+
+Sample Input
+
+1+2j
+
+Sample Output
+
+2.23606797749979
+1.1071487177940904
+
+Your task: Write the Python program to solve this problem.
+CODE
+import cmath
+
+z = complex(input())
+
+print(abs(z))
+print(cmath.phase(z))
