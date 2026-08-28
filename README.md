@@ -1,3 +1,4 @@
+
 ### DSA PRACTICE
 HackerRank 1: Left Rotation
 This repository contains a solution for the Left Rotation problem from HackerRank
@@ -5558,3 +5559,37 @@ KH
 
 Example:
 For S = HACK and K = 2, generate every possible arrangement of 2 characters from HACK and print them alphabetically.
+### HACKERRANK 117: INTRODUCTION TO SETS
+📝 Question
+
+Given an array of integers representing the heights of plants, calculate the average height of all distinct plants.
+
+You must:
+
+Remove duplicate heights.
+Find the sum of the remaining heights.
+Divide by the number of distinct heights.
+Round the answer to 3 decimal places.
+Example
+
+Input:
+
+10
+161 182 161 154 176 170 167 171 170 174
+
+Output:
+
+169.375
+
+Explanation:
+
+The distinct heights are:
+
+154 161 167 170 171 174 176 182
+
+Their average is:
+
+(154 + 161 + 167 + 170 + 171 + 174 + 176 + 182) / 8
+= 169.375
+
+Your task: Complete the average(array) function.
