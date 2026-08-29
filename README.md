@@ -5593,3 +5593,36 @@ Their average is:
 = 169.375
 
 Your task: Complete the average(array) function.
+### HACKERRAANK 118: DEFAULTDICT TUTORIAL
+Question — DefaultDict Tutorial
+
+You are given two groups of words, Group A and Group B.
+
+Group A contains n words, and words may be repeated.
+Group B contains m words.
+For each word in Group B, print the 1-indexed positions at which that word occurs in Group A.
+If the word does not occur in Group A, print -1.
+Input Format
+The first line contains two integers n and m.
+The next n lines contain the words of Group A.
+The next m lines contain the words of Group B.
+Example Input
+5 2
+a
+a
+b
+a
+b
+a
+b
+Example Output
+1 2 4
+3 5
+
+Explanation:
+a occurs at positions 1, 2, 4 in Group A.
+b occurs at positions 3, 5 in Group A.
+
+If Group B contained c, the output would be:
+
+-1
