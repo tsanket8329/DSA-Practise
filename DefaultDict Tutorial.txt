@@ -1,0 +1,52 @@
+Question — DefaultDict Tutorial
+
+You are given two groups of words, Group A and Group B.
+
+Group A contains n words, and words may be repeated.
+Group B contains m words.
+For each word in Group B, print the 1-indexed positions at which that word occurs in Group A.
+If the word does not occur in Group A, print -1.
+Input Format
+The first line contains two integers n and m.
+The next n lines contain the words of Group A.
+The next m lines contain the words of Group B.
+Example Input
+5 2
+a
+a
+b
+a
+b
+a
+b
+Example Output
+1 2 4
+3 5
+
+Explanation:
+a occurs at positions 1, 2, 4 in Group A.
+b occurs at positions 3, 5 in Group A.
+
+If Group B contained c, the output would be:
+
+-1
+CODE
+from collections import defaultdict
+
+n, m = map(int, input().split())
+
+d = defaultdict(list)
+
+# Store positions of words in Group A
+for i in range(1, n + 1):
+    word = input()
+    d[word].append(i)
+
+# Process Group B
+for _ in range(m):
+    word = input()
+
+    if word in d:
+        print(*d[word])
+    else:
+        print(-1)
