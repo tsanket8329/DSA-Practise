@@ -5626,3 +5626,24 @@ b occurs at positions 3, 5 in Group A.
 If Group B contained c, the output would be:
 
 -1
+### HACKERRANK 119: CALENDAR MODULE
+Question — Calendar Module
+
+You are given a date in the format MM DD YYYY. Your task is to determine the day of the week for that date.
+
+Input Format
+
+A single line containing three space-separated integers:
+
+MM DD YYYY
+Output Format
+
+Print the day of the week in capital letters.
+
+Sample Input
+08 05 2015
+Sample Output
+WEDNESDAY
+Explanation
+
+August 5, 2015 was a Wednesday.
