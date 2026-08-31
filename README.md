@@ -5647,3 +5647,25 @@ WEDNESDAY
 Explanation
 
 August 5, 2015 was a Wednesday.
+### HACKERRANK 120: EXCEPTIONS
+Question — HackerRank: Exceptions
+
+You are given two values a and b. Perform integer division a // b and print the result.
+
+If a ZeroDivisionError or ValueError occurs, print the error message in the following format:
+
+Error Code: <error message>
+Input Format
+The first line contains an integer T, the number of test cases.
+The next T lines each contain two space-separated values a and b.
+Sample Input
+3
+1 0
+2 $
+3 1
+Sample Output
+Error Code: integer division or modulo by zero
+Error Code: invalid literal for int() with base 10: '$'
+3
+
+Task: Write a Python program using try and except to handle the exceptions.
