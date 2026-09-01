@@ -5669,3 +5669,30 @@ Error Code: invalid literal for int() with base 10: '$'
 3
 
 Task: Write a Python program using try and except to handle the exceptions.
+### HACKERRANK 121:COLLECTIINS.NAMEDTUPLE
+Question — collections.namedtuple()
+
+You are given the details of N students. Each student has four fields:
+
+ID
+MARKS
+NAME
+CLASS
+
+The columns can appear in any order.
+
+Your task is to use Python's collections.namedtuple() to calculate and print the average marks of all students, rounded to 2 decimal places.
+
+Input
+4
+NAME ID CLASS MARKS
+John 101 10 85
+Alice 102 10 92
+Bob 103 9 78
+Emma 104 9 95
+Output
+87.50
+
+Your task: Solve this using namedtuple() in 4 lines or less.
+
+Try it yourself first. Send me your code, and I'll check it.
