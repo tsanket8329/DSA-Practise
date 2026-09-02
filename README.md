@@ -5696,3 +5696,21 @@ Output
 Your task: Solve this using namedtuple() in 4 lines or less.
 
 Try it yourself first. Send me your code, and I'll check it.
+### HACKERRANK 122: FIND THE MEDIAN
+HackerRank – Find the Median
+
+Question:
+Given an unsorted array of integers with an odd number of elements, find its median.
+
+The median is the middle element after sorting the array in ascending order.
+
+Example:
+
+Input:
+7
+0 1 2 4 6 5 3
+
+Output:
+3
+
+
