@@ -5713,4 +5713,38 @@ Input:
 Output:
 3
 
+### HACKERRANK 123: FIND THE MBC
+Find Angle MBC ⭐
 
+You are given the lengths of AB and BC in a right-angled triangle. Point M is the midpoint of the hypotenuse AC.
+
+Your task is to find ∠MBC in degrees.
+
+Input Format
+
+The first line contains the length of side AB.
+
+The second line contains the length of side BC.
+
+Output Format
+
+Print the angle MBC in degrees, rounded to the nearest integer, followed by the degree symbol °.
+
+Example
+
+Input
+
+10
+10
+
+Output
+
+45°
+Formula
+$$ \theta = \tan^{-1}\left(\frac{AB}{BC}\right) $$
+
+In Python:
+
+angle = math.degrees(math.atan2(AB, BC))
+
+Use chr(176) if HackerRank rejects the ° character in your source code.
