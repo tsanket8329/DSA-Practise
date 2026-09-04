@@ -5748,3 +5748,39 @@ In Python:
 angle = math.degrees(math.atan2(AB, BC))
 
 Use chr(176) if HackerRank rejects the ° character in your source code.
+### HACKERRANK 124: NO IDEA!
+HackerRank — No Idea!
+
+There is an array of n integers. You are given two disjoint sets, A and B.
+
+You like every integer present in set A.
+You dislike every integer present in set B.
+Your initial happiness is 0.
+For every element in the array:
+If it is in A, increase happiness by 1.
+If it is in B, decrease happiness by 1.
+Otherwise, happiness remains unchanged.
+
+Print your final happiness.
+
+Example
+
+Input
+
+3 2
+1 5 3
+3 1
+5 7
+
+Output
+
+1
+
+Explanation:
+1 is in A → +1
+5 is in B → -1
+3 is in A → +1
+
+Final happiness = 1.
+
+Your task: Write the Python 3 solution.
